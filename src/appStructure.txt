@@ -1,0 +1,17 @@
+• src
++---• app
+|   +---• employees
+|   |   |--employees.components.ts | .html | .scss
+|   +---• employee
+|   |   |--employee.components.ts | .html | .scss
+|   |   
+|   +---• employee-list
+|   |   |--employee-list.components.ts | .html | .scss
+|   |   
+|   +---• shared
+|   |   |--employee.service.ts
+|   |   |--employee.model.ts
+|   |   
+|   |--app.module.ts
+|   
+|--index.html
