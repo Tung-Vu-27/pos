@@ -24,4 +24,14 @@ export class EmployeeComponent implements OnInit {
       LastName: ""
     };
   }
+
+  onSubmit(form: NgForm) {
+    this.insertRecord(form);
+  }
+
+  insertRecord(form: NgForm) {
+    this.service.postEmployee(form.value).subscribe(res => {
+      this.resetForm(form);
+    })
+  }
 }

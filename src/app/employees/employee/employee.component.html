@@ -1,4 +1,4 @@
-<form #form="ngForm" autocomplete="off">
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
   <div class="form-group">
     <label>First Name</label>
     <input
