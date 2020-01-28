@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { EmployeeService } from "src/app/services/employee.service";
+import { NgForm } from "@angular/forms";
 
 @Component({
   selector: "app-employee",
@@ -9,5 +10,18 @@ import { EmployeeService } from "src/app/services/employee.service";
 export class EmployeeComponent implements OnInit {
   constructor(private service: EmployeeService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.resetForm();
+  }
+
+  // ? means nullable i.e. form is nullable
+  resetForm(form?: NgForm) {
+    if (form != null) form.resetForm();
+
+    this.service.formData = {
+      EmployeeID: null,
+      FirstName: "",
+      LastName: ""
+    };
+  }
 }

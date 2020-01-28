@@ -1,17 +1,39 @@
-<form #form="ngForm">
-    <div class="form-group">
-        <label>Employee ID</label>
-        <input name="EmployeeID" #EmployeeID="ngModel" [(ngModel)]="service.formData.EmployeeID" type="text" class="form-control">
+<form #form="ngForm" autocomplete="off">
+  <div class="form-group">
+    <label>First Name</label>
+    <input
+      name="FirstName"
+      #FirstName="ngModel"
+      [(ngModel)]="service.formData.FirstName"
+      type="text"
+      class="form-control"
+      required
+    />
+    <div
+      *ngIf="FirstName.invalid && FirstName.touched"
+      class="validation-error"
+    >
+      This field is required.
     </div>
-    <div class="form-group">
-        <label>First Name</label>
-        <input name="FirstName" #FirstName="ngModel" [(ngModel)]="service.formData.FirstName" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Last Name</label>
+    <input
+      name="LastName"
+      #LastName="ngModel"
+      [(ngModel)]="service.formData.LastName"
+      type="text"
+      class="form-control"
+      required
+    />
+    <div
+      *ngIf="LastName.invalid && LastName.touched"
+      class="validation-error"
+    >
+      This field is required.
     </div>
-    <div class="form-group">
-        <label>Last Name</label>
-        <input name="FirstName" #LastName="ngModel" [(ngModel)]="service.formData.LastName" type="text" class="form-control">
-    </div>
-    <div class="form-group">
-        <button type="submit" class="btn btn-lg btn-block">Submit</button>
-    </div>
+  </div>
+  <div class="form-group">
+    <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block">Submit</button>
+  </div>
 </form>
