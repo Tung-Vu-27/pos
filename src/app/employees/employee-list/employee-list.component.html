@@ -1,1 +1,28 @@
-<p>employee-list works!</p>
+
+<table class="table table-striped table-hover">
+    <thead class="thead-dark"> 
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Position</th>
+          <th scope="col">Hours</th>
+          <th scope="col">Rate</th>
+          <th scope="col">Total</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+    <tbody>
+        <tr *ngFor="let employee of service.employeeList">
+            <td (click)="populateForm(employee)">{{employee.EmployeeID}}</td>
+            <td (click)="populateForm(employee)">{{employee.FirstName}}</td>
+            <td (click)="populateForm(employee)">{{employee.LastName}}</td>
+            <td (click)="populateForm(employee)">{{employee.Position}}</td>
+            <td (click)="populateForm(employee)">{{employee.HoursWorked | number : '1.2-2'}}</td>
+            <td (click)="populateForm(employee)">{{employee.HourlyRate | number : '1.2-2'}}</td>
+            <td (click)="populateForm(employee)">{{employee.TotalPay | number : '1.2-2'}}</td>
+            <td (click)="deleteEmp(employee.EmployeeID)"><button class="btn btn-sm btn-outline-danger">X</button></td>
+        </tr>
+    </tbody>
+    
+</table>
