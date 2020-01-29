@@ -5,13 +5,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EmployeesComponent } from './employees/employees.component';
-import { EmployeeComponent } from './employees/employee/employee.component';
-import { EmployeeListComponent } from './employees/employee-list/employee-list.component';
-import { HomeComponent } from './home/home.component';
+import { EmployeesComponent } from './components/employees/employees.component';
+import { EmployeeComponent } from './components/employees/employee/employee.component';
+import { EmployeeListComponent } from './components/employees/employee-list/employee-list.component';
+import { HomeComponent } from './components/home/home.component';
 import { EmployeeService } from './services/employee.service';
 import { FormsModule } from "@angular/forms";
-import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { SalesUIComponent } from './components/sales-ui/sales-ui.component';
+import { AdminUIComponent } from './components/admin-ui/admin-ui.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     EmployeeComponent,
     EmployeeListComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    SalesUIComponent,
+    AdminUIComponent
   ],
   imports: [
     BrowserModule,
