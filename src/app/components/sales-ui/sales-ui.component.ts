@@ -10,9 +10,11 @@ export class SalesUIComponent implements OnInit {
 
   constructor(globals: Globals) { 
     globals.page = "sales";
+    console.log(globals.page);
   }
 
   ngOnInit() {
+    
   }
 
 }

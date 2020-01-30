@@ -1,4 +1,30 @@
 .brand {
     position: absolute;
     left: 45%;
+    color: rgb(197, 197, 197);
+}
+
+.sales {
+    background: rgb(87, 87, 87);
+}
+
+.admin {
+    background: rgb(87, 87, 87);
+}
+
+.navbar {
+    padding: 0;
+}
+
+div.collapse.navbar-collapse {
+    height: 5vh;
+}
+
+.nav-link {
+    height: 5vh;
+    font-size: 2vh;
+}
+
+.nav-item {
+    height: 5vh;
 }

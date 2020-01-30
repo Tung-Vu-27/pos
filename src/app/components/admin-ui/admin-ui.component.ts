@@ -10,6 +10,7 @@ export class AdminUIComponent implements OnInit {
 
   constructor(globals: Globals) {
     globals.page = "admin";
+    console.log(globals.page);
   }
 
   ngOnInit() {}
