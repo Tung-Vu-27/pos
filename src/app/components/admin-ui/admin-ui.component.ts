@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { Globals } from "../../globals";
 
 @Component({
-  selector: 'app-admin-ui',
-  templateUrl: './admin-ui.component.html',
-  styleUrls: ['./admin-ui.component.scss']
+  selector: "app-admin-ui",
+  templateUrl: "./admin-ui.component.html",
+  styleUrls: ["./admin-ui.component.scss"]
 })
 export class AdminUIComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(globals: Globals) {
+    globals.page = "admin";
   }
 
+  ngOnInit() {}
 }

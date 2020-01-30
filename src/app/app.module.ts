@@ -14,6 +14,7 @@ import { FormsModule } from "@angular/forms";
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SalesUIComponent } from './components/sales-ui/sales-ui.component';
 import { AdminUIComponent } from './components/admin-ui/admin-ui.component';
+import { Globals } from './globals';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { AdminUIComponent } from './components/admin-ui/admin-ui.component';
     BrowserAnimationsModule, 
     ToastrModule.forRoot() 
   ],
-  providers: [EmployeeService],
+  providers: [EmployeeService, Globals],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
