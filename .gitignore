@@ -1,2 +1,4 @@
 node_modules
 REQUESTS.rest
+.vscode
+.env
