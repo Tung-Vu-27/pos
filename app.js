@@ -5,23 +5,23 @@ const path = require("path");
 require("dotenv").config();
 
 const app = express();
-app.use(express.json);
-app.use(cors);
+app.use(express.json());
+
 
 // Connect to database
 
 const db = process.env.DB_URL;
 
 mongoose.connect(db, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useUnifiedTopology: true
 })
 
 const connection = mongoose.connection;
 
-connection.once("open",() => {
-    console.log("Mongoose connected.")
+connection.once("open", () => {
+  console.log("Mongoose connected.")
 });
 
 /******************** FORCE HTTPS (UNCOMMENT WHEN DEPLOY) *********************
@@ -41,7 +41,7 @@ app.use((req, res, next) => {
       process.env.NODE_ENV === "production" &&
       req.headers["x-forwarded-proto"] !== "https"
     ) {
-      sslUrl = ["https://b1nari.herokuapp.com/", req.url].join("");
+      sslUrl = ["https://posmean.herokuapp.com/", req.url].join("");
       return res.redirect(sslUrl);
     }
   
@@ -61,9 +61,26 @@ app.use((req, res, next) => {
   app.use(https_redirect);
 
   /*******************************************************************************/
+app.use(cors);
 
-  // Set up static public folder
-  app.use(express.static(path.join(__dirname, 'public')));
+// Set up static public folder
+app.use(express.static(path.join(__dirname, 'public')));
 
-  // Routes
-  const salesRoute = require("./backend/routes/sales");
+// Routes
+const salesRoute = require("./api/routes/sales");
+app.use("/sales", salesRoute);
+
+// Index route
+app.get("/", (req, res) => {
+  res.send("Invalid endpoint.")
+})
+
+/***************************HANDLE HEROKU DEPLOYMENT ******************************/
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, "public/index.html"));
+})
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server started on port:${PORT}`);
+});

@@ -4,7 +4,8 @@
   "description": "Full stack POS system built on MEAN stack.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -26,5 +27,8 @@
     "express": "^4.17.1",
     "mongoose": "^5.8.11",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
   }
 }
