@@ -1,5 +1,19 @@
 .display-container {
-    height: 47.5vh;
-    width: 70vw;
-    background: pink;
+  height: 47.5vh;
+  width: 70vw;
+  overflow-y: scroll;
+  background-color: rgb(236, 236, 236);
+}
+
+.td-display {
+    width: 30vw;
+    font-size: 1vw;
+}
+
+.rmv-btn {
+    font-size: 1vw;
+}
+
+td {
+    background-color: white;
 }

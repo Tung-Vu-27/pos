@@ -2,19 +2,19 @@
 <div class="display-container">
     
 
-<table class="table table-striped table-hover">
-    <thead class="thead-dark"> 
+<table class="table table-hover">
+    <thead> 
         <tr>
-          <th scope="col">Description</th>
-          <th scope="col">Unit Price</th>
+          <th class="td-display" scope="col">Description</th>
+          <th class="td-display" scope="col">Unit Price</th>
           <th scope="col"></th>
         </tr>
       </thead>
     <tbody>
         <tr *ngFor="let item of service.itemList">
-            <td>{{item.Name}}</td>
-            <td>{{item.UnitPrice}}</td>
-            <td (click)="deleteItem(item.ItemID)"><button class="btn btn-sm btn-outline-danger">X</button></td>
+            <td class="td-display">{{item.Name}}</td>
+            <td class="td-display">{{item.UnitPrice}}</td>
+            <td (click)="deleteItem(item.ItemID)"><button class="btn btn-outline-danger rmv-btn">Remove</button></td>
         </tr>
     </tbody>
     
