@@ -13,6 +13,5 @@ export class MenuBtnsComponent implements OnInit {
 
   addVanillaCone() {
     this.service.addItem("Vanilla Cone", 2.99);
-    console.log(this.service.itemList);
   }
 }

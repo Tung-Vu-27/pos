@@ -13,4 +13,7 @@ export class ItemsDisplayComponent implements OnInit {
   ngOnInit() {
   }
 
+  removeItem(id: string) {
+    this.service.removeItem(id);
+  }
 }

@@ -20,4 +20,15 @@ export class RegisterService {
     newItem.UnitPrice = unitPrice;
     this.itemList.push(newItem);
   }
+
+  // @desc    Function to remove item from item array
+  // @params  id
+  // @access  Public
+  removeItem(id: string) {
+    for (var i = 0; i < this.itemList.length; i++) {
+      if (this.itemList[i].ItemID === id) {
+        this.itemList.splice(i, 1);
+      }
+    }
+  }
 }

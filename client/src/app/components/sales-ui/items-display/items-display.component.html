@@ -14,7 +14,7 @@
         <tr *ngFor="let item of service.itemList">
             <td class="td-display">{{item.Name}}</td>
             <td class="td-display">{{item.UnitPrice}}</td>
-            <td (click)="deleteItem(item.ItemID)"><button class="btn btn-outline-danger rmv-btn">Remove</button></td>
+            <td (click)="removeItem(item.ItemID)"><button class="btn btn-outline-danger rmv-btn">Remove</button></td>
         </tr>
     </tbody>
     
