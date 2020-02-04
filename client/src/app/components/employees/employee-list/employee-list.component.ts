@@ -9,7 +9,10 @@ import { ToastrService } from "ngx-toastr";
   styleUrls: ["./employee-list.component.scss"]
 })
 export class EmployeeListComponent implements OnInit {
-  constructor(private service: EmployeeService, private toastr: ToastrService) {}
+  constructor(
+    private service: EmployeeService,
+    private toastr: ToastrService
+  ) {}
 
   ngOnInit() {
     this.service.refreshList();
@@ -20,10 +23,10 @@ export class EmployeeListComponent implements OnInit {
     this.service.formData = Object.assign({}, employee);
   }
 
-  deleteEmp(id : number) {
+  deleteEmp(id: number) {
     this.service.deleteEmployee(id).subscribe(res => {
       this.service.refreshList();
       this.toastr.warning("Employee removed", "DELETE");
-    })
+    });
   }
 }

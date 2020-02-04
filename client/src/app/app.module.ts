@@ -6,7 +6,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmployeesComponent } from './components/employees/employees.component';
-import { EmployeeComponent } from './components/employees/employee/employee.component';
+import { EmployeeFormComponent } from './components/employees/employee-form/employee-form.component';
 import { EmployeeListComponent } from './components/employees/employee-list/employee-list.component';
 import { EmployeeService } from './services/employee.service';
 import { FormsModule } from "@angular/forms";
@@ -17,12 +17,13 @@ import { Globals } from './globals';
 import { ItemsDisplayComponent } from './components/sales-ui/items-display/items-display.component';
 import { RegisterComponent } from './components/sales-ui/register/register.component';
 import { MenuBtnsComponent } from './components/sales-ui/menu-btns/menu-btns.component';
+import { RegisterService } from './services/register.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeesComponent,
-    EmployeeComponent,
+    EmployeeFormComponent,
     EmployeeListComponent,
     NavbarComponent,
     SalesUIComponent,
@@ -39,7 +40,7 @@ import { MenuBtnsComponent } from './components/sales-ui/menu-btns/menu-btns.com
     BrowserAnimationsModule, 
     ToastrModule.forRoot() 
   ],
-  providers: [EmployeeService, Globals],
+  providers: [EmployeeService, RegisterService, Globals],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

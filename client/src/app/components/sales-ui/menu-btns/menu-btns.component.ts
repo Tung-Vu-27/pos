@@ -1,31 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { Item } from "../../../models/item.model";
-import { ItemService } from "../../../services/item.service";
+import { Component, OnInit } from "@angular/core";
+import { RegisterService } from "src/app/services/register.service";
 
 @Component({
-  selector: 'app-menu-btns',
-  templateUrl: './menu-btns.component.html',
-  styleUrls: ['./menu-btns.component.scss']
+  selector: "app-menu-btns",
+  templateUrl: "./menu-btns.component.html",
+  styleUrls: ["./menu-btns.component.scss"]
 })
 export class MenuBtnsComponent implements OnInit {
+  constructor(private service: RegisterService) {}
 
-  itemModel: Item;
-
-  constructor(private service: ItemService) {
-    
-   }
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   addVanillaCone() {
-    this.itemModel = new Item();
-    this.itemModel.Name = "Vanilla";
-    this.itemModel.Quantity = 1;
-    this.itemModel.UnitPrice = 2.99;
-
-    this.service.postItem(this.itemModel).subscribe(res => {
-      this.service.refreshList();
-    })
+    this.service.addItem("Vanilla Cone", 2.99);
+    console.log(this.service.itemList);
   }
 }

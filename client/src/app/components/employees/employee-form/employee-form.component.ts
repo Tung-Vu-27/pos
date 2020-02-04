@@ -4,11 +4,11 @@ import { NgForm } from "@angular/forms";
 import { ToastrService } from "ngx-toastr";
 
 @Component({
-  selector: "app-employee",
-  templateUrl: "./employee.component.html",
-  styleUrls: ["./employee.component.scss"]
+  selector: "app-employee-form",
+  templateUrl: "./employee-form.component.html",
+  styleUrls: ["./employee-form.component.scss"]
 })
-export class EmployeeComponent implements OnInit {
+export class EmployeeFormComponent implements OnInit {
   constructor(
     private service: EmployeeService,
     private toastr: ToastrService

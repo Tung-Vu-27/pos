@@ -1,6 +1,5 @@
 export class Item {
+    ItemID: string;
     Name: string;
-    Quantity: number;
     UnitPrice: number;
-    Total: number;
 }

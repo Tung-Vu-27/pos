@@ -1,0 +1,18 @@
+
+GET http://localhost:5000/sales
+
+
+###
+
+POST http://localhost:5000/sales
+Content-Type: application/json
+
+{
+    "salesID": "AFSF23ff23",
+    "total": 32
+}
+
+###
+
+DELETE http://localhost:5000/sales/5e38eb46af07c331f0ede1d6
+Content-Type: application/json

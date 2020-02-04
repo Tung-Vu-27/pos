@@ -1,4 +1,23 @@
 
 <div class="display-container">
     
+
+<table class="table table-striped table-hover">
+    <thead class="thead-dark"> 
+        <tr>
+          <th scope="col">Description</th>
+          <th scope="col">Unit Price</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+    <tbody>
+        <tr *ngFor="let item of service.itemList">
+            <td>{{item.Name}}</td>
+            <td>{{item.UnitPrice}}</td>
+            <td (click)="deleteItem(item.ItemID)"><button class="btn btn-sm btn-outline-danger">X</button></td>
+        </tr>
+    </tbody>
+    
+</table>
+
 </div>

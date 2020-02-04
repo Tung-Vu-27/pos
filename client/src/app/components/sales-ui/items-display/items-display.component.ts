@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RegisterService } from '../../../services/register.service';
 
 @Component({
   selector: 'app-items-display',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemsDisplayComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: RegisterService) { }
 
   ngOnInit() {
   }
