@@ -13,11 +13,13 @@ export class RegisterService {
   // @desc    Add new item to current order Item array
   // @params  name, unitPrice
   // @access  Public
-  addItem(name: string, unitPrice: number) {
+  addItem(name: string, quantity: number, unitPrice: number) {
     let newItem = new Item();
     newItem.ItemID = uuid();
     newItem.Name = name;
+    newItem.Quantity = quantity;
     newItem.UnitPrice = unitPrice;
+    newItem.Subtotal = quantity * unitPrice;
     this.itemList.push(newItem);
   }
 

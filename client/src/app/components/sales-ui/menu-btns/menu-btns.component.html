@@ -1,5 +1,28 @@
 <div class="display-container">
-  <button class="btn btn-primary" type="button" (click)="addVanillaCone()">
-      Vanilla Cone
-  </button>
+  <div class="row">
+    <div class="col-md-5 cones">
+      <button class="btn btn-primary col-md-12" type="button" (click)="addCone('Chocolate')">
+        Chocolate Cone
+      </button>
+      <button class="btn btn-primary col-md-12" type="button" (click)="addCone('Vanilla')">
+        Vanilla Cone
+      </button>
+      <button class="btn btn-primary col-md-12" type="button" (click)="addCone('Strawberry')">
+        Strawberry Cone
+      </button>
+    </div>
+
+
+    <div class="col-md-5 scoops">
+      <button class="btn btn-primary col-md-12" type="button" (click)="addBowl('Chocolate')">
+        Chocolate Bowl
+      </button>
+      <button class="btn btn-primary col-md-12" type="button" (click)="addBowl('Vanilla')">
+        Vanilla Bowl
+      </button>
+      <button class="btn btn-primary col-md-12" type="button" (click)="addBowl('Strawberry')">
+        Strawberry Bowl
+      </button>
+    </div>
+  </div>
 </div>

@@ -6,14 +6,18 @@
     <thead> 
         <tr>
           <th class="td-display" scope="col">Description</th>
+          <th class="td-display" scope="col">Quantity</th>
           <th class="td-display" scope="col">Unit Price</th>
+          <th class="td-display" scope="col">Subtotal</th>
           <th scope="col"></th>
         </tr>
       </thead>
     <tbody>
         <tr *ngFor="let item of service.itemList">
             <td class="td-display">{{item.Name}}</td>
+            <td class="td-display">{{item.Quantity}}</td>
             <td class="td-display">{{item.UnitPrice}}</td>
+            <td class="td-display">{{item.Subtotal}}</td>
             <td (click)="removeItem(item.ItemID)"><button class="btn btn-outline-danger rmv-btn">Remove</button></td>
         </tr>
     </tbody>
