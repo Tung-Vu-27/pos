@@ -23,6 +23,9 @@ export class RegisterService {
       newItem.Quantity = quantity;
       newItem.UnitPrice = unitPrice;
       newItem.Subtotal = quantity * unitPrice;
+      newItem.SubtotalString = (
+        Math.round(newItem.Subtotal * 100) / 100
+      ).toFixed(2);
       this.itemList.push(newItem);
     }
   }
@@ -61,6 +64,10 @@ export class RegisterService {
         // Used to round to 2 decimal places
         this.itemList[i].Subtotal =
           Math.round((newSubtotal + Number.EPSILON) * 100) / 100;
+        // Forcing 2 decimal places (converts to string only)
+        this.itemList[i].SubtotalString = (
+          Math.round(this.itemList[i].Subtotal * 100) / 100
+        ).toFixed(2);
       }
     }
   }
