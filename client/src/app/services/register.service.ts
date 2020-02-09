@@ -13,7 +13,7 @@ export class RegisterService {
   // @desc    Add new item to current order Item array
   // @params  name, unitPrice
   // @return  None
-  addItem(name: string, quantity: number, unitPrice: number) {
+  public addItem(name: string, quantity: number, unitPrice: number) {
     if (this.itemExists(name)) {
       this.increaseQuantity(name);
     } else {
@@ -41,10 +41,14 @@ export class RegisterService {
   // @desc    Find item, then increment quantity.
   // @params  name
   // @Return  None
-  increaseQuantity(name: string) {
+  public increaseQuantity(name: string) {
     for (let i = 0; i < this.itemList.length; i++) {
       if (this.itemList[i].Name === name) {
         this.itemList[i].Quantity++;
+        let newSubtotal = this.itemList[i].Quantity * this.itemList[i].UnitPrice;
+        // Used to round to 2 decimal places
+        this.itemList[i].Subtotal = Math.round((newSubtotal + Number.EPSILON) * 100) / 100;
+  
       }
     }
   }
@@ -52,9 +56,9 @@ export class RegisterService {
   // @desc    Returns true if item is already in basket.
   // @params  name
   // @Return  None
-  itemExists(name: string) {
+  private itemExists(name: string) {
     var exists = false;
-    
+
     for (let i = 0; i < this.itemList.length; i++) {
       if (this.itemList[i].Name === name) {
         exists = true;
