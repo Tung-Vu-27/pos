@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.vu</groupId>
-	<artifactId>pos.spring</artifactId>
+	<artifactId>pos</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>pos.spring</name>
+	<name>pos</name>
 	<description>Java Spring backend for POS system.</description>
 
 	<properties>

@@ -20,7 +20,7 @@ public class SalesController {
     @Autowired
     private SalesRepository repository;
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "", method = RequestMethod.GET)
     public List<Sales> getAllSales() {
         return repository.findAll();
     }
@@ -36,7 +36,7 @@ public class SalesController {
         repository.save(sale);
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.POST)
+    @RequestMapping(value = "", method = RequestMethod.POST)
     public Sales createSale(@Valid @RequestBody Sales sale) {
         sale.set_id(ObjectId.get());
         repository.save(sale);
