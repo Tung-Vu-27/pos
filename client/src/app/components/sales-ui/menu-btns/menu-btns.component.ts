@@ -12,7 +12,7 @@ export class MenuBtnsComponent implements OnInit {
   ngOnInit() {}
 
   addCone(flavor: string) {
-    this.service.addItem(flavor + "Cone", 1, 2.99);
+    this.service.addItem(flavor + " Cone", 1, 2.99);
   }
 
   addBowl(flavor: string) {
