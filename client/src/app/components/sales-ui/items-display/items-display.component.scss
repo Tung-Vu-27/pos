@@ -1,7 +1,32 @@
 .display-container {
   height: 47.5vh;
   width: 70vw;
-  overflow-y: scroll;
+}
+
+// This setup is to fix the table head so that it doesn't scroll.
+thead,
+tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+thead {
+  width: 100%;
+  height: 5vh;
+}
+
+table {
+  width: 100%;
+}
+
+tbody {
+  display: block;
+  height: 42.5vh;
+}
+
+.items-display {
+  height: 47.5vh;
 }
 
 tr {
@@ -17,9 +42,11 @@ td {
   background-color: white;
 }
 
-
+.qty-btn {
+  font-size: 1vw;
+  outline: black;
+}
 
 .rmv-btn {
   font-size: 1vw;
 }
-

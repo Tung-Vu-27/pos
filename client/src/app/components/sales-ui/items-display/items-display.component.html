@@ -1,22 +1,37 @@
-<div class="display-container" style="overflow: scroll; height: xyz;" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+<div class="display-container">
   <table class="table table-hover">
     <thead>
       <tr>
         <th class="td-display" scope="col">Description</th>
-        <th class="td-display" scope="col">QTY</th>
+        <th class="td-display" scope="col">Quantity</th>
         <th class="td-display" scope="col">Unit Price</th>
         <th class="td-display" scope="col">Subtotal</th>
         <th scope="col"></th>
       </tr>
     </thead>
-    <tbody>
+
+    <tbody style="overflow-y: scroll; height: xyz;" #scrollMe [scrollTop]="scrollMe.scrollHeight">
       <tr *ngFor="let item of service.itemList">
         <td class="td-display">{{ item.Name }}</td>
-        <td class="td-display">{{ item.Quantity }}</td>
+        <td class="td-display">
+          <button
+            class="btn btn-outline-secondary qty-btn"
+            (click)="decreaseQty(item.Name)"
+          >
+            -</button
+          >&nbsp;&nbsp;&nbsp;{{ item.Quantity }}&nbsp;&nbsp;&nbsp;<button
+            class="btn btn-outline-secondary qty-btn"
+            (click)="increaseQty(item.Name)"
+          >
+            +
+          </button>
+        </td>
         <td class="td-display">{{ item.UnitPrice }}</td>
         <td class="td-display">{{ item.Subtotal }}</td>
         <td (click)="removeItem(item.ItemID)" class="delete-td">
-          <button class="btn btn-outline-danger rmv-btn" onclick="this.blur();">Remove</button>&nbsp;
+          <button class="btn btn-outline-danger rmv-btn" onclick="this.blur();">
+            Remove</button
+          >&nbsp;
         </td>
       </tr>
     </tbody>

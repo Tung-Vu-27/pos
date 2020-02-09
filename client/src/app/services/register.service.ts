@@ -27,12 +27,23 @@ export class RegisterService {
     }
   }
 
-  // @desc    Function to remove item from item array
+  // @desc    Function to remove item from item array by id (used for "Remove" btn)
   // @params  id
   // @Return  None
-  public removeItem(id: string) {
+  public removeItemById(id: string) {
     for (let i = 0; i < this.itemList.length; i++) {
       if (this.itemList[i].ItemID === id) {
+        this.itemList.splice(i, 1);
+      }
+    }
+  }
+
+  // @desc    Function to remove item from item array by name (private method used for decreaseQuantity)
+  // @params  itemName
+  // @Return  None
+  private removeItemByName(itemName: string) {
+    for (let i = 0; i < this.itemList.length; i++) {
+      if (this.itemList[i].Name === itemName) {
         this.itemList.splice(i, 1);
       }
     }
@@ -45,10 +56,11 @@ export class RegisterService {
     for (let i = 0; i < this.itemList.length; i++) {
       if (this.itemList[i].Name === name) {
         this.itemList[i].Quantity++;
-        let newSubtotal = this.itemList[i].Quantity * this.itemList[i].UnitPrice;
+        let newSubtotal =
+          this.itemList[i].Quantity * this.itemList[i].UnitPrice;
         // Used to round to 2 decimal places
-        this.itemList[i].Subtotal = Math.round((newSubtotal + Number.EPSILON) * 100) / 100;
-  
+        this.itemList[i].Subtotal =
+          Math.round((newSubtotal + Number.EPSILON) * 100) / 100;
       }
     }
   }
@@ -59,10 +71,17 @@ export class RegisterService {
   public decreaseQuantity(name: string) {
     for (let i = 0; i < this.itemList.length; i++) {
       if (this.itemList[i].Name === name) {
-        this.itemList[i].Quantity--;
-        let newSubtotal = this.itemList[i].Quantity * this.itemList[i].UnitPrice;
-        // Used to round to 2 decimal places
-        this.itemList[i].Subtotal = Math.round((newSubtotal + Number.EPSILON) * 100) / 100;
+        // If quantity is 0, then remove it from the list.
+        if (this.itemList[i].Quantity === 1) {
+          this.removeItemByName(name);
+        } else {
+          this.itemList[i].Quantity--;
+          let newSubtotal =
+            this.itemList[i].Quantity * this.itemList[i].UnitPrice;
+          // Used to round to 2 decimal places
+          this.itemList[i].Subtotal =
+            Math.round((newSubtotal + Number.EPSILON) * 100) / 100;
+        }
       }
     }
   }

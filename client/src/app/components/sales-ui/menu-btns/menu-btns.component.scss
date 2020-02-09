@@ -4,7 +4,7 @@
     left: 0;
     height: 47.5vh;
     width: 70vw;
-    background: grey;
+    background-color: rgb(236, 236, 236);
 }
 
 .cones, .scoops {
@@ -13,15 +13,23 @@
     text-align: center;
     
     button {
-        height: 13.8vh;
+        height: 12.83vh;
         border-radius: 1.5vh;
-        margin: 1vh 0vw;
+        margin: 1.5vh 0vw;
         font-size: 1.5vw;
+        border: none;
     }
 }
 
 .scoops {
     text-align: left;
+    
+    button {
+        background-color: rgb(39, 163, 49);
+    }
+    button:hover {
+        background-color: rgb(34, 134, 0);
+    }
 }
 
 .drinks {
@@ -29,10 +37,15 @@
     padding: 0vw;
 
     button {
-        height: 13.8vh;
+        height: 12.83vh;
         border-radius: 1.5vh;
-        margin: 1vh 0vw;
+        margin: 1.5vh 0vw;
         font-size: 1.5vw;
+        border: none;
+        background-color: rgb(177, 78, 78);
+    }
+    button:hover {
+        background-color: rgb(150, 66, 66);
     }
 }
 

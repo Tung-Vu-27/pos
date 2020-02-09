@@ -13,7 +13,25 @@ export class ItemsDisplayComponent implements OnInit {
   ngOnInit() {
   }
 
+  // @desc    UI method to remove item from current order
+  // @params  id
+  // @Return  None
   removeItem(id: string) {
-    this.service.removeItem(id);
+    this.service.removeItemById(id);
   }
+
+  // @desc    UI method to increase qty of item
+  // @params  itemName
+  // @Return  None
+  increaseQty(itemName: string) {
+    this.service.increaseQuantity(itemName);
+  }
+
+  // @desc    UI method to decrease qty of item
+  // @params  itemName
+  // @Return  None
+  decreaseQty(itemName: string) {
+    this.service.decreaseQuantity(itemName);
+  }
+
 }
