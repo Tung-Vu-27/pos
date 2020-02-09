@@ -53,6 +53,20 @@ export class RegisterService {
     }
   }
 
+  // @desc    Find item, then increment quantity.
+  // @params  name
+  // @Return  None
+  public decreaseQuantity(name: string) {
+    for (let i = 0; i < this.itemList.length; i++) {
+      if (this.itemList[i].Name === name) {
+        this.itemList[i].Quantity--;
+        let newSubtotal = this.itemList[i].Quantity * this.itemList[i].UnitPrice;
+        // Used to round to 2 decimal places
+        this.itemList[i].Subtotal = Math.round((newSubtotal + Number.EPSILON) * 100) / 100;
+      }
+    }
+  }
+
   // @desc    Returns true if item is already in basket.
   // @params  name
   // @Return  None

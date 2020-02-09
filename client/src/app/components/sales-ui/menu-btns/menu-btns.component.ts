@@ -11,12 +11,11 @@ export class MenuBtnsComponent implements OnInit {
 
   ngOnInit() {}
 
-  addCone(flavor: string) {
-    this.service.addItem(flavor + " Cone", 1, 2.99);
-  }
-
-  addBowl(flavor: string) {
-    // this.service.addItem(flavor + " Bowl", 5.99);
+  // @desc    UI method to add item to current order
+  // @params  itemName
+  // @Return  None
+  addItem(itemName: string) {
+    this.service.addItem(itemName, 1, 2.99);
   }
 
 }

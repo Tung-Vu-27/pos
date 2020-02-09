@@ -1,27 +1,83 @@
 <div class="display-container">
   <div class="row">
     <div class="col-md-5 cones">
-      <button class="btn btn-primary col-md-12" type="button" (click)="addCone('Chocolate')">
+      <button
+        class="btn btn-primary col-md-10"
+        type="button"
+        (click)="addItem('Chocolate Cone')"
+        onclick="this.blur();"
+      >
         Chocolate Cone
       </button>
-      <button class="btn btn-primary col-md-12" type="button" (click)="addCone('Vanilla')">
+      <button
+        class="btn btn-primary col-md-10"
+        type="button"
+        (click)="addItem('Vanilla Cone')"
+        onclick="this.blur();"
+      >
         Vanilla Cone
       </button>
-      <button class="btn btn-primary col-md-12" type="button" (click)="addCone('Strawberry')">
+      <button
+        class="btn btn-primary col-md-10"
+        type="button"
+        (click)="addItem('Strawberry Cone')"
+        onclick="this.blur();"
+      >
         Strawberry Cone
       </button>
     </div>
 
-
     <div class="col-md-5 scoops">
-      <button class="btn btn-primary col-md-12" type="button" (click)="addBowl('Chocolate')">
+      <button
+        class="btn btn-primary col-md-10"
+        type="button"
+        (click)="addItem('Chocolate Bowl')"
+        onclick="this.blur();"
+      >
         Chocolate Bowl
       </button>
-      <button class="btn btn-primary col-md-12" type="button" (click)="addBowl('Vanilla')">
+      <button
+        class="btn btn-primary col-md-10"
+        type="button"
+        (click)="addItem('Vanilla Bowl')"
+        onclick="this.blur();"
+      >
         Vanilla Bowl
       </button>
-      <button class="btn btn-primary col-md-12" type="button" (click)="addBowl('Strawberry')">
+      <button
+        class="btn btn-primary col-md-10"
+        type="button"
+        (click)="addItem('Strawberry Bowl')"
+        onclick="this.blur();"
+      >
         Strawberry Bowl
+      </button>
+    </div>
+
+    <div class="col-md-2 drinks">
+      <button
+        class="btn btn-primary col-md-9"
+        type="button"
+        (click)="addItem('Sm Soft Drink')"
+        onclick="this.blur();"
+      >
+        Sm Soft Drink
+      </button>
+      <button
+        class="btn btn-primary col-md-9"
+        type="button"
+        (click)="addItem('Md Soft Drink')"
+        onclick="this.blur();"
+      >
+        Md Soft Drink
+      </button>
+      <button
+        class="btn btn-primary col-md-9"
+        type="button"
+        (click)="addItem('Lg Soft Drink')"
+        onclick="this.blur();"
+      >
+        Lg Soft Drink
       </button>
     </div>
   </div>

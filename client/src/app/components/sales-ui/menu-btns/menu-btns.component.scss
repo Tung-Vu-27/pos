@@ -4,27 +4,37 @@
     left: 0;
     height: 47.5vh;
     width: 70vw;
-    background: rgb(50, 145, 38);
+    background: grey;
 }
 
-.cones {
-    background: grey;
+.cones, .scoops {
     height: 47.5vh;
-    padding: 0;
+    padding: 0vw;
+    text-align: center;
     
     button {
-        height: 15.8vh;
-        border-radius: 0;
+        height: 13.8vh;
+        border-radius: 1.5vh;
+        margin: 1vh 0vw;
+        font-size: 1.5vw;
     }
 }
 
 .scoops {
-    background: grey;
+    text-align: left;
+}
+
+.drinks {
     height: 47.5vh;
-    padding: 0;
+    padding: 0vw;
 
     button {
-        height: 15.8vh;
-        border-radius: 0;
+        height: 13.8vh;
+        border-radius: 1.5vh;
+        margin: 1vh 0vw;
+        font-size: 1.5vw;
     }
 }
+
+
+
