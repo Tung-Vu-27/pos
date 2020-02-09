@@ -40,11 +40,30 @@ tr {
 
 td {
   background-color: white;
+  font-weight: 500;
 }
 
 .qty-btn {
   font-size: 1vw;
   outline: black;
+  width: 2vw;
+  padding: 0.2vh 0vw;
+}
+
+.qty-div {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.qty-num {
+  text-align: center;
+  padding: 0;
+  margin-right: 0.5vw;
+}
+
+.qty-space-adj {
+  margin-left: 0.8vw;
 }
 
 .rmv-btn {

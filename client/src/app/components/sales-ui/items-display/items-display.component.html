@@ -5,26 +5,42 @@
         <th class="td-display" scope="col">Description</th>
         <th class="td-display" scope="col">Quantity</th>
         <th class="td-display" scope="col">Unit Price</th>
-        <th class="td-display" scope="col">Subtotal</th>
+        <th class="td-display" scope="col">Total</th>
         <th scope="col"></th>
       </tr>
     </thead>
 
-    <tbody style="overflow-y: scroll; height: xyz;" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+    <tbody
+      style="overflow-y: scroll; height: xyz;"
+      #scrollMe
+      [scrollTop]="scrollMe.scrollHeight"
+    >
       <tr *ngFor="let item of service.itemList">
         <td class="td-display">{{ item.Name }}</td>
         <td class="td-display">
-          <button
-            class="btn btn-outline-secondary qty-btn"
-            (click)="decreaseQty(item.Name)"
-          >
-            -</button
-          >&nbsp;&nbsp;&nbsp;{{ item.Quantity }}&nbsp;&nbsp;&nbsp;<button
-            class="btn btn-outline-secondary qty-btn"
-            (click)="increaseQty(item.Name)"
-          >
-            +
-          </button>
+          <div class="row qty-wrapper">
+            <div class="col-md-2 qty-div qty-space-adj">
+              <button
+                class="btn btn-outline-secondary qty-btn"
+                (click)="decreaseQty(item.Name)"
+                onclick="this.blur();"
+              >
+                -
+              </button>
+            </div>
+            <div class="col-md-2 qty-num">
+              {{ item.Quantity }}
+            </div>
+            <div class="col-md-2 qty-div">
+              <button
+                class="btn btn-outline-secondary qty-btn"
+                (click)="increaseQty(item.Name)"
+                onclick="this.blur();"
+              >
+                +
+              </button>
+            </div>
+          </div>
         </td>
         <td class="td-display">{{ item.UnitPrice }}</td>
         <td class="td-display">{{ item.Subtotal }}</td>
