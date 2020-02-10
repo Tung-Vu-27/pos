@@ -7,7 +7,6 @@ public class Sales {
     @Id
     public ObjectId _id;
     public String date;
-    public String itemList;
     public double total;
 
     // Constructors
@@ -17,7 +16,6 @@ public class Sales {
     public Sales(ObjectId _id, String date, String itemList, double total) {
         this._id = _id;
         this.date = date;
-        this.itemList = itemList;
         this.total = total;
     }
 
@@ -35,14 +33,6 @@ public class Sales {
 
     public void setDate(String date) {
         this.date = date;
-    }
-
-    public String getItemList() {
-        return itemList;
-    }
-
-    public void setItemList(String itemList) {
-        this.itemList = itemList;
     }
 
     public double getTotal() {
