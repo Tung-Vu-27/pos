@@ -1,30 +1,37 @@
 package com.vu.pos.model;
 
-import org.bson.types.ObjectId;
-import org.springframework.data.annotation.Id;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "sales")
 public class Sales {
+
     @Id
-    public ObjectId _id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    public long id;
+
+    @Column(name = "date")
     public String date;
+
+    @Column(name = "total")
     public double total;
 
     // Constructors
     public Sales() {
     }
 
-    public Sales(ObjectId _id, String date, String itemList, double total) {
-        this._id = _id;
+    public Sales(String date, double total) {
         this.date = date;
         this.total = total;
     }
 
-    public String get_id() {
-        return _id.toHexString();
-    }
-
-    public void set_id(ObjectId _id) {
-        this._id = _id;
+    public long getId() {
+        return id;
     }
 
     public String getDate() {
@@ -43,4 +50,8 @@ public class Sales {
         this.total = total;
     }
 
+    @Override
+    public String toString() {
+        return "Sales [id=" + id + ", date=" + date + ", total=" + total + "]";
+    }
 }
