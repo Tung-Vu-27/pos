@@ -6,3 +6,59 @@
     width: 30vw;
     background: rgb(63, 63, 255);
 }
+
+.totals {
+    position: absolute;
+    right: 0;
+    height: 47.5vh;
+    width: 30vw;
+    background: rgb(47, 114, 131);
+}
+
+.subtotal-wrapper, .discount-wrapper, .tax-wrapper, .total-wrapper, .input-wrapper {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 7.92vh;
+    color: white;
+    background: #343a40;
+    border-bottom: .01vh rgb(97, 97, 97) solid;
+}
+
+.subtotal-label, .discount-label, .tax-label {
+    line-height: 7.92vh;
+    font-size: 1.25vw;
+}
+
+.subtotal-data, .discount-data, .tax-data, .input-data {
+    line-height: 7.92vh;
+    font-size: 1vw;
+    position: absolute;
+    right: 1.5vw;
+} 
+
+.total-data {
+    line-height: 7.92vh;
+    font-size: 2vw;
+    position: absolute;
+    right: 1.3vw;
+}
+
+.payment-btns {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 7.92vh;
+    background: #343a40;
+
+    button {
+        border-radius: 0;
+        width: 15vw;
+        font-size: 1.25vw;
+    }
+}
+
+.cash-btn {
+    border-right: .01vh rgb(143, 143, 143) solid;
+}
