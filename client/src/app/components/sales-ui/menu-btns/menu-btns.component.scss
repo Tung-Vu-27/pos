@@ -18,6 +18,10 @@
         margin: 1.5vh 0vw;
         font-size: 1.5vw;
         border: none;
+        background-color: rgb(51, 53, 126);
+    }
+    button:hover {
+        background-color: rgb(33, 34, 80);
     }
 }
 
@@ -25,7 +29,7 @@
     text-align: left;
     
     button {
-        background-color: rgb(39, 163, 49);
+        background-color: rgb(51, 177, 61);
     }
     button:hover {
         background-color: rgb(34, 134, 0);

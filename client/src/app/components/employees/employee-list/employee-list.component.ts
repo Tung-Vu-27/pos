@@ -19,7 +19,7 @@ export class EmployeeListComponent implements OnInit {
   }
 
   populateForm(employee: Employee) {
-    // Object.assign precents two-way binding from automatically updating while users are editing info
+    // Object.assign prevents two-way binding from automatically updating while users are editing info
     this.service.formData = Object.assign({}, employee);
   }
 

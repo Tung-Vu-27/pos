@@ -8,7 +8,13 @@ import { v4 as uuid } from "uuid";
 export class RegisterService {
   constructor() {}
 
-  private itemList: Item[] = [];
+  itemList: Item[] = [];
+  subtotal: number;
+  // Used to display two decimal number
+  subtotalStr: string;
+  discount: number;
+  tax: number;
+  total: number;
 
   // @desc    Add new item to current order Item array
   // @params  name, unitPrice
@@ -16,6 +22,7 @@ export class RegisterService {
   public addItem(name: string, quantity: number, unitPrice: number) {
     if (this.itemExists(name)) {
       this.increaseQuantity(name);
+      this.refreshValues();
     } else {
       let newItem = new Item();
       newItem.ItemID = uuid();
@@ -27,6 +34,7 @@ export class RegisterService {
         Math.round(newItem.Subtotal * 100) / 100
       ).toFixed(2);
       this.itemList.push(newItem);
+      this.refreshValues();
     }
   }
 
@@ -39,6 +47,7 @@ export class RegisterService {
         this.itemList.splice(i, 1);
       }
     }
+    this.refreshValues();
   }
 
   // @desc    Function to remove item from item array by name (private method used for decreaseQuantity)
@@ -68,6 +77,7 @@ export class RegisterService {
         this.itemList[i].SubtotalString = (
           Math.round(this.itemList[i].Subtotal * 100) / 100
         ).toFixed(2);
+        this.refreshValues();
       }
     }
   }
@@ -81,6 +91,7 @@ export class RegisterService {
         // If quantity is 0, then remove it from the list.
         if (this.itemList[i].Quantity === 1) {
           this.removeItemByName(name);
+          this.refreshValues();
         } else {
           this.itemList[i].Quantity--;
           let newSubtotal =
@@ -88,6 +99,7 @@ export class RegisterService {
           // Used to round to 2 decimal places
           this.itemList[i].Subtotal =
             Math.round((newSubtotal + Number.EPSILON) * 100) / 100;
+          this.refreshValues();
         }
       }
     }
@@ -105,5 +117,16 @@ export class RegisterService {
       }
     }
     return exists;
+  }
+
+  // @desc    Refresh subtotal, discount, tax, and total values
+  // @params  None
+  // @Return  None
+  public refreshValues() {
+    this.subtotal = 0;
+    for (let i = 0; i < this.itemList.length; i++) {
+      this.subtotal += this.itemList[i].Subtotal;
+    }
+    this.subtotalStr = (Math.round(this.subtotal * 100) / 100).toFixed(2);
   }
 }
