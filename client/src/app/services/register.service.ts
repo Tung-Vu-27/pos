@@ -10,11 +10,15 @@ export class RegisterService {
 
   itemList: Item[] = [];
   subtotal: number;
-  // Used to display two decimal number
-  subtotalStr: string;
-  discount: number;
+  discount: number = 0;
   tax: number;
   total: number;
+  
+  // Used to display two decimal number
+  subtotalStr: string;
+  discountStr: string;
+  taxStr: string;
+  totalStr: string;
 
   // @desc    Add new item to current order Item array
   // @params  name, unitPrice
@@ -123,10 +127,24 @@ export class RegisterService {
   // @params  None
   // @Return  None
   public refreshValues() {
+
+    // Refresh subtotals
     this.subtotal = 0;
     for (let i = 0; i < this.itemList.length; i++) {
       this.subtotal += this.itemList[i].Subtotal;
     }
     this.subtotalStr = (Math.round(this.subtotal * 100) / 100).toFixed(2);
+
+    // Refresh taxes: MN sales tax is 6.875%
+    this.tax = this.subtotal * .06875;
+    this.taxStr = (Math.round(this.tax * 100) / 100).toFixed(2);
+
+    // Refresh total
+    this.total = this.subtotal + this.tax - this.discount;
+    this.totalStr = (Math.round(this.total * 100) / 100).toFixed(2);
+    console.log(this.total + this.totalStr);
+
+    // 2 decimal places for discount
+    this.discountStr = (Math.round(this.discount * 100) / 100).toFixed(2);
   }
 }
