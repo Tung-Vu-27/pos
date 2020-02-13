@@ -4,7 +4,7 @@
     right: 0;
     height: 95vh;
     width: 30vw;
-    background: rgb(63, 63, 255);
+    background-color: rgb(236, 236, 236);
 }
 
 .totals {
@@ -12,7 +12,6 @@
     right: 0;
     height: 47.5vh;
     width: 30vw;
-    background: rgb(47, 114, 131);
 }
 
 .subtotal-wrapper, .discount-wrapper, .tax-wrapper, .total-wrapper, .input-wrapper {
@@ -61,4 +60,19 @@
 
 .cash-btn {
     border-right: .01vh rgb(143, 143, 143) solid;
+}
+
+.numpad {
+    position: absolute;
+    top: 47.5vh;
+    right: 0;
+    height: 47.5vh;
+    width: 30vw;
+}
+
+.numpad-btn {
+    width: 7vw;
+    height: 9vh;
+    margin-top: 2.3vh;
+    margin-left: 2.3vw;
 }

@@ -5,6 +5,7 @@
     height: 47.5vh;
     width: 70vw;
     background-color: rgb(236, 236, 236);
+    border-right: 1px solid black;
 }
 
 .cones, .scoops {
@@ -39,7 +40,7 @@
 .drinks {
     height: 47.5vh;
     padding: 0vw;
-
+    
     button {
         height: 12.83vh;
         border-radius: 1.5vh;

@@ -9,10 +9,10 @@ export class RegisterService {
   constructor() {}
 
   itemList: Item[] = [];
-  subtotal: number;
+  subtotal: number = 0;
   discount: number = 0;
-  tax: number;
-  total: number;
+  tax: number = 0;
+  total: number = 0;
   
   // Used to display two decimal number
   subtotalStr: string;
