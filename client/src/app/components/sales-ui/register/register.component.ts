@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { RegisterService } from "../../../services/register.service";
+import { ToastrService } from "ngx-toastr";
 
 @Component({
   selector: "app-register",
@@ -7,7 +8,10 @@ import { RegisterService } from "../../../services/register.service";
   styleUrls: ["./register.component.scss"]
 })
 export class RegisterComponent implements OnInit {
-  constructor(private service: RegisterService) {}
+  constructor(
+    private service: RegisterService,
+    private toastr: ToastrService
+  ) {}
 
   ngOnInit() {
     this.service.refreshValues();
@@ -27,6 +31,23 @@ export class RegisterComponent implements OnInit {
   refreshNum() {
     this.inputNum = parseFloat(this.inputStr);
     this.displayNum = (Math.floor(this.inputNum * 100) / 100).toFixed(2);
+  }
+
+  // Method to make complete sale. This method will interact with backend to add new sale.
+  cashSale() {
+    if (this.service.total != 0) {
+      if (this.inputNum < this.service.total) {
+        this.toastr.error("Payment amount is less than total owed.", "INVALID");
+      } else {
+        this.toastr.success("Purchase completed.", "SUCCESS");
+      }
+    }
+  }
+
+  creditSale() {
+    if (this.service.total != 0) {
+      this.toastr.success("Purchase completed.", "SUCCESS");
+    }
   }
 
   // Numpad btn methods
@@ -85,10 +106,8 @@ export class RegisterComponent implements OnInit {
     this.refreshNum();
   }
 
-  // Delete number/character method
   pressDel() {
     this.inputStr = "0";
     this.refreshNum();
   }
-
 }

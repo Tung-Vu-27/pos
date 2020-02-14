@@ -19,10 +19,10 @@
       <p class="input-data">{{ displayNum }}</p>
     </div>
     <div class="payment-btns">
-      <button class="btn btn-primary cash-btn" onclick="this.blur();">
+      <button class="btn btn-primary cash-btn" onclick="this.blur();" (click)="cashSale()">
         Cash
       </button>
-      <button class="btn btn-primary credit-btn" onclick="this.blur();">
+      <button class="btn btn-primary credit-btn" onclick="this.blur();" (click)="creditSale()">
         Credit
       </button>
     </div>

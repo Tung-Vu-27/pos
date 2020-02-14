@@ -38,7 +38,10 @@ import { RegisterService } from './services/register.service';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule, 
-    ToastrModule.forRoot() 
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      preventDuplicates: true,
+    }) 
   ],
   providers: [EmployeeService, RegisterService, Globals],
   bootstrap: [AppComponent]
