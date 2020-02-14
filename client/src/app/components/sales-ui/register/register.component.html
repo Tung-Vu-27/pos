@@ -2,47 +2,123 @@
   <div class="totals">
     <div class="container subtotal-wrapper">
       <p class="subtotal-label">Subtotal</p>
-      <p class="subtotal-data">{{service.subtotalStr}}</p>
+      <p class="subtotal-data">{{ service.subtotalStr }}</p>
     </div>
     <div class="container discount-wrapper">
       <p class="discount-label">Discount</p>
-      <p class="discount-data">{{service.discountStr}}</p>
+      <p class="discount-data">{{ service.discountStr }}</p>
     </div>
     <div class="container tax-wrapper">
       <p class="tax-label">Tax</p>
-      <p class="tax-data">{{service.taxStr}}</p>
+      <p class="tax-data">{{ service.taxStr }}</p>
     </div>
     <div class="container total-wrapper">
-      <p class="total-data">{{service.totalStr}}</p>
+      <p class="total-data">{{ service.totalStr }}</p>
     </div>
     <div class="container input-wrapper">
-      <p class="input-data">-</p>
+      <p class="input-data">{{ displayNum }}</p>
     </div>
     <div class="payment-btns">
-        <button class="btn btn-primary cash-btn" onclick="this.blur();">Cash</button>
-        <button class="btn btn-primary credit-btn" onclick="this.blur();">Credit</button>
+      <button class="btn btn-primary cash-btn" onclick="this.blur();">
+        Cash
+      </button>
+      <button class="btn btn-primary credit-btn" onclick="this.blur();">
+        Credit
+      </button>
     </div>
   </div>
   <div class="container numpad">
     <div class="row">
-      <button class="btn btn-primary numpad-btn">7</button>
-      <button class="btn btn-primary numpad-btn">8</button>
-      <button class="btn btn-primary numpad-btn">9</button>
+      <button
+        class="btn btn-primary numpad-btn"
+        onclick="this.blur();"
+        (click)="pressSeven()"
+      >
+        7
+      </button>
+      <button
+        class="btn btn-primary numpad-btn"
+        onclick="this.blur();"
+        (click)="pressEight()"
+      >
+        8
+      </button>
+      <button
+        class="btn btn-primary numpad-btn"
+        onclick="this.blur();"
+        (click)="pressNine()"
+      >
+        9
+      </button>
     </div>
     <div class="row">
-      <button class="btn btn-primary numpad-btn">4</button>
-      <button class="btn btn-primary numpad-btn">5</button>
-      <button class="btn btn-primary numpad-btn">6</button>
+      <button
+        class="btn btn-primary numpad-btn"
+        onclick="this.blur();"
+        (click)="pressFour()"
+      >
+        4
+      </button>
+      <button
+        class="btn btn-primary numpad-btn"
+        onclick="this.blur();"
+        (click)="pressFive()"
+      >
+        5
+      </button>
+      <button
+        class="btn btn-primary numpad-btn"
+        onclick="this.blur();"
+        (click)="pressSix()"
+      >
+        6
+      </button>
     </div>
     <div class="row">
-      <button class="btn btn-primary numpad-btn">1</button>
-      <button class="btn btn-primary numpad-btn">2</button>
-      <button class="btn btn-primary numpad-btn">3</button>
+      <button
+        class="btn btn-primary numpad-btn"
+        onclick="this.blur();"
+        (click)="pressOne()"
+      >
+        1
+      </button>
+      <button
+        class="btn btn-primary numpad-btn"
+        onclick="this.blur();"
+        (click)="pressTwo()"
+      >
+        2
+      </button>
+      <button
+        class="btn btn-primary numpad-btn"
+        onclick="this.blur();"
+        (click)="pressThree()"
+      >
+        3
+      </button>
     </div>
     <div class="row">
-      <button class="btn btn-primary numpad-btn">Del</button>
-      <button class="btn btn-primary numpad-btn">0</button>
-      <button class="btn btn-primary numpad-btn">.</button>
+      <button
+        class="btn btn-primary numpad-btn"
+        onclick="this.blur();"
+        (click)="pressDel()"
+      >
+        Del
+      </button>
+      <button
+        class="btn btn-primary numpad-btn"
+        onclick="this.blur();"
+        (click)="pressZero()"
+      >
+        0
+      </button>
+      <button
+        class="btn btn-primary numpad-btn"
+        onclick="this.blur();"
+        (click)="pressPoint()"
+      >
+        .
+      </button>
     </div>
   </div>
 </div>
