@@ -136,7 +136,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"display-container\">\r\n  \r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"display-container\">\r\n  <div class=\"totals\">\r\n    <div class=\"container subtotal-wrapper\">\r\n      <p class=\"subtotal-label\">Subtotal</p>\r\n      <p class=\"subtotal-data\">{{ service.subtotalStr }}</p>\r\n    </div>\r\n    <div class=\"container discount-wrapper\">\r\n      <p class=\"discount-label\">Discount</p>\r\n      <p class=\"discount-data\">{{ service.discountStr }}</p>\r\n    </div>\r\n    <div class=\"container tax-wrapper\">\r\n      <p class=\"tax-label\">Tax</p>\r\n      <p class=\"tax-data\">{{ service.taxStr }}</p>\r\n    </div>\r\n    <div class=\"container total-wrapper\">\r\n      <p class=\"total-label\">Total</p>\r\n      <p class=\"total-data\">{{ service.totalStr }}</p>\r\n    </div>\r\n    <div class=\"container input-wrapper\">\r\n      <p class=\"input-data\">{{ displayNum }}</p>\r\n    </div>\r\n    <div class=\"payment-btns\">\r\n      <button class=\"btn btn-primary cash-btn\" onclick=\"this.blur();\" (click)=\"cashSale()\">\r\n        Cash\r\n      </button>\r\n      <button class=\"btn btn-primary credit-btn\" onclick=\"this.blur();\" (click)=\"creditSale()\">\r\n        Credit\r\n      </button>\r\n    </div>\r\n  </div>\r\n  <div class=\"container numpad\">\r\n    <div class=\"row\">\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressSeven()\"\r\n      >\r\n        7\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressEight()\"\r\n      >\r\n        8\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressNine()\"\r\n      >\r\n        9\r\n      </button>\r\n    </div>\r\n    <div class=\"row\">\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressFour()\"\r\n      >\r\n        4\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressFive()\"\r\n      >\r\n        5\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressSix()\"\r\n      >\r\n        6\r\n      </button>\r\n    </div>\r\n    <div class=\"row\">\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressOne()\"\r\n      >\r\n        1\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressTwo()\"\r\n      >\r\n        2\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressThree()\"\r\n      >\r\n        3\r\n      </button>\r\n    </div>\r\n    <div class=\"row\">\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressDel()\"\r\n      >\r\n        Del\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressZero()\"\r\n      >\r\n        0\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressPoint()\"\r\n      >\r\n        .\r\n      </button>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -537,7 +537,10 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_forms__WEBPACK_IMPORTED_MODULE_12__["FormsModule"],
             _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"],
-            ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrModule"].forRoot()
+            ngx_toastr__WEBPACK_IMPORTED_MODULE_5__["ToastrModule"].forRoot({
+                timeOut: 3000,
+                preventDuplicates: true,
+            })
         ],
         providers: [_services_employee_service__WEBPACK_IMPORTED_MODULE_11__["EmployeeService"], _services_register_service__WEBPACK_IMPORTED_MODULE_20__["RegisterService"], _globals__WEBPACK_IMPORTED_MODULE_16__["Globals"]],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
@@ -727,7 +730,7 @@ let EmployeeListComponent = class EmployeeListComponent {
         this.service.refreshList();
     }
     populateForm(employee) {
-        // Object.assign precents two-way binding from automatically updating while users are editing info
+        // Object.assign prevents two-way binding from automatically updating while users are editing info
         this.service.formData = Object.assign({}, employee);
     }
     deleteEmp(id) {
@@ -938,7 +941,7 @@ ItemsDisplayComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".display-container {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  height: 47.5vh;\n  width: 70vw;\n  background-color: #ececec;\n}\n\n.cones, .scoops {\n  height: 47.5vh;\n  padding: 0vw;\n  text-align: center;\n}\n\n.cones button, .scoops button {\n  height: 12.83vh;\n  border-radius: 1.5vh;\n  margin: 1.5vh 0vw;\n  font-size: 1.5vw;\n  border: none;\n}\n\n.scoops {\n  text-align: left;\n}\n\n.scoops button {\n  background-color: #27a331;\n}\n\n.scoops button:hover {\n  background-color: #228600;\n}\n\n.drinks {\n  height: 47.5vh;\n  padding: 0vw;\n}\n\n.drinks button {\n  height: 12.83vh;\n  border-radius: 1.5vh;\n  margin: 1.5vh 0vw;\n  font-size: 1.5vw;\n  border: none;\n  background-color: #b14e4e;\n}\n\n.drinks button:hover {\n  background-color: #964242;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9zYWxlcy11aS9tZW51LWJ0bnMvQzpcXFVzZXJzXFxCT1NTXFxEZXNrdG9wXFxwb3NcXGNsaWVudC9zcmNcXGFwcFxcY29tcG9uZW50c1xcc2FsZXMtdWlcXG1lbnUtYnRuc1xcbWVudS1idG5zLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9jb21wb25lbnRzL3NhbGVzLXVpL21lbnUtYnRucy9tZW51LWJ0bnMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxrQkFBQTtFQUNBLFNBQUE7RUFDQSxPQUFBO0VBQ0EsY0FBQTtFQUNBLFdBQUE7RUFDQSx5QkFBQTtBQ0NKOztBREVBO0VBQ0ksY0FBQTtFQUNBLFlBQUE7RUFDQSxrQkFBQTtBQ0NKOztBRENJO0VBQ0ksZUFBQTtFQUNBLG9CQUFBO0VBQ0EsaUJBQUE7RUFDQSxnQkFBQTtFQUNBLFlBQUE7QUNDUjs7QURHQTtFQUNJLGdCQUFBO0FDQUo7O0FERUk7RUFDSSx5QkFBQTtBQ0FSOztBREVJO0VBQ0kseUJBQUE7QUNBUjs7QURJQTtFQUNJLGNBQUE7RUFDQSxZQUFBO0FDREo7O0FER0k7RUFDSSxlQUFBO0VBQ0Esb0JBQUE7RUFDQSxpQkFBQTtFQUNBLGdCQUFBO0VBQ0EsWUFBQTtFQUNBLHlCQUFBO0FDRFI7O0FER0k7RUFDSSx5QkFBQTtBQ0RSIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9zYWxlcy11aS9tZW51LWJ0bnMvbWVudS1idG5zLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmRpc3BsYXktY29udGFpbmVyIHtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIGJvdHRvbTogMDtcclxuICAgIGxlZnQ6IDA7XHJcbiAgICBoZWlnaHQ6IDQ3LjV2aDtcclxuICAgIHdpZHRoOiA3MHZ3O1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDIzNiwgMjM2LCAyMzYpO1xyXG59XHJcblxyXG4uY29uZXMsIC5zY29vcHMge1xyXG4gICAgaGVpZ2h0OiA0Ny41dmg7XHJcbiAgICBwYWRkaW5nOiAwdnc7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBcclxuICAgIGJ1dHRvbiB7XHJcbiAgICAgICAgaGVpZ2h0OiAxMi44M3ZoO1xyXG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDEuNXZoO1xyXG4gICAgICAgIG1hcmdpbjogMS41dmggMHZ3O1xyXG4gICAgICAgIGZvbnQtc2l6ZTogMS41dnc7XHJcbiAgICAgICAgYm9yZGVyOiBub25lO1xyXG4gICAgfVxyXG59XHJcblxyXG4uc2Nvb3BzIHtcclxuICAgIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgICBcclxuICAgIGJ1dHRvbiB7XHJcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDM5LCAxNjMsIDQ5KTtcclxuICAgIH1cclxuICAgIGJ1dHRvbjpob3ZlciB7XHJcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDM0LCAxMzQsIDApO1xyXG4gICAgfVxyXG59XHJcblxyXG4uZHJpbmtzIHtcclxuICAgIGhlaWdodDogNDcuNXZoO1xyXG4gICAgcGFkZGluZzogMHZ3O1xyXG5cclxuICAgIGJ1dHRvbiB7XHJcbiAgICAgICAgaGVpZ2h0OiAxMi44M3ZoO1xyXG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDEuNXZoO1xyXG4gICAgICAgIG1hcmdpbjogMS41dmggMHZ3O1xyXG4gICAgICAgIGZvbnQtc2l6ZTogMS41dnc7XHJcbiAgICAgICAgYm9yZGVyOiBub25lO1xyXG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigxNzcsIDc4LCA3OCk7XHJcbiAgICB9XHJcbiAgICBidXR0b246aG92ZXIge1xyXG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigxNTAsIDY2LCA2Nik7XHJcbiAgICB9XHJcbn1cclxuXHJcblxyXG5cclxuIiwiLmRpc3BsYXktY29udGFpbmVyIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBib3R0b206IDA7XG4gIGxlZnQ6IDA7XG4gIGhlaWdodDogNDcuNXZoO1xuICB3aWR0aDogNzB2dztcbiAgYmFja2dyb3VuZC1jb2xvcjogI2VjZWNlYztcbn1cblxuLmNvbmVzLCAuc2Nvb3BzIHtcbiAgaGVpZ2h0OiA0Ny41dmg7XG4gIHBhZGRpbmc6IDB2dztcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuLmNvbmVzIGJ1dHRvbiwgLnNjb29wcyBidXR0b24ge1xuICBoZWlnaHQ6IDEyLjgzdmg7XG4gIGJvcmRlci1yYWRpdXM6IDEuNXZoO1xuICBtYXJnaW46IDEuNXZoIDB2dztcbiAgZm9udC1zaXplOiAxLjV2dztcbiAgYm9yZGVyOiBub25lO1xufVxuXG4uc2Nvb3BzIHtcbiAgdGV4dC1hbGlnbjogbGVmdDtcbn1cbi5zY29vcHMgYnV0dG9uIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzI3YTMzMTtcbn1cbi5zY29vcHMgYnV0dG9uOmhvdmVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzIyODYwMDtcbn1cblxuLmRyaW5rcyB7XG4gIGhlaWdodDogNDcuNXZoO1xuICBwYWRkaW5nOiAwdnc7XG59XG4uZHJpbmtzIGJ1dHRvbiB7XG4gIGhlaWdodDogMTIuODN2aDtcbiAgYm9yZGVyLXJhZGl1czogMS41dmg7XG4gIG1hcmdpbjogMS41dmggMHZ3O1xuICBmb250LXNpemU6IDEuNXZ3O1xuICBib3JkZXI6IG5vbmU7XG4gIGJhY2tncm91bmQtY29sb3I6ICNiMTRlNGU7XG59XG4uZHJpbmtzIGJ1dHRvbjpob3ZlciB7XG4gIGJhY2tncm91bmQtY29sb3I6ICM5NjQyNDI7XG59Il19 */");
+/* harmony default export */ __webpack_exports__["default"] = (".display-container {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  height: 47.5vh;\n  width: 70vw;\n  background-color: #ececec;\n  border-right: 1px solid black;\n}\n\n.cones, .scoops {\n  height: 47.5vh;\n  padding: 0vw;\n  text-align: center;\n}\n\n.cones button, .scoops button {\n  height: 12.83vh;\n  border-radius: 1.5vh;\n  margin: 1.5vh 0vw;\n  font-size: 1.5vw;\n  border: none;\n  background-color: #33357e;\n}\n\n.cones button:hover, .scoops button:hover {\n  background-color: #212250;\n}\n\n.scoops {\n  text-align: left;\n}\n\n.scoops button {\n  background-color: #33b13d;\n}\n\n.scoops button:hover {\n  background-color: #228600;\n}\n\n.drinks {\n  height: 47.5vh;\n  padding: 0vw;\n}\n\n.drinks button {\n  height: 12.83vh;\n  border-radius: 1.5vh;\n  margin: 1.5vh 0vw;\n  font-size: 1.5vw;\n  border: none;\n  background-color: #b14e4e;\n}\n\n.drinks button:hover {\n  background-color: #964242;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9zYWxlcy11aS9tZW51LWJ0bnMvQzpcXFVzZXJzXFxCT1NTXFxEZXNrdG9wXFxwb3NcXGNsaWVudC9zcmNcXGFwcFxcY29tcG9uZW50c1xcc2FsZXMtdWlcXG1lbnUtYnRuc1xcbWVudS1idG5zLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9jb21wb25lbnRzL3NhbGVzLXVpL21lbnUtYnRucy9tZW51LWJ0bnMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxrQkFBQTtFQUNBLFNBQUE7RUFDQSxPQUFBO0VBQ0EsY0FBQTtFQUNBLFdBQUE7RUFDQSx5QkFBQTtFQUNBLDZCQUFBO0FDQ0o7O0FERUE7RUFDSSxjQUFBO0VBQ0EsWUFBQTtFQUNBLGtCQUFBO0FDQ0o7O0FEQ0k7RUFDSSxlQUFBO0VBQ0Esb0JBQUE7RUFDQSxpQkFBQTtFQUNBLGdCQUFBO0VBQ0EsWUFBQTtFQUNBLHlCQUFBO0FDQ1I7O0FEQ0k7RUFDSSx5QkFBQTtBQ0NSOztBREdBO0VBQ0ksZ0JBQUE7QUNBSjs7QURFSTtFQUNJLHlCQUFBO0FDQVI7O0FERUk7RUFDSSx5QkFBQTtBQ0FSOztBRElBO0VBQ0ksY0FBQTtFQUNBLFlBQUE7QUNESjs7QURHSTtFQUNJLGVBQUE7RUFDQSxvQkFBQTtFQUNBLGlCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxZQUFBO0VBQ0EseUJBQUE7QUNEUjs7QURHSTtFQUNJLHlCQUFBO0FDRFIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnRzL3NhbGVzLXVpL21lbnUtYnRucy9tZW51LWJ0bnMuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZGlzcGxheS1jb250YWluZXIge1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgYm90dG9tOiAwO1xyXG4gICAgbGVmdDogMDtcclxuICAgIGhlaWdodDogNDcuNXZoO1xyXG4gICAgd2lkdGg6IDcwdnc7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjM2LCAyMzYsIDIzNik7XHJcbiAgICBib3JkZXItcmlnaHQ6IDFweCBzb2xpZCBibGFjaztcclxufVxyXG5cclxuLmNvbmVzLCAuc2Nvb3BzIHtcclxuICAgIGhlaWdodDogNDcuNXZoO1xyXG4gICAgcGFkZGluZzogMHZ3O1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgXHJcbiAgICBidXR0b24ge1xyXG4gICAgICAgIGhlaWdodDogMTIuODN2aDtcclxuICAgICAgICBib3JkZXItcmFkaXVzOiAxLjV2aDtcclxuICAgICAgICBtYXJnaW46IDEuNXZoIDB2dztcclxuICAgICAgICBmb250LXNpemU6IDEuNXZ3O1xyXG4gICAgICAgIGJvcmRlcjogbm9uZTtcclxuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoNTEsIDUzLCAxMjYpO1xyXG4gICAgfVxyXG4gICAgYnV0dG9uOmhvdmVyIHtcclxuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMzMsIDM0LCA4MCk7XHJcbiAgICB9XHJcbn1cclxuXHJcbi5zY29vcHMge1xyXG4gICAgdGV4dC1hbGlnbjogbGVmdDtcclxuICAgIFxyXG4gICAgYnV0dG9uIHtcclxuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoNTEsIDE3NywgNjEpO1xyXG4gICAgfVxyXG4gICAgYnV0dG9uOmhvdmVyIHtcclxuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMzQsIDEzNCwgMCk7XHJcbiAgICB9XHJcbn1cclxuXHJcbi5kcmlua3Mge1xyXG4gICAgaGVpZ2h0OiA0Ny41dmg7XHJcbiAgICBwYWRkaW5nOiAwdnc7XHJcbiAgICBcclxuICAgIGJ1dHRvbiB7XHJcbiAgICAgICAgaGVpZ2h0OiAxMi44M3ZoO1xyXG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDEuNXZoO1xyXG4gICAgICAgIG1hcmdpbjogMS41dmggMHZ3O1xyXG4gICAgICAgIGZvbnQtc2l6ZTogMS41dnc7XHJcbiAgICAgICAgYm9yZGVyOiBub25lO1xyXG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigxNzcsIDc4LCA3OCk7XHJcbiAgICB9XHJcbiAgICBidXR0b246aG92ZXIge1xyXG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigxNTAsIDY2LCA2Nik7XHJcbiAgICB9XHJcbn1cclxuXHJcblxyXG5cclxuIiwiLmRpc3BsYXktY29udGFpbmVyIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBib3R0b206IDA7XG4gIGxlZnQ6IDA7XG4gIGhlaWdodDogNDcuNXZoO1xuICB3aWR0aDogNzB2dztcbiAgYmFja2dyb3VuZC1jb2xvcjogI2VjZWNlYztcbiAgYm9yZGVyLXJpZ2h0OiAxcHggc29saWQgYmxhY2s7XG59XG5cbi5jb25lcywgLnNjb29wcyB7XG4gIGhlaWdodDogNDcuNXZoO1xuICBwYWRkaW5nOiAwdnc7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbi5jb25lcyBidXR0b24sIC5zY29vcHMgYnV0dG9uIHtcbiAgaGVpZ2h0OiAxMi44M3ZoO1xuICBib3JkZXItcmFkaXVzOiAxLjV2aDtcbiAgbWFyZ2luOiAxLjV2aCAwdnc7XG4gIGZvbnQtc2l6ZTogMS41dnc7XG4gIGJvcmRlcjogbm9uZTtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzMzMzU3ZTtcbn1cbi5jb25lcyBidXR0b246aG92ZXIsIC5zY29vcHMgYnV0dG9uOmhvdmVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzIxMjI1MDtcbn1cblxuLnNjb29wcyB7XG4gIHRleHQtYWxpZ246IGxlZnQ7XG59XG4uc2Nvb3BzIGJ1dHRvbiB7XG4gIGJhY2tncm91bmQtY29sb3I6ICMzM2IxM2Q7XG59XG4uc2Nvb3BzIGJ1dHRvbjpob3ZlciB7XG4gIGJhY2tncm91bmQtY29sb3I6ICMyMjg2MDA7XG59XG5cbi5kcmlua3Mge1xuICBoZWlnaHQ6IDQ3LjV2aDtcbiAgcGFkZGluZzogMHZ3O1xufVxuLmRyaW5rcyBidXR0b24ge1xuICBoZWlnaHQ6IDEyLjgzdmg7XG4gIGJvcmRlci1yYWRpdXM6IDEuNXZoO1xuICBtYXJnaW46IDEuNXZoIDB2dztcbiAgZm9udC1zaXplOiAxLjV2dztcbiAgYm9yZGVyOiBub25lO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjYjE0ZTRlO1xufVxuLmRyaW5rcyBidXR0b246aG92ZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjOTY0MjQyO1xufSJdfQ== */");
 
 /***/ }),
 
@@ -1027,7 +1030,7 @@ MenuBtnsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".display-container {\n  position: absolute;\n  top: 5vh;\n  right: 0;\n  height: 95vh;\n  width: 30vw;\n  background: #3f3fff;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9zYWxlcy11aS9yZWdpc3Rlci9DOlxcVXNlcnNcXEJPU1NcXERlc2t0b3BcXHBvc1xcY2xpZW50L3NyY1xcYXBwXFxjb21wb25lbnRzXFxzYWxlcy11aVxccmVnaXN0ZXJcXHJlZ2lzdGVyLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9jb21wb25lbnRzL3NhbGVzLXVpL3JlZ2lzdGVyL3JlZ2lzdGVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksa0JBQUE7RUFDQSxRQUFBO0VBQ0EsUUFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0VBQ0EsbUJBQUE7QUNDSiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvc2FsZXMtdWkvcmVnaXN0ZXIvcmVnaXN0ZXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZGlzcGxheS1jb250YWluZXIge1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgdG9wOiA1dmg7XHJcbiAgICByaWdodDogMDtcclxuICAgIGhlaWdodDogOTV2aDtcclxuICAgIHdpZHRoOiAzMHZ3O1xyXG4gICAgYmFja2dyb3VuZDogcmdiKDYzLCA2MywgMjU1KTtcclxufSIsIi5kaXNwbGF5LWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiA1dmg7XG4gIHJpZ2h0OiAwO1xuICBoZWlnaHQ6IDk1dmg7XG4gIHdpZHRoOiAzMHZ3O1xuICBiYWNrZ3JvdW5kOiAjM2YzZmZmO1xufSJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".display-container {\n  position: absolute;\n  top: 5vh;\n  right: 0;\n  height: 95vh;\n  width: 30vw;\n  background-color: #ececec;\n}\n\n.totals {\n  position: absolute;\n  right: 0;\n  height: 47.5vh;\n  width: 30vw;\n}\n\n.subtotal-wrapper, .discount-wrapper, .tax-wrapper, .total-wrapper, .input-wrapper {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n          flex-direction: row;\n  position: relative;\n  width: 100%;\n  height: 7.92vh;\n  color: white;\n  background: #343a40;\n  border-bottom: 0.01vh #616161 solid;\n}\n\n.subtotal-label, .discount-label, .tax-label, .total-label {\n  line-height: 7.92vh;\n  font-size: 1.25vw;\n}\n\n.subtotal-data, .discount-data, .tax-data, .input-data {\n  line-height: 7.92vh;\n  font-size: 1vw;\n  position: absolute;\n  right: 1.5vw;\n}\n\n.total-data, .input-data {\n  line-height: 7.92vh;\n  font-size: 2vw;\n  position: absolute;\n  right: 1.3vw;\n}\n\n.payment-btns {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n          flex-direction: row;\n  width: 100%;\n  height: 7.92vh;\n  background: #343a40;\n}\n\n.payment-btns button {\n  border-radius: 0;\n  width: 15vw;\n  font-size: 1.25vw;\n}\n\n.cash-btn {\n  border-right: 0.01vh #8f8f8f solid;\n}\n\n.numpad {\n  position: absolute;\n  top: 47.5vh;\n  right: 0;\n  height: 47.5vh;\n  width: 30vw;\n}\n\n.numpad-btn {\n  width: 7vw;\n  height: 9vh;\n  margin-top: 2.3vh;\n  margin-left: 2.3vw;\n  font-size: 1.5vw;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9zYWxlcy11aS9yZWdpc3Rlci9DOlxcVXNlcnNcXEJPU1NcXERlc2t0b3BcXHBvc1xcY2xpZW50L3NyY1xcYXBwXFxjb21wb25lbnRzXFxzYWxlcy11aVxccmVnaXN0ZXJcXHJlZ2lzdGVyLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9jb21wb25lbnRzL3NhbGVzLXVpL3JlZ2lzdGVyL3JlZ2lzdGVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksa0JBQUE7RUFDQSxRQUFBO0VBQ0EsUUFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0VBQ0EseUJBQUE7QUNDSjs7QURFQTtFQUNJLGtCQUFBO0VBQ0EsUUFBQTtFQUNBLGNBQUE7RUFDQSxXQUFBO0FDQ0o7O0FERUE7RUFDSSxvQkFBQTtFQUFBLGFBQUE7RUFDQSw4QkFBQTtFQUFBLDZCQUFBO1VBQUEsbUJBQUE7RUFDQSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxjQUFBO0VBQ0EsWUFBQTtFQUNBLG1CQUFBO0VBQ0EsbUNBQUE7QUNDSjs7QURFQTtFQUNJLG1CQUFBO0VBQ0EsaUJBQUE7QUNDSjs7QURFQTtFQUNJLG1CQUFBO0VBQ0EsY0FBQTtFQUNBLGtCQUFBO0VBQ0EsWUFBQTtBQ0NKOztBREVBO0VBQ0ksbUJBQUE7RUFDQSxjQUFBO0VBQ0Esa0JBQUE7RUFDQSxZQUFBO0FDQ0o7O0FERUE7RUFDSSxvQkFBQTtFQUFBLGFBQUE7RUFDQSw4QkFBQTtFQUFBLDZCQUFBO1VBQUEsbUJBQUE7RUFDQSxXQUFBO0VBQ0EsY0FBQTtFQUNBLG1CQUFBO0FDQ0o7O0FEQ0k7RUFDSSxnQkFBQTtFQUNBLFdBQUE7RUFDQSxpQkFBQTtBQ0NSOztBREdBO0VBQ0ksa0NBQUE7QUNBSjs7QURHQTtFQUNJLGtCQUFBO0VBQ0EsV0FBQTtFQUNBLFFBQUE7RUFDQSxjQUFBO0VBQ0EsV0FBQTtBQ0FKOztBREdBO0VBQ0ksVUFBQTtFQUNBLFdBQUE7RUFDQSxpQkFBQTtFQUNBLGtCQUFBO0VBQ0EsZ0JBQUE7QUNBSiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvc2FsZXMtdWkvcmVnaXN0ZXIvcmVnaXN0ZXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZGlzcGxheS1jb250YWluZXIge1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgdG9wOiA1dmg7XHJcbiAgICByaWdodDogMDtcclxuICAgIGhlaWdodDogOTV2aDtcclxuICAgIHdpZHRoOiAzMHZ3O1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDIzNiwgMjM2LCAyMzYpO1xyXG59XHJcblxyXG4udG90YWxzIHtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHJpZ2h0OiAwO1xyXG4gICAgaGVpZ2h0OiA0Ny41dmg7XHJcbiAgICB3aWR0aDogMzB2dztcclxufVxyXG5cclxuLnN1YnRvdGFsLXdyYXBwZXIsIC5kaXNjb3VudC13cmFwcGVyLCAudGF4LXdyYXBwZXIsIC50b3RhbC13cmFwcGVyLCAuaW5wdXQtd3JhcHBlciB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC1kaXJlY3Rpb246IHJvdztcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgaGVpZ2h0OiA3Ljkydmg7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbiAgICBiYWNrZ3JvdW5kOiAjMzQzYTQwO1xyXG4gICAgYm9yZGVyLWJvdHRvbTogLjAxdmggcmdiKDk3LCA5NywgOTcpIHNvbGlkO1xyXG59XHJcblxyXG4uc3VidG90YWwtbGFiZWwsIC5kaXNjb3VudC1sYWJlbCwgLnRheC1sYWJlbCwgLnRvdGFsLWxhYmVsIHtcclxuICAgIGxpbmUtaGVpZ2h0OiA3Ljkydmg7XHJcbiAgICBmb250LXNpemU6IDEuMjV2dztcclxufVxyXG5cclxuLnN1YnRvdGFsLWRhdGEsIC5kaXNjb3VudC1kYXRhLCAudGF4LWRhdGEsIC5pbnB1dC1kYXRhIHtcclxuICAgIGxpbmUtaGVpZ2h0OiA3Ljkydmg7XHJcbiAgICBmb250LXNpemU6IDF2dztcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHJpZ2h0OiAxLjV2dztcclxufSBcclxuXHJcbi50b3RhbC1kYXRhLCAuaW5wdXQtZGF0YSB7XHJcbiAgICBsaW5lLWhlaWdodDogNy45MnZoO1xyXG4gICAgZm9udC1zaXplOiAydnc7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICByaWdodDogMS4zdnc7XHJcbn1cclxuXHJcbi5wYXltZW50LWJ0bnMge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtZGlyZWN0aW9uOiByb3c7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGhlaWdodDogNy45MnZoO1xyXG4gICAgYmFja2dyb3VuZDogIzM0M2E0MDtcclxuXHJcbiAgICBidXR0b24ge1xyXG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDA7XHJcbiAgICAgICAgd2lkdGg6IDE1dnc7XHJcbiAgICAgICAgZm9udC1zaXplOiAxLjI1dnc7XHJcbiAgICB9XHJcbn1cclxuXHJcbi5jYXNoLWJ0biB7XHJcbiAgICBib3JkZXItcmlnaHQ6IC4wMXZoIHJnYigxNDMsIDE0MywgMTQzKSBzb2xpZDtcclxufVxyXG5cclxuLm51bXBhZCB7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB0b3A6IDQ3LjV2aDtcclxuICAgIHJpZ2h0OiAwO1xyXG4gICAgaGVpZ2h0OiA0Ny41dmg7XHJcbiAgICB3aWR0aDogMzB2dztcclxufVxyXG5cclxuLm51bXBhZC1idG4ge1xyXG4gICAgd2lkdGg6IDd2dztcclxuICAgIGhlaWdodDogOXZoO1xyXG4gICAgbWFyZ2luLXRvcDogMi4zdmg7XHJcbiAgICBtYXJnaW4tbGVmdDogMi4zdnc7XHJcbiAgICBmb250LXNpemU6IDEuNXZ3O1xyXG59IiwiLmRpc3BsYXktY29udGFpbmVyIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDV2aDtcbiAgcmlnaHQ6IDA7XG4gIGhlaWdodDogOTV2aDtcbiAgd2lkdGg6IDMwdnc7XG4gIGJhY2tncm91bmQtY29sb3I6ICNlY2VjZWM7XG59XG5cbi50b3RhbHMge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHJpZ2h0OiAwO1xuICBoZWlnaHQ6IDQ3LjV2aDtcbiAgd2lkdGg6IDMwdnc7XG59XG5cbi5zdWJ0b3RhbC13cmFwcGVyLCAuZGlzY291bnQtd3JhcHBlciwgLnRheC13cmFwcGVyLCAudG90YWwtd3JhcHBlciwgLmlucHV0LXdyYXBwZXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogcm93O1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDcuOTJ2aDtcbiAgY29sb3I6IHdoaXRlO1xuICBiYWNrZ3JvdW5kOiAjMzQzYTQwO1xuICBib3JkZXItYm90dG9tOiAwLjAxdmggIzYxNjE2MSBzb2xpZDtcbn1cblxuLnN1YnRvdGFsLWxhYmVsLCAuZGlzY291bnQtbGFiZWwsIC50YXgtbGFiZWwsIC50b3RhbC1sYWJlbCB7XG4gIGxpbmUtaGVpZ2h0OiA3Ljkydmg7XG4gIGZvbnQtc2l6ZTogMS4yNXZ3O1xufVxuXG4uc3VidG90YWwtZGF0YSwgLmRpc2NvdW50LWRhdGEsIC50YXgtZGF0YSwgLmlucHV0LWRhdGEge1xuICBsaW5lLWhlaWdodDogNy45MnZoO1xuICBmb250LXNpemU6IDF2dztcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICByaWdodDogMS41dnc7XG59XG5cbi50b3RhbC1kYXRhLCAuaW5wdXQtZGF0YSB7XG4gIGxpbmUtaGVpZ2h0OiA3Ljkydmg7XG4gIGZvbnQtc2l6ZTogMnZ3O1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHJpZ2h0OiAxLjN2dztcbn1cblxuLnBheW1lbnQtYnRucyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiByb3c7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDcuOTJ2aDtcbiAgYmFja2dyb3VuZDogIzM0M2E0MDtcbn1cbi5wYXltZW50LWJ0bnMgYnV0dG9uIHtcbiAgYm9yZGVyLXJhZGl1czogMDtcbiAgd2lkdGg6IDE1dnc7XG4gIGZvbnQtc2l6ZTogMS4yNXZ3O1xufVxuXG4uY2FzaC1idG4ge1xuICBib3JkZXItcmlnaHQ6IDAuMDF2aCAjOGY4ZjhmIHNvbGlkO1xufVxuXG4ubnVtcGFkIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDQ3LjV2aDtcbiAgcmlnaHQ6IDA7XG4gIGhlaWdodDogNDcuNXZoO1xuICB3aWR0aDogMzB2dztcbn1cblxuLm51bXBhZC1idG4ge1xuICB3aWR0aDogN3Z3O1xuICBoZWlnaHQ6IDl2aDtcbiAgbWFyZ2luLXRvcDogMi4zdmg7XG4gIG1hcmdpbi1sZWZ0OiAyLjN2dztcbiAgZm9udC1zaXplOiAxLjV2dztcbn0iXX0= */");
 
 /***/ }),
 
@@ -1043,16 +1046,105 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegisterComponent", function() { return RegisterComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _services_register_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/register.service */ "./src/app/services/register.service.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
+
+
 
 
 let RegisterComponent = class RegisterComponent {
-    constructor() { }
+    constructor(service, toastr) {
+        this.service = service;
+        this.toastr = toastr;
+        // Used for concatenating input numbers with decimals
+        this.inputStr = "0";
+        // Used after all conversions to display string
+        this.displayNum = "";
+        // Will be used in refreshNum() method and used for completing purchase
+        this.inputNum = 0;
+    }
     ngOnInit() {
+        this.service.refreshValues();
+        this.refreshNum();
+    }
+    // Method used to force string to show 2 digit decimal
+    refreshNum() {
+        this.inputNum = parseFloat(this.inputStr);
+        this.displayNum = (Math.floor(this.inputNum * 100) / 100).toFixed(2);
+    }
+    // Method to make complete sale. This method will interact with backend to add new sale.
+    cashSale() {
+        if (this.service.total != 0) {
+            if (this.inputNum < this.service.total) {
+                this.toastr.error("Payment amount is less than total owed.", "INVALID");
+            }
+            else {
+                this.toastr.success("Purchase completed.", "SUCCESS");
+            }
+        }
+    }
+    creditSale() {
+        if (this.service.total != 0) {
+            this.toastr.success("Purchase completed.", "SUCCESS");
+        }
+    }
+    // Numpad btn methods
+    pressZero() {
+        this.inputStr += "0";
+        this.refreshNum();
+    }
+    pressOne() {
+        this.inputStr += "1";
+        this.refreshNum();
+    }
+    pressTwo() {
+        this.inputStr += "2";
+        this.refreshNum();
+    }
+    pressThree() {
+        this.inputStr += "3";
+        this.refreshNum();
+    }
+    pressFour() {
+        this.inputStr += "4";
+        this.refreshNum();
+    }
+    pressFive() {
+        this.inputStr += "5";
+        this.refreshNum();
+    }
+    pressSix() {
+        this.inputStr += "6";
+        this.refreshNum();
+    }
+    pressSeven() {
+        this.inputStr += "7";
+        this.refreshNum();
+    }
+    pressEight() {
+        this.inputStr += "8";
+        this.refreshNum();
+    }
+    pressNine() {
+        this.inputStr += "9";
+        this.refreshNum();
+    }
+    pressPoint() {
+        this.inputStr += ".";
+        this.refreshNum();
+    }
+    pressDel() {
+        this.inputStr = "0";
+        this.refreshNum();
     }
 };
+RegisterComponent.ctorParameters = () => [
+    { type: _services_register_service__WEBPACK_IMPORTED_MODULE_2__["RegisterService"] },
+    { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_3__["ToastrService"] }
+];
 RegisterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-register',
+        selector: "app-register",
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./register.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/components/sales-ui/register/register.component.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./register.component.scss */ "./src/app/components/sales-ui/register/register.component.scss")).default]
     })
@@ -1240,6 +1332,10 @@ __webpack_require__.r(__webpack_exports__);
 let RegisterService = class RegisterService {
     constructor() {
         this.itemList = [];
+        this.subtotal = 0;
+        this.discount = 0;
+        this.tax = 0;
+        this.total = 0;
     }
     // @desc    Add new item to current order Item array
     // @params  name, unitPrice
@@ -1247,6 +1343,7 @@ let RegisterService = class RegisterService {
     addItem(name, quantity, unitPrice) {
         if (this.itemExists(name)) {
             this.increaseQuantity(name);
+            this.refreshValues();
         }
         else {
             let newItem = new _models_item_model__WEBPACK_IMPORTED_MODULE_2__["Item"]();
@@ -1257,6 +1354,7 @@ let RegisterService = class RegisterService {
             newItem.Subtotal = quantity * unitPrice;
             newItem.SubtotalString = (Math.round(newItem.Subtotal * 100) / 100).toFixed(2);
             this.itemList.push(newItem);
+            this.refreshValues();
         }
     }
     // @desc    Function to remove item from item array by id (used for "Remove" btn)
@@ -1268,6 +1366,7 @@ let RegisterService = class RegisterService {
                 this.itemList.splice(i, 1);
             }
         }
+        this.refreshValues();
     }
     // @desc    Function to remove item from item array by name (private method used for decreaseQuantity)
     // @params  itemName
@@ -1292,6 +1391,7 @@ let RegisterService = class RegisterService {
                     Math.round((newSubtotal + Number.EPSILON) * 100) / 100;
                 // Forcing 2 decimal places (converts to string only)
                 this.itemList[i].SubtotalString = (Math.round(this.itemList[i].Subtotal * 100) / 100).toFixed(2);
+                this.refreshValues();
             }
         }
     }
@@ -1304,6 +1404,7 @@ let RegisterService = class RegisterService {
                 // If quantity is 0, then remove it from the list.
                 if (this.itemList[i].Quantity === 1) {
                     this.removeItemByName(name);
+                    this.refreshValues();
                 }
                 else {
                     this.itemList[i].Quantity--;
@@ -1311,6 +1412,7 @@ let RegisterService = class RegisterService {
                     // Used to round to 2 decimal places
                     this.itemList[i].Subtotal =
                         Math.round((newSubtotal + Number.EPSILON) * 100) / 100;
+                    this.refreshValues();
                 }
             }
         }
@@ -1326,6 +1428,26 @@ let RegisterService = class RegisterService {
             }
         }
         return exists;
+    }
+    // @desc    Refresh subtotal, discount, tax, and total values
+    // @params  None
+    // @Return  None
+    refreshValues() {
+        // Refresh subtotals
+        this.subtotal = 0;
+        for (let i = 0; i < this.itemList.length; i++) {
+            this.subtotal += this.itemList[i].Subtotal;
+        }
+        this.subtotalStr = (Math.round(this.subtotal * 100) / 100).toFixed(2);
+        // Refresh taxes: MN sales tax is 6.875%
+        this.tax = this.subtotal * .06875;
+        this.taxStr = (Math.round(this.tax * 100) / 100).toFixed(2);
+        // Refresh total
+        this.total = this.subtotal + this.tax - this.discount;
+        this.totalStr = (Math.round(this.total * 100) / 100).toFixed(2);
+        console.log(this.total + this.totalStr);
+        // 2 decimal places for discount
+        this.discountStr = (Math.round(this.discount * 100) / 100).toFixed(2);
     }
 };
 RegisterService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
