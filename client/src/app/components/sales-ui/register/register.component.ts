@@ -8,6 +8,7 @@ import { ToastrService } from "ngx-toastr";
   styleUrls: ["./register.component.scss"]
 })
 export class RegisterComponent implements OnInit {
+
   constructor(
     private service: RegisterService,
     private toastr: ToastrService

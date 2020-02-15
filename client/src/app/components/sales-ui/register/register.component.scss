@@ -14,7 +14,7 @@
     width: 30vw;
 }
 
-.subtotal-wrapper, .discount-wrapper, .tax-wrapper, .total-wrapper, .input-wrapper {
+.subtotal-wrapper, .discount-wrapper, .tax-wrapper, .total-wrapper, .input-wrapper, .change-wrapper {
     display: flex;
     flex-direction: row;
     position: relative;
@@ -25,7 +25,7 @@
     border-bottom: .01vh rgb(97, 97, 97) solid;
 }
 
-.subtotal-label, .discount-label, .tax-label, .total-label {
+.subtotal-label, .discount-label, .tax-label, .total-label, .change-label {
     line-height: 7.92vh;
     font-size: 1.25vw;
 }
@@ -37,7 +37,7 @@
     right: 1.5vw;
 } 
 
-.total-data, .input-data {
+.total-data, .input-data, .change-data {
     line-height: 7.92vh;
     font-size: 2vw;
     position: absolute;

@@ -10,15 +10,25 @@ export class RegisterService {
 
   itemList: Item[] = [];
   subtotal: number = 0;
-  discount: number = 0;
   tax: number = 0;
   total: number = 0;
-  
+
   // Used to display two decimal number
   subtotalStr: string;
-  discountStr: string;
   taxStr: string;
   totalStr: string;
+
+  // Once sale is made, this turns true which displays cash change
+  // amount if paid in cash.
+  saleMade: boolean = false;
+
+  // @desc    Sends all items from one transaction to database Items table. Sends 1 sale receipt to
+  //          Sale table. Sets up relation between Items and Sale with UUID.
+  // @params  None
+  // @return  None
+  public completeSale() {
+    
+  }
 
   // @desc    Add new item to current order Item array
   // @params  name, unitPrice
@@ -123,11 +133,10 @@ export class RegisterService {
     return exists;
   }
 
-  // @desc    Refresh subtotal, discount, tax, and total values
+  // @desc    Refresh subtotal, tax, and total values
   // @params  None
   // @Return  None
   public refreshValues() {
-
     // Refresh subtotals
     this.subtotal = 0;
     for (let i = 0; i < this.itemList.length; i++) {
@@ -136,15 +145,12 @@ export class RegisterService {
     this.subtotalStr = (Math.round(this.subtotal * 100) / 100).toFixed(2);
 
     // Refresh taxes: MN sales tax is 6.875%
-    this.tax = this.subtotal * .06875;
+    this.tax = this.subtotal * 0.06875;
     this.taxStr = (Math.round(this.tax * 100) / 100).toFixed(2);
 
     // Refresh total
-    this.total = this.subtotal + this.tax - this.discount;
+    this.total = this.subtotal + this.tax;
     this.totalStr = (Math.round(this.total * 100) / 100).toFixed(2);
     console.log(this.total + this.totalStr);
-
-    // 2 decimal places for discount
-    this.discountStr = (Math.round(this.discount * 100) / 100).toFixed(2);
   }
 }

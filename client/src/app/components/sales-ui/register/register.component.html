@@ -4,21 +4,42 @@
       <p class="subtotal-label">Subtotal</p>
       <p class="subtotal-data">{{ service.subtotalStr }}</p>
     </div>
-    <div class="container discount-wrapper">
-      <p class="discount-label">Discount</p>
-      <p class="discount-data">{{ service.discountStr }}</p>
-    </div>
     <div class="container tax-wrapper">
       <p class="tax-label">Tax</p>
       <p class="tax-data">{{ service.taxStr }}</p>
     </div>
-    <div class="container total-wrapper">
-      <p class="total-label">Total</p>
-      <p class="total-data">{{ service.totalStr }}</p>
-    </div>
+
+
+
+    
+      <div class="container total-wrapper">
+        <p class="total-label">Total</p>
+        <p class="total-data">{{ service.totalStr }}</p>
+      </div>
+
+    
+    
+    
+
     <div class="container input-wrapper">
       <p class="input-data">{{ displayNum }}</p>
     </div>
+
+
+
+    <div class="container change-wrapper">
+      <p class="change-label">Change</p>
+      <p class="change-data"></p>
+    </div>
+
+
+
+
+
+
+
+
+
     <div class="payment-btns">
       <button class="btn btn-primary cash-btn" onclick="this.blur();" (click)="cashSale()">
         Cash
