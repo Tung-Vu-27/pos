@@ -20,14 +20,6 @@ target/
 *.ipr
 /src/main/resources/application.properties
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-
 ### VS Code ###
 .vscode/
 

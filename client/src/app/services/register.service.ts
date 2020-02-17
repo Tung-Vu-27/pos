@@ -1,6 +1,8 @@
 import { Injectable } from "@angular/core";
 import { Item } from "../models/item.model";
+import { Sales } from "../models/sales.model";
 import { v4 as uuid } from "uuid";
+
 
 @Injectable({
   providedIn: "root"
@@ -21,14 +23,6 @@ export class RegisterService {
   // Once sale is made, this turns true which displays cash change
   // amount if paid in cash.
   saleMade: boolean = false;
-
-  // @desc    Sends all items from one transaction to database Items table. Sends 1 sale receipt to
-  //          Sale table. Sets up relation between Items and Sale with UUID.
-  // @params  None
-  // @return  None
-  public completeSale() {
-    
-  }
 
   // @desc    Add new item to current order Item array
   // @params  name, unitPrice

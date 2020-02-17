@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { RegisterService } from "../../../services/register.service";
+import { SalesService } from "../../../services/sales.service";
 import { ToastrService } from "ngx-toastr";
+import { Sales } from "../../../models/sales.model";
 
 @Component({
   selector: "app-register",
@@ -8,14 +10,14 @@ import { ToastrService } from "ngx-toastr";
   styleUrls: ["./register.component.scss"]
 })
 export class RegisterComponent implements OnInit {
-
   constructor(
-    private service: RegisterService,
+    private registerService: RegisterService,
+    private salesService: SalesService,
     private toastr: ToastrService
   ) {}
 
   ngOnInit() {
-    this.service.refreshValues();
+    this.registerService.refreshValues();
     this.refreshNum();
   }
 
@@ -34,19 +36,44 @@ export class RegisterComponent implements OnInit {
     this.displayNum = (Math.floor(this.inputNum * 100) / 100).toFixed(2);
   }
 
-  // Method to make complete sale. This method will interact with backend to add new sale.
+  // Method to make complete sale. This method will interact with salesService to add new sale to database.
   cashSale() {
-    if (this.service.total != 0) {
-      if (this.inputNum < this.service.total) {
+    if (this.registerService.total != 0) {
+      if (this.inputNum < this.registerService.total) {
         this.toastr.error("Payment amount is less than total owed.", "INVALID");
       } else {
+        let newSale = new Sales();
+
+        var today = new Date();
+        var date =
+          today.getFullYear() +
+          "-" +
+          (today.getMonth() + 1) +
+          "-" +
+          today.getDate();
+        var time =
+          today.getHours() +
+          ":" +
+          today.getMinutes() +
+          ":" +
+          today.getSeconds();
+        var dateTime = date + " " + time;
+
+        newSale.date = dateTime;
+        newSale.total = this.registerService.total;
+
+        this.salesService.createSale(newSale).subscribe(
+          data => console.log(data),
+          error => console.log(error)
+        );
+
         this.toastr.success("Purchase completed.", "SUCCESS");
       }
     }
   }
 
   creditSale() {
-    if (this.service.total != 0) {
+    if (this.registerService.total != 0) {
       this.toastr.success("Purchase completed.", "SUCCESS");
     }
   }

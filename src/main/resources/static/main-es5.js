@@ -211,7 +211,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"display-container\">\r\n  <div class=\"totals\">\r\n    <div class=\"container subtotal-wrapper\">\r\n      <p class=\"subtotal-label\">Subtotal</p>\r\n      <p class=\"subtotal-data\">{{ service.subtotalStr }}</p>\r\n    </div>\r\n    <div class=\"container discount-wrapper\">\r\n      <p class=\"discount-label\">Discount</p>\r\n      <p class=\"discount-data\">{{ service.discountStr }}</p>\r\n    </div>\r\n    <div class=\"container tax-wrapper\">\r\n      <p class=\"tax-label\">Tax</p>\r\n      <p class=\"tax-data\">{{ service.taxStr }}</p>\r\n    </div>\r\n    <div class=\"container total-wrapper\">\r\n      <p class=\"total-label\">Total</p>\r\n      <p class=\"total-data\">{{ service.totalStr }}</p>\r\n    </div>\r\n    <div class=\"container input-wrapper\">\r\n      <p class=\"input-data\">{{ displayNum }}</p>\r\n    </div>\r\n    <div class=\"payment-btns\">\r\n      <button class=\"btn btn-primary cash-btn\" onclick=\"this.blur();\" (click)=\"cashSale()\">\r\n        Cash\r\n      </button>\r\n      <button class=\"btn btn-primary credit-btn\" onclick=\"this.blur();\" (click)=\"creditSale()\">\r\n        Credit\r\n      </button>\r\n    </div>\r\n  </div>\r\n  <div class=\"container numpad\">\r\n    <div class=\"row\">\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressSeven()\"\r\n      >\r\n        7\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressEight()\"\r\n      >\r\n        8\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressNine()\"\r\n      >\r\n        9\r\n      </button>\r\n    </div>\r\n    <div class=\"row\">\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressFour()\"\r\n      >\r\n        4\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressFive()\"\r\n      >\r\n        5\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressSix()\"\r\n      >\r\n        6\r\n      </button>\r\n    </div>\r\n    <div class=\"row\">\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressOne()\"\r\n      >\r\n        1\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressTwo()\"\r\n      >\r\n        2\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressThree()\"\r\n      >\r\n        3\r\n      </button>\r\n    </div>\r\n    <div class=\"row\">\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressDel()\"\r\n      >\r\n        Del\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressZero()\"\r\n      >\r\n        0\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressPoint()\"\r\n      >\r\n        .\r\n      </button>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
+    __webpack_exports__["default"] = "<div class=\"display-container\">\r\n  <div class=\"totals\">\r\n    <div class=\"container subtotal-wrapper\">\r\n      <p class=\"subtotal-label\">Subtotal</p>\r\n      <p class=\"subtotal-data\">{{ service.subtotalStr }}</p>\r\n    </div>\r\n    <div class=\"container tax-wrapper\">\r\n      <p class=\"tax-label\">Tax</p>\r\n      <p class=\"tax-data\">{{ service.taxStr }}</p>\r\n    </div>\r\n\r\n\r\n\r\n    \r\n      <div class=\"container total-wrapper\">\r\n        <p class=\"total-label\">Total</p>\r\n        <p class=\"total-data\">{{ service.totalStr }}</p>\r\n      </div>\r\n\r\n    \r\n    \r\n    \r\n\r\n    <div class=\"container input-wrapper\">\r\n      <p class=\"input-data\">{{ displayNum }}</p>\r\n    </div>\r\n\r\n\r\n\r\n    <div class=\"container change-wrapper\">\r\n      <p class=\"change-label\">Change</p>\r\n      <p class=\"change-data\"></p>\r\n    </div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n    <div class=\"payment-btns\">\r\n      <button class=\"btn btn-primary cash-btn\" onclick=\"this.blur();\" (click)=\"cashSale()\">\r\n        Cash\r\n      </button>\r\n      <button class=\"btn btn-primary credit-btn\" onclick=\"this.blur();\" (click)=\"creditSale()\">\r\n        Credit\r\n      </button>\r\n    </div>\r\n  </div>\r\n  <div class=\"container numpad\">\r\n    <div class=\"row\">\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressSeven()\"\r\n      >\r\n        7\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressEight()\"\r\n      >\r\n        8\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressNine()\"\r\n      >\r\n        9\r\n      </button>\r\n    </div>\r\n    <div class=\"row\">\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressFour()\"\r\n      >\r\n        4\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressFive()\"\r\n      >\r\n        5\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressSix()\"\r\n      >\r\n        6\r\n      </button>\r\n    </div>\r\n    <div class=\"row\">\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressOne()\"\r\n      >\r\n        1\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressTwo()\"\r\n      >\r\n        2\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressThree()\"\r\n      >\r\n        3\r\n      </button>\r\n    </div>\r\n    <div class=\"row\">\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressDel()\"\r\n      >\r\n        Del\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressZero()\"\r\n      >\r\n        0\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressPoint()\"\r\n      >\r\n        .\r\n      </button>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
     /***/
   },
 
@@ -1927,7 +1927,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".display-container {\n  position: absolute;\n  top: 5vh;\n  right: 0;\n  height: 95vh;\n  width: 30vw;\n  background-color: #ececec;\n}\n\n.totals {\n  position: absolute;\n  right: 0;\n  height: 47.5vh;\n  width: 30vw;\n}\n\n.subtotal-wrapper, .discount-wrapper, .tax-wrapper, .total-wrapper, .input-wrapper {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n          flex-direction: row;\n  position: relative;\n  width: 100%;\n  height: 7.92vh;\n  color: white;\n  background: #343a40;\n  border-bottom: 0.01vh #616161 solid;\n}\n\n.subtotal-label, .discount-label, .tax-label, .total-label {\n  line-height: 7.92vh;\n  font-size: 1.25vw;\n}\n\n.subtotal-data, .discount-data, .tax-data, .input-data {\n  line-height: 7.92vh;\n  font-size: 1vw;\n  position: absolute;\n  right: 1.5vw;\n}\n\n.total-data, .input-data {\n  line-height: 7.92vh;\n  font-size: 2vw;\n  position: absolute;\n  right: 1.3vw;\n}\n\n.payment-btns {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n          flex-direction: row;\n  width: 100%;\n  height: 7.92vh;\n  background: #343a40;\n}\n\n.payment-btns button {\n  border-radius: 0;\n  width: 15vw;\n  font-size: 1.25vw;\n}\n\n.cash-btn {\n  border-right: 0.01vh #8f8f8f solid;\n}\n\n.numpad {\n  position: absolute;\n  top: 47.5vh;\n  right: 0;\n  height: 47.5vh;\n  width: 30vw;\n}\n\n.numpad-btn {\n  width: 7vw;\n  height: 9vh;\n  margin-top: 2.3vh;\n  margin-left: 2.3vw;\n  font-size: 1.5vw;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9zYWxlcy11aS9yZWdpc3Rlci9DOlxcVXNlcnNcXEJPU1NcXERlc2t0b3BcXHBvc1xcY2xpZW50L3NyY1xcYXBwXFxjb21wb25lbnRzXFxzYWxlcy11aVxccmVnaXN0ZXJcXHJlZ2lzdGVyLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9jb21wb25lbnRzL3NhbGVzLXVpL3JlZ2lzdGVyL3JlZ2lzdGVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksa0JBQUE7RUFDQSxRQUFBO0VBQ0EsUUFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0VBQ0EseUJBQUE7QUNDSjs7QURFQTtFQUNJLGtCQUFBO0VBQ0EsUUFBQTtFQUNBLGNBQUE7RUFDQSxXQUFBO0FDQ0o7O0FERUE7RUFDSSxvQkFBQTtFQUFBLGFBQUE7RUFDQSw4QkFBQTtFQUFBLDZCQUFBO1VBQUEsbUJBQUE7RUFDQSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxjQUFBO0VBQ0EsWUFBQTtFQUNBLG1CQUFBO0VBQ0EsbUNBQUE7QUNDSjs7QURFQTtFQUNJLG1CQUFBO0VBQ0EsaUJBQUE7QUNDSjs7QURFQTtFQUNJLG1CQUFBO0VBQ0EsY0FBQTtFQUNBLGtCQUFBO0VBQ0EsWUFBQTtBQ0NKOztBREVBO0VBQ0ksbUJBQUE7RUFDQSxjQUFBO0VBQ0Esa0JBQUE7RUFDQSxZQUFBO0FDQ0o7O0FERUE7RUFDSSxvQkFBQTtFQUFBLGFBQUE7RUFDQSw4QkFBQTtFQUFBLDZCQUFBO1VBQUEsbUJBQUE7RUFDQSxXQUFBO0VBQ0EsY0FBQTtFQUNBLG1CQUFBO0FDQ0o7O0FEQ0k7RUFDSSxnQkFBQTtFQUNBLFdBQUE7RUFDQSxpQkFBQTtBQ0NSOztBREdBO0VBQ0ksa0NBQUE7QUNBSjs7QURHQTtFQUNJLGtCQUFBO0VBQ0EsV0FBQTtFQUNBLFFBQUE7RUFDQSxjQUFBO0VBQ0EsV0FBQTtBQ0FKOztBREdBO0VBQ0ksVUFBQTtFQUNBLFdBQUE7RUFDQSxpQkFBQTtFQUNBLGtCQUFBO0VBQ0EsZ0JBQUE7QUNBSiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvc2FsZXMtdWkvcmVnaXN0ZXIvcmVnaXN0ZXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZGlzcGxheS1jb250YWluZXIge1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgdG9wOiA1dmg7XHJcbiAgICByaWdodDogMDtcclxuICAgIGhlaWdodDogOTV2aDtcclxuICAgIHdpZHRoOiAzMHZ3O1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDIzNiwgMjM2LCAyMzYpO1xyXG59XHJcblxyXG4udG90YWxzIHtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHJpZ2h0OiAwO1xyXG4gICAgaGVpZ2h0OiA0Ny41dmg7XHJcbiAgICB3aWR0aDogMzB2dztcclxufVxyXG5cclxuLnN1YnRvdGFsLXdyYXBwZXIsIC5kaXNjb3VudC13cmFwcGVyLCAudGF4LXdyYXBwZXIsIC50b3RhbC13cmFwcGVyLCAuaW5wdXQtd3JhcHBlciB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC1kaXJlY3Rpb246IHJvdztcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgaGVpZ2h0OiA3Ljkydmg7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbiAgICBiYWNrZ3JvdW5kOiAjMzQzYTQwO1xyXG4gICAgYm9yZGVyLWJvdHRvbTogLjAxdmggcmdiKDk3LCA5NywgOTcpIHNvbGlkO1xyXG59XHJcblxyXG4uc3VidG90YWwtbGFiZWwsIC5kaXNjb3VudC1sYWJlbCwgLnRheC1sYWJlbCwgLnRvdGFsLWxhYmVsIHtcclxuICAgIGxpbmUtaGVpZ2h0OiA3Ljkydmg7XHJcbiAgICBmb250LXNpemU6IDEuMjV2dztcclxufVxyXG5cclxuLnN1YnRvdGFsLWRhdGEsIC5kaXNjb3VudC1kYXRhLCAudGF4LWRhdGEsIC5pbnB1dC1kYXRhIHtcclxuICAgIGxpbmUtaGVpZ2h0OiA3Ljkydmg7XHJcbiAgICBmb250LXNpemU6IDF2dztcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHJpZ2h0OiAxLjV2dztcclxufSBcclxuXHJcbi50b3RhbC1kYXRhLCAuaW5wdXQtZGF0YSB7XHJcbiAgICBsaW5lLWhlaWdodDogNy45MnZoO1xyXG4gICAgZm9udC1zaXplOiAydnc7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICByaWdodDogMS4zdnc7XHJcbn1cclxuXHJcbi5wYXltZW50LWJ0bnMge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtZGlyZWN0aW9uOiByb3c7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGhlaWdodDogNy45MnZoO1xyXG4gICAgYmFja2dyb3VuZDogIzM0M2E0MDtcclxuXHJcbiAgICBidXR0b24ge1xyXG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDA7XHJcbiAgICAgICAgd2lkdGg6IDE1dnc7XHJcbiAgICAgICAgZm9udC1zaXplOiAxLjI1dnc7XHJcbiAgICB9XHJcbn1cclxuXHJcbi5jYXNoLWJ0biB7XHJcbiAgICBib3JkZXItcmlnaHQ6IC4wMXZoIHJnYigxNDMsIDE0MywgMTQzKSBzb2xpZDtcclxufVxyXG5cclxuLm51bXBhZCB7XHJcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgICB0b3A6IDQ3LjV2aDtcclxuICAgIHJpZ2h0OiAwO1xyXG4gICAgaGVpZ2h0OiA0Ny41dmg7XHJcbiAgICB3aWR0aDogMzB2dztcclxufVxyXG5cclxuLm51bXBhZC1idG4ge1xyXG4gICAgd2lkdGg6IDd2dztcclxuICAgIGhlaWdodDogOXZoO1xyXG4gICAgbWFyZ2luLXRvcDogMi4zdmg7XHJcbiAgICBtYXJnaW4tbGVmdDogMi4zdnc7XHJcbiAgICBmb250LXNpemU6IDEuNXZ3O1xyXG59IiwiLmRpc3BsYXktY29udGFpbmVyIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDV2aDtcbiAgcmlnaHQ6IDA7XG4gIGhlaWdodDogOTV2aDtcbiAgd2lkdGg6IDMwdnc7XG4gIGJhY2tncm91bmQtY29sb3I6ICNlY2VjZWM7XG59XG5cbi50b3RhbHMge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHJpZ2h0OiAwO1xuICBoZWlnaHQ6IDQ3LjV2aDtcbiAgd2lkdGg6IDMwdnc7XG59XG5cbi5zdWJ0b3RhbC13cmFwcGVyLCAuZGlzY291bnQtd3JhcHBlciwgLnRheC13cmFwcGVyLCAudG90YWwtd3JhcHBlciwgLmlucHV0LXdyYXBwZXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogcm93O1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDcuOTJ2aDtcbiAgY29sb3I6IHdoaXRlO1xuICBiYWNrZ3JvdW5kOiAjMzQzYTQwO1xuICBib3JkZXItYm90dG9tOiAwLjAxdmggIzYxNjE2MSBzb2xpZDtcbn1cblxuLnN1YnRvdGFsLWxhYmVsLCAuZGlzY291bnQtbGFiZWwsIC50YXgtbGFiZWwsIC50b3RhbC1sYWJlbCB7XG4gIGxpbmUtaGVpZ2h0OiA3Ljkydmg7XG4gIGZvbnQtc2l6ZTogMS4yNXZ3O1xufVxuXG4uc3VidG90YWwtZGF0YSwgLmRpc2NvdW50LWRhdGEsIC50YXgtZGF0YSwgLmlucHV0LWRhdGEge1xuICBsaW5lLWhlaWdodDogNy45MnZoO1xuICBmb250LXNpemU6IDF2dztcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICByaWdodDogMS41dnc7XG59XG5cbi50b3RhbC1kYXRhLCAuaW5wdXQtZGF0YSB7XG4gIGxpbmUtaGVpZ2h0OiA3Ljkydmg7XG4gIGZvbnQtc2l6ZTogMnZ3O1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHJpZ2h0OiAxLjN2dztcbn1cblxuLnBheW1lbnQtYnRucyB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiByb3c7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDcuOTJ2aDtcbiAgYmFja2dyb3VuZDogIzM0M2E0MDtcbn1cbi5wYXltZW50LWJ0bnMgYnV0dG9uIHtcbiAgYm9yZGVyLXJhZGl1czogMDtcbiAgd2lkdGg6IDE1dnc7XG4gIGZvbnQtc2l6ZTogMS4yNXZ3O1xufVxuXG4uY2FzaC1idG4ge1xuICBib3JkZXItcmlnaHQ6IDAuMDF2aCAjOGY4ZjhmIHNvbGlkO1xufVxuXG4ubnVtcGFkIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDQ3LjV2aDtcbiAgcmlnaHQ6IDA7XG4gIGhlaWdodDogNDcuNXZoO1xuICB3aWR0aDogMzB2dztcbn1cblxuLm51bXBhZC1idG4ge1xuICB3aWR0aDogN3Z3O1xuICBoZWlnaHQ6IDl2aDtcbiAgbWFyZ2luLXRvcDogMi4zdmg7XG4gIG1hcmdpbi1sZWZ0OiAyLjN2dztcbiAgZm9udC1zaXplOiAxLjV2dztcbn0iXX0= */";
+    __webpack_exports__["default"] = ".display-container {\n  position: absolute;\n  top: 5vh;\n  right: 0;\n  height: 95vh;\n  width: 30vw;\n  background-color: #ececec;\n}\n\n.totals {\n  position: absolute;\n  right: 0;\n  height: 47.5vh;\n  width: 30vw;\n}\n\n.subtotal-wrapper, .discount-wrapper, .tax-wrapper, .total-wrapper, .input-wrapper, .change-wrapper {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n          flex-direction: row;\n  position: relative;\n  width: 100%;\n  height: 7.92vh;\n  color: white;\n  background: #343a40;\n  border-bottom: 0.01vh #616161 solid;\n}\n\n.subtotal-label, .discount-label, .tax-label, .total-label, .change-label {\n  line-height: 7.92vh;\n  font-size: 1.25vw;\n}\n\n.subtotal-data, .discount-data, .tax-data, .input-data {\n  line-height: 7.92vh;\n  font-size: 1vw;\n  position: absolute;\n  right: 1.5vw;\n}\n\n.total-data, .input-data, .change-data {\n  line-height: 7.92vh;\n  font-size: 2vw;\n  position: absolute;\n  right: 1.3vw;\n}\n\n.payment-btns {\n  display: -webkit-box;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n          flex-direction: row;\n  width: 100%;\n  height: 7.92vh;\n  background: #343a40;\n}\n\n.payment-btns button {\n  border-radius: 0;\n  width: 15vw;\n  font-size: 1.25vw;\n}\n\n.cash-btn {\n  border-right: 0.01vh #8f8f8f solid;\n}\n\n.numpad {\n  position: absolute;\n  top: 47.5vh;\n  right: 0;\n  height: 47.5vh;\n  width: 30vw;\n}\n\n.numpad-btn {\n  width: 7vw;\n  height: 9vh;\n  margin-top: 2.3vh;\n  margin-left: 2.3vw;\n  font-size: 1.5vw;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9zYWxlcy11aS9yZWdpc3Rlci9DOlxcVXNlcnNcXEJPU1NcXERlc2t0b3BcXHBvc1xcY2xpZW50L3NyY1xcYXBwXFxjb21wb25lbnRzXFxzYWxlcy11aVxccmVnaXN0ZXJcXHJlZ2lzdGVyLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9jb21wb25lbnRzL3NhbGVzLXVpL3JlZ2lzdGVyL3JlZ2lzdGVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksa0JBQUE7RUFDQSxRQUFBO0VBQ0EsUUFBQTtFQUNBLFlBQUE7RUFDQSxXQUFBO0VBQ0EseUJBQUE7QUNDSjs7QURFQTtFQUNJLGtCQUFBO0VBQ0EsUUFBQTtFQUNBLGNBQUE7RUFDQSxXQUFBO0FDQ0o7O0FERUE7RUFDSSxvQkFBQTtFQUFBLGFBQUE7RUFDQSw4QkFBQTtFQUFBLDZCQUFBO1VBQUEsbUJBQUE7RUFDQSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxjQUFBO0VBQ0EsWUFBQTtFQUNBLG1CQUFBO0VBQ0EsbUNBQUE7QUNDSjs7QURFQTtFQUNJLG1CQUFBO0VBQ0EsaUJBQUE7QUNDSjs7QURFQTtFQUNJLG1CQUFBO0VBQ0EsY0FBQTtFQUNBLGtCQUFBO0VBQ0EsWUFBQTtBQ0NKOztBREVBO0VBQ0ksbUJBQUE7RUFDQSxjQUFBO0VBQ0Esa0JBQUE7RUFDQSxZQUFBO0FDQ0o7O0FERUE7RUFDSSxvQkFBQTtFQUFBLGFBQUE7RUFDQSw4QkFBQTtFQUFBLDZCQUFBO1VBQUEsbUJBQUE7RUFDQSxXQUFBO0VBQ0EsY0FBQTtFQUNBLG1CQUFBO0FDQ0o7O0FEQ0k7RUFDSSxnQkFBQTtFQUNBLFdBQUE7RUFDQSxpQkFBQTtBQ0NSOztBREdBO0VBQ0ksa0NBQUE7QUNBSjs7QURHQTtFQUNJLGtCQUFBO0VBQ0EsV0FBQTtFQUNBLFFBQUE7RUFDQSxjQUFBO0VBQ0EsV0FBQTtBQ0FKOztBREdBO0VBQ0ksVUFBQTtFQUNBLFdBQUE7RUFDQSxpQkFBQTtFQUNBLGtCQUFBO0VBQ0EsZ0JBQUE7QUNBSiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvc2FsZXMtdWkvcmVnaXN0ZXIvcmVnaXN0ZXIuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZGlzcGxheS1jb250YWluZXIge1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgdG9wOiA1dmg7XHJcbiAgICByaWdodDogMDtcclxuICAgIGhlaWdodDogOTV2aDtcclxuICAgIHdpZHRoOiAzMHZ3O1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDIzNiwgMjM2LCAyMzYpO1xyXG59XHJcblxyXG4udG90YWxzIHtcclxuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgIHJpZ2h0OiAwO1xyXG4gICAgaGVpZ2h0OiA0Ny41dmg7XHJcbiAgICB3aWR0aDogMzB2dztcclxufVxyXG5cclxuLnN1YnRvdGFsLXdyYXBwZXIsIC5kaXNjb3VudC13cmFwcGVyLCAudGF4LXdyYXBwZXIsIC50b3RhbC13cmFwcGVyLCAuaW5wdXQtd3JhcHBlciwgLmNoYW5nZS13cmFwcGVyIHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogcm93O1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBoZWlnaHQ6IDcuOTJ2aDtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIGJhY2tncm91bmQ6ICMzNDNhNDA7XHJcbiAgICBib3JkZXItYm90dG9tOiAuMDF2aCByZ2IoOTcsIDk3LCA5Nykgc29saWQ7XHJcbn1cclxuXHJcbi5zdWJ0b3RhbC1sYWJlbCwgLmRpc2NvdW50LWxhYmVsLCAudGF4LWxhYmVsLCAudG90YWwtbGFiZWwsIC5jaGFuZ2UtbGFiZWwge1xyXG4gICAgbGluZS1oZWlnaHQ6IDcuOTJ2aDtcclxuICAgIGZvbnQtc2l6ZTogMS4yNXZ3O1xyXG59XHJcblxyXG4uc3VidG90YWwtZGF0YSwgLmRpc2NvdW50LWRhdGEsIC50YXgtZGF0YSwgLmlucHV0LWRhdGEge1xyXG4gICAgbGluZS1oZWlnaHQ6IDcuOTJ2aDtcclxuICAgIGZvbnQtc2l6ZTogMXZ3O1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgcmlnaHQ6IDEuNXZ3O1xyXG59IFxyXG5cclxuLnRvdGFsLWRhdGEsIC5pbnB1dC1kYXRhLCAuY2hhbmdlLWRhdGEge1xyXG4gICAgbGluZS1oZWlnaHQ6IDcuOTJ2aDtcclxuICAgIGZvbnQtc2l6ZTogMnZ3O1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgcmlnaHQ6IDEuM3Z3O1xyXG59XHJcblxyXG4ucGF5bWVudC1idG5zIHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogcm93O1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBoZWlnaHQ6IDcuOTJ2aDtcclxuICAgIGJhY2tncm91bmQ6ICMzNDNhNDA7XHJcblxyXG4gICAgYnV0dG9uIHtcclxuICAgICAgICBib3JkZXItcmFkaXVzOiAwO1xyXG4gICAgICAgIHdpZHRoOiAxNXZ3O1xyXG4gICAgICAgIGZvbnQtc2l6ZTogMS4yNXZ3O1xyXG4gICAgfVxyXG59XHJcblxyXG4uY2FzaC1idG4ge1xyXG4gICAgYm9yZGVyLXJpZ2h0OiAuMDF2aCByZ2IoMTQzLCAxNDMsIDE0Mykgc29saWQ7XHJcbn1cclxuXHJcbi5udW1wYWQge1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgdG9wOiA0Ny41dmg7XHJcbiAgICByaWdodDogMDtcclxuICAgIGhlaWdodDogNDcuNXZoO1xyXG4gICAgd2lkdGg6IDMwdnc7XHJcbn1cclxuXHJcbi5udW1wYWQtYnRuIHtcclxuICAgIHdpZHRoOiA3dnc7XHJcbiAgICBoZWlnaHQ6IDl2aDtcclxuICAgIG1hcmdpbi10b3A6IDIuM3ZoO1xyXG4gICAgbWFyZ2luLWxlZnQ6IDIuM3Z3O1xyXG4gICAgZm9udC1zaXplOiAxLjV2dztcclxufSIsIi5kaXNwbGF5LWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiA1dmg7XG4gIHJpZ2h0OiAwO1xuICBoZWlnaHQ6IDk1dmg7XG4gIHdpZHRoOiAzMHZ3O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZWNlY2VjO1xufVxuXG4udG90YWxzIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICByaWdodDogMDtcbiAgaGVpZ2h0OiA0Ny41dmg7XG4gIHdpZHRoOiAzMHZ3O1xufVxuXG4uc3VidG90YWwtd3JhcHBlciwgLmRpc2NvdW50LXdyYXBwZXIsIC50YXgtd3JhcHBlciwgLnRvdGFsLXdyYXBwZXIsIC5pbnB1dC13cmFwcGVyLCAuY2hhbmdlLXdyYXBwZXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogcm93O1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHdpZHRoOiAxMDAlO1xuICBoZWlnaHQ6IDcuOTJ2aDtcbiAgY29sb3I6IHdoaXRlO1xuICBiYWNrZ3JvdW5kOiAjMzQzYTQwO1xuICBib3JkZXItYm90dG9tOiAwLjAxdmggIzYxNjE2MSBzb2xpZDtcbn1cblxuLnN1YnRvdGFsLWxhYmVsLCAuZGlzY291bnQtbGFiZWwsIC50YXgtbGFiZWwsIC50b3RhbC1sYWJlbCwgLmNoYW5nZS1sYWJlbCB7XG4gIGxpbmUtaGVpZ2h0OiA3Ljkydmg7XG4gIGZvbnQtc2l6ZTogMS4yNXZ3O1xufVxuXG4uc3VidG90YWwtZGF0YSwgLmRpc2NvdW50LWRhdGEsIC50YXgtZGF0YSwgLmlucHV0LWRhdGEge1xuICBsaW5lLWhlaWdodDogNy45MnZoO1xuICBmb250LXNpemU6IDF2dztcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICByaWdodDogMS41dnc7XG59XG5cbi50b3RhbC1kYXRhLCAuaW5wdXQtZGF0YSwgLmNoYW5nZS1kYXRhIHtcbiAgbGluZS1oZWlnaHQ6IDcuOTJ2aDtcbiAgZm9udC1zaXplOiAydnc7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgcmlnaHQ6IDEuM3Z3O1xufVxuXG4ucGF5bWVudC1idG5zIHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IHJvdztcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogNy45MnZoO1xuICBiYWNrZ3JvdW5kOiAjMzQzYTQwO1xufVxuLnBheW1lbnQtYnRucyBidXR0b24ge1xuICBib3JkZXItcmFkaXVzOiAwO1xuICB3aWR0aDogMTV2dztcbiAgZm9udC1zaXplOiAxLjI1dnc7XG59XG5cbi5jYXNoLWJ0biB7XG4gIGJvcmRlci1yaWdodDogMC4wMXZoICM4ZjhmOGYgc29saWQ7XG59XG5cbi5udW1wYWQge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogNDcuNXZoO1xuICByaWdodDogMDtcbiAgaGVpZ2h0OiA0Ny41dmg7XG4gIHdpZHRoOiAzMHZ3O1xufVxuXG4ubnVtcGFkLWJ0biB7XG4gIHdpZHRoOiA3dnc7XG4gIGhlaWdodDogOXZoO1xuICBtYXJnaW4tdG9wOiAyLjN2aDtcbiAgbWFyZ2luLWxlZnQ6IDIuM3Z3O1xuICBmb250LXNpemU6IDEuNXZ3O1xufSJdfQ== */";
     /***/
   },
 
@@ -2012,6 +2012,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             if (this.inputNum < this.service.total) {
               this.toastr.error("Payment amount is less than total owed.", "INVALID");
             } else {
+              this.service.completeSale();
               this.toastr.success("Purchase completed.", "SUCCESS");
             }
           }
@@ -2300,6 +2301,39 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./src/app/models/sales.model.ts":
+  /*!***************************************!*\
+    !*** ./src/app/models/sales.model.ts ***!
+    \***************************************/
+
+  /*! exports provided: Sales */
+
+  /***/
+  function srcAppModelsSalesModelTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "Sales", function () {
+      return Sales;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+
+    var Sales = function Sales() {
+      _classCallCheck(this, Sales);
+    };
+    /***/
+
+  },
+
+  /***/
   "./src/app/services/employee.service.ts":
   /*!**********************************************!*\
     !*** ./src/app/services/employee.service.ts ***!
@@ -2428,33 +2462,74 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var uuid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _models_sales_model__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ../models/sales.model */
+    "./src/app/models/sales.model.ts");
+    /* harmony import */
+
+
+    var uuid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! uuid */
     "./node_modules/uuid/index.js");
     /* harmony import */
 
 
-    var uuid__WEBPACK_IMPORTED_MODULE_3___default =
+    var uuid__WEBPACK_IMPORTED_MODULE_4___default =
     /*#__PURE__*/
-    __webpack_require__.n(uuid__WEBPACK_IMPORTED_MODULE_3__);
+    __webpack_require__.n(uuid__WEBPACK_IMPORTED_MODULE_4__);
+    /* harmony import */
+
+
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @angular/common/http */
+    "./node_modules/@angular/common/fesm2015/http.js");
 
     var RegisterService =
     /*#__PURE__*/
     function () {
-      function RegisterService() {
+      function RegisterService(http) {
         _classCallCheck(this, RegisterService);
 
+        this.http = http;
+        this.baseUrl = 'http://localhost:8080/api/sales';
         this.itemList = [];
         this.subtotal = 0;
-        this.discount = 0;
         this.tax = 0;
-        this.total = 0;
-      } // @desc    Add new item to current order Item array
-      // @params  name, unitPrice
-      // @return  None
+        this.total = 0; // Once sale is made, this turns true which displays cash change
+        // amount if paid in cash.
+
+        this.saleMade = false;
+      } // @desc    CRUD service method to create new sale
+      // @params  Sales sale object
+      // @return  NA
 
 
       _createClass(RegisterService, [{
+        key: "createSale",
+        value: function createSale(sale) {
+          return this.http.post("".concat(this.baseUrl), sale);
+        } // @desc    Sends all items from one transaction to database Items table. Sends 1 sale receipt to
+        //          Sale table. Sets up relation between Items and Sale with UUID.
+        // @params  None
+        // @return  None
+
+      }, {
+        key: "completeSale",
+        value: function completeSale() {
+          var newSale = new _models_sales_model__WEBPACK_IMPORTED_MODULE_3__["Sales"]();
+          var today = new Date();
+          var date = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
+          var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+          var dateTime = date + " " + time;
+          newSale.date = dateTime;
+          newSale.total = this.total;
+          console.log("SALE ADDED" + newSale.date + " " + newSale.total);
+          this.createSale(newSale);
+        } // @desc    Add new item to current order Item array
+        // @params  name, unitPrice
+        // @return  None
+
+      }, {
         key: "addItem",
         value: function addItem(name, quantity, unitPrice) {
           if (this.itemExists(name)) {
@@ -2462,7 +2537,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this.refreshValues();
           } else {
             var newItem = new _models_item_model__WEBPACK_IMPORTED_MODULE_2__["Item"]();
-            newItem.ItemID = Object(uuid__WEBPACK_IMPORTED_MODULE_3__["v4"])();
+            newItem.ItemID = Object(uuid__WEBPACK_IMPORTED_MODULE_4__["v4"])();
             newItem.Name = name;
             newItem.Quantity = quantity;
             newItem.UnitPrice = unitPrice;
@@ -2553,7 +2628,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
 
           return exists;
-        } // @desc    Refresh subtotal, discount, tax, and total values
+        } // @desc    Refresh subtotal, tax, and total values
         // @params  None
         // @Return  None
 
@@ -2569,19 +2644,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           this.subtotalStr = (Math.round(this.subtotal * 100) / 100).toFixed(2); // Refresh taxes: MN sales tax is 6.875%
 
-          this.tax = this.subtotal * .06875;
+          this.tax = this.subtotal * 0.06875;
           this.taxStr = (Math.round(this.tax * 100) / 100).toFixed(2); // Refresh total
 
-          this.total = this.subtotal + this.tax - this.discount;
+          this.total = this.subtotal + this.tax;
           this.totalStr = (Math.round(this.total * 100) / 100).toFixed(2);
-          console.log(this.total + this.totalStr); // 2 decimal places for discount
-
-          this.discountStr = (Math.round(this.discount * 100) / 100).toFixed(2);
+          console.log(this.total + this.totalStr);
         }
       }]);
 
       return RegisterService;
     }();
+
+    RegisterService.ctorParameters = function () {
+      return [{
+        type: _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClient"]
+      }];
+    };
 
     RegisterService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
       providedIn: "root"
