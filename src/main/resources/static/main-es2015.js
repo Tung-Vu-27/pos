@@ -136,7 +136,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"display-container\">\r\n  <div class=\"totals\">\r\n    <div class=\"container subtotal-wrapper\">\r\n      <p class=\"subtotal-label\">Subtotal</p>\r\n      <p class=\"subtotal-data\">{{ service.subtotalStr }}</p>\r\n    </div>\r\n    <div class=\"container tax-wrapper\">\r\n      <p class=\"tax-label\">Tax</p>\r\n      <p class=\"tax-data\">{{ service.taxStr }}</p>\r\n    </div>\r\n\r\n\r\n\r\n    \r\n      <div class=\"container total-wrapper\">\r\n        <p class=\"total-label\">Total</p>\r\n        <p class=\"total-data\">{{ service.totalStr }}</p>\r\n      </div>\r\n\r\n    \r\n    \r\n    \r\n\r\n    <div class=\"container input-wrapper\">\r\n      <p class=\"input-data\">{{ displayNum }}</p>\r\n    </div>\r\n\r\n\r\n\r\n    <div class=\"container change-wrapper\">\r\n      <p class=\"change-label\">Change</p>\r\n      <p class=\"change-data\"></p>\r\n    </div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n    <div class=\"payment-btns\">\r\n      <button class=\"btn btn-primary cash-btn\" onclick=\"this.blur();\" (click)=\"cashSale()\">\r\n        Cash\r\n      </button>\r\n      <button class=\"btn btn-primary credit-btn\" onclick=\"this.blur();\" (click)=\"creditSale()\">\r\n        Credit\r\n      </button>\r\n    </div>\r\n  </div>\r\n  <div class=\"container numpad\">\r\n    <div class=\"row\">\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressSeven()\"\r\n      >\r\n        7\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressEight()\"\r\n      >\r\n        8\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressNine()\"\r\n      >\r\n        9\r\n      </button>\r\n    </div>\r\n    <div class=\"row\">\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressFour()\"\r\n      >\r\n        4\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressFive()\"\r\n      >\r\n        5\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressSix()\"\r\n      >\r\n        6\r\n      </button>\r\n    </div>\r\n    <div class=\"row\">\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressOne()\"\r\n      >\r\n        1\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressTwo()\"\r\n      >\r\n        2\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressThree()\"\r\n      >\r\n        3\r\n      </button>\r\n    </div>\r\n    <div class=\"row\">\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressDel()\"\r\n      >\r\n        Del\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressZero()\"\r\n      >\r\n        0\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressPoint()\"\r\n      >\r\n        .\r\n      </button>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"display-container\">\r\n  <div class=\"totals\">\r\n    <div class=\"container subtotal-wrapper\">\r\n      <p class=\"subtotal-label\">Subtotal</p>\r\n      <p class=\"subtotal-data\">{{ registerService.subtotalStr }}</p>\r\n    </div>\r\n    <div class=\"container tax-wrapper\">\r\n      <p class=\"tax-label\">Tax</p>\r\n      <p class=\"tax-data\">{{ registerService.taxStr }}</p>\r\n    </div>\r\n\r\n\r\n\r\n    \r\n      <div class=\"container total-wrapper\">\r\n        <p class=\"total-label\">Total</p>\r\n        <p class=\"total-data\">{{ registerService.totalStr }}</p>\r\n      </div>\r\n\r\n    \r\n    \r\n    \r\n\r\n    <div class=\"container input-wrapper\">\r\n      <p class=\"input-data\">{{ displayNum }}</p>\r\n    </div>\r\n\r\n\r\n\r\n    <div class=\"container change-wrapper\">\r\n      <p class=\"change-label\">Change</p>\r\n      <p class=\"change-data\"></p>\r\n    </div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n    <div class=\"payment-btns\">\r\n      <button class=\"btn btn-primary cash-btn\" onclick=\"this.blur();\" (click)=\"cashSale()\">\r\n        Cash\r\n      </button>\r\n      <button class=\"btn btn-primary credit-btn\" onclick=\"this.blur();\" (click)=\"creditSale()\">\r\n        Credit\r\n      </button>\r\n    </div>\r\n  </div>\r\n  <div class=\"container numpad\">\r\n    <div class=\"row\">\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressSeven()\"\r\n      >\r\n        7\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressEight()\"\r\n      >\r\n        8\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressNine()\"\r\n      >\r\n        9\r\n      </button>\r\n    </div>\r\n    <div class=\"row\">\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressFour()\"\r\n      >\r\n        4\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressFive()\"\r\n      >\r\n        5\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressSix()\"\r\n      >\r\n        6\r\n      </button>\r\n    </div>\r\n    <div class=\"row\">\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressOne()\"\r\n      >\r\n        1\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressTwo()\"\r\n      >\r\n        2\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressThree()\"\r\n      >\r\n        3\r\n      </button>\r\n    </div>\r\n    <div class=\"row\">\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressDel()\"\r\n      >\r\n        Del\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressZero()\"\r\n      >\r\n        0\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressPoint()\"\r\n      >\r\n        .\r\n      </button>\r\n    </div>\r\n  </div>\r\n</div>\r\n");
 
 /***/ }),
 
@@ -1047,14 +1047,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _services_register_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../services/register.service */ "./src/app/services/register.service.ts");
-/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
+/* harmony import */ var _services_sales_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../services/sales.service */ "./src/app/services/sales.service.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
+/* harmony import */ var _models_sales_model__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../models/sales.model */ "./src/app/models/sales.model.ts");
+
+
 
 
 
 
 let RegisterComponent = class RegisterComponent {
-    constructor(service, toastr) {
-        this.service = service;
+    constructor(registerService, salesService, toastr) {
+        this.registerService = registerService;
+        this.salesService = salesService;
         this.toastr = toastr;
         // Used for concatenating input numbers with decimals
         this.inputStr = "0";
@@ -1064,7 +1069,7 @@ let RegisterComponent = class RegisterComponent {
         this.inputNum = 0;
     }
     ngOnInit() {
-        this.service.refreshValues();
+        this.registerService.refreshValues();
         this.refreshNum();
     }
     // Method used to force string to show 2 digit decimal
@@ -1072,20 +1077,35 @@ let RegisterComponent = class RegisterComponent {
         this.inputNum = parseFloat(this.inputStr);
         this.displayNum = (Math.floor(this.inputNum * 100) / 100).toFixed(2);
     }
-    // Method to make complete sale. This method will interact with backend to add new sale.
+    // Method to make complete sale. This method will interact with salesService to add new sale to database.
     cashSale() {
-        if (this.service.total != 0) {
-            if (this.inputNum < this.service.total) {
+        if (this.registerService.total != 0) {
+            if (this.inputNum < this.registerService.total) {
                 this.toastr.error("Payment amount is less than total owed.", "INVALID");
             }
             else {
-                this.service.completeSale();
+                let newSale = new _models_sales_model__WEBPACK_IMPORTED_MODULE_5__["Sales"]();
+                var today = new Date();
+                var date = today.getFullYear() +
+                    "-" +
+                    (today.getMonth() + 1) +
+                    "-" +
+                    today.getDate();
+                var time = today.getHours() +
+                    ":" +
+                    today.getMinutes() +
+                    ":" +
+                    today.getSeconds();
+                var dateTime = date + " " + time;
+                newSale.date = dateTime;
+                newSale.total = this.registerService.total;
+                this.salesService.createSale(newSale).subscribe(data => console.log(data), error => console.log(error));
                 this.toastr.success("Purchase completed.", "SUCCESS");
             }
         }
     }
     creditSale() {
-        if (this.service.total != 0) {
+        if (this.registerService.total != 0) {
             this.toastr.success("Purchase completed.", "SUCCESS");
         }
     }
@@ -1141,7 +1161,8 @@ let RegisterComponent = class RegisterComponent {
 };
 RegisterComponent.ctorParameters = () => [
     { type: _services_register_service__WEBPACK_IMPORTED_MODULE_2__["RegisterService"] },
-    { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_3__["ToastrService"] }
+    { type: _services_sales_service__WEBPACK_IMPORTED_MODULE_3__["SalesService"] },
+    { type: ngx_toastr__WEBPACK_IMPORTED_MODULE_4__["ToastrService"] }
 ];
 RegisterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1342,20 +1363,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _models_item_model__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../models/item.model */ "./src/app/models/item.model.ts");
-/* harmony import */ var _models_sales_model__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../models/sales.model */ "./src/app/models/sales.model.ts");
-/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! uuid */ "./node_modules/uuid/index.js");
-/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(uuid__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-
-
+/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! uuid */ "./node_modules/uuid/index.js");
+/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(uuid__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
 
 let RegisterService = class RegisterService {
-    constructor(http) {
-        this.http = http;
-        this.baseUrl = 'http://localhost:8080/api/sales';
+    constructor() {
         this.itemList = [];
         this.subtotal = 0;
         this.tax = 0;
@@ -1363,31 +1378,6 @@ let RegisterService = class RegisterService {
         // Once sale is made, this turns true which displays cash change
         // amount if paid in cash.
         this.saleMade = false;
-    }
-    // @desc    CRUD service method to create new sale
-    // @params  Sales sale object
-    // @return  NA
-    createSale(sale) {
-        return this.http.post(`${this.baseUrl}`, sale);
-    }
-    // @desc    Sends all items from one transaction to database Items table. Sends 1 sale receipt to
-    //          Sale table. Sets up relation between Items and Sale with UUID.
-    // @params  None
-    // @return  None
-    completeSale() {
-        let newSale = new _models_sales_model__WEBPACK_IMPORTED_MODULE_3__["Sales"]();
-        var today = new Date();
-        var date = today.getFullYear() +
-            "-" +
-            (today.getMonth() + 1) +
-            "-" +
-            today.getDate();
-        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        var dateTime = date + " " + time;
-        newSale.date = dateTime;
-        newSale.total = this.total;
-        console.log("SALE ADDED" + newSale.date + " " + newSale.total);
-        this.createSale(newSale);
     }
     // @desc    Add new item to current order Item array
     // @params  name, unitPrice
@@ -1399,7 +1389,7 @@ let RegisterService = class RegisterService {
         }
         else {
             let newItem = new _models_item_model__WEBPACK_IMPORTED_MODULE_2__["Item"]();
-            newItem.ItemID = Object(uuid__WEBPACK_IMPORTED_MODULE_4__["v4"])();
+            newItem.ItemID = Object(uuid__WEBPACK_IMPORTED_MODULE_3__["v4"])();
             newItem.Name = name;
             newItem.Quantity = quantity;
             newItem.UnitPrice = unitPrice;
@@ -1500,14 +1490,52 @@ let RegisterService = class RegisterService {
         console.log(this.total + this.totalStr);
     }
 };
-RegisterService.ctorParameters = () => [
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClient"] }
-];
 RegisterService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
         providedIn: "root"
     })
 ], RegisterService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/sales.service.ts":
+/*!*******************************************!*\
+  !*** ./src/app/services/sales.service.ts ***!
+  \*******************************************/
+/*! exports provided: SalesService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SalesService", function() { return SalesService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+
+
+
+let SalesService = class SalesService {
+    constructor(http) {
+        this.http = http;
+        this.baseUrl = 'http://localhost:8080/api/sales';
+    }
+    // @desc    CRUD service method to create new sale
+    // @params  Sales sale object
+    // @return  NA
+    createSale(sale) {
+        return this.http.post(`${this.baseUrl}`, sale);
+    }
+};
+SalesService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+];
+SalesService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], SalesService);
 
 
 

@@ -9,42 +9,33 @@
       <p class="tax-data">{{ registerService.taxStr }}</p>
     </div>
 
-
-
-    
-      <div class="container total-wrapper">
-        <p class="total-label">Total</p>
-        <p class="total-data">{{ registerService.totalStr }}</p>
-      </div>
-
-    
-    
-    
+    <div class="container total-wrapper">
+      <p class="total-label">Total</p>
+      <p class="total-data">{{ registerService.totalStr }}</p>
+    </div>
 
     <div class="container input-wrapper">
       <p class="input-data">{{ displayNum }}</p>
     </div>
-
-
 
     <div class="container change-wrapper">
       <p class="change-label">Change</p>
       <p class="change-data"></p>
     </div>
 
-
-
-
-
-
-
-
-
     <div class="payment-btns">
-      <button class="btn btn-primary cash-btn" onclick="this.blur();" (click)="cashSale()">
+      <button
+        class="btn btn-primary cash-btn"
+        onclick="this.blur();"
+        (click)="cashSale()"
+      >
         Cash
       </button>
-      <button class="btn btn-primary credit-btn" onclick="this.blur();" (click)="creditSale()">
+      <button
+        class="btn btn-primary credit-btn"
+        onclick="this.blur();"
+        (click)="creditSale()"
+      >
         Credit
       </button>
     </div>

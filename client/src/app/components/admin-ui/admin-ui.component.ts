@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Globals } from "../../globals";
+import { SalesService } from "../../services/sales.service";
 
 @Component({
   selector: "app-admin-ui",
@@ -8,10 +9,12 @@ import { Globals } from "../../globals";
 })
 export class AdminUIComponent implements OnInit {
 
-  constructor(globals: Globals) {
+  constructor(globals: Globals, private service: SalesService) {
     globals.page = "admin";
     console.log(globals.page);
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.service.refreshSalesList();
+  }
 }
