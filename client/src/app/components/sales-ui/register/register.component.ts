@@ -59,8 +59,8 @@ export class RegisterComponent implements OnInit {
           today.getSeconds();
         var dateTime = date + " " + time;
 
-        newSale.date = dateTime;
-        newSale.total = this.registerService.total;
+        newSale.Date = dateTime;
+        newSale.Total = this.registerService.total;
 
         this.salesService.createSale(newSale).subscribe(
           data => console.log(data),

@@ -71,7 +71,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<p>admin-ui works!</p>\r\n";
+    __webpack_exports__["default"] = "<div class=\"container\">\r\n    <table class=\"table table-hover\">\r\n      <thead>\r\n        <tr>\r\n          <th class=\"td-display\" scope=\"col\">ID</th>\r\n          <th class=\"td-display\" scope=\"col\">Date</th>\r\n          <th class=\"td-display\" scope=\"col\">Total</th>\r\n          <th scope=\"col\"></th>\r\n        </tr>\r\n      </thead>\r\n  \r\n      <tbody>\r\n        <tr *ngFor=\"let sale of service.salesList\">\r\n          <td class=\"td-display\">{{ sale.id }}</td>\r\n          <td class=\"td-display\">{{ sale.date }}</td>\r\n          <td class=\"td-display\">{{ sale.total }}</td>\r\n          <td (click)=\"removeItem(item.ItemID)\" class=\"delete-td\">\r\n            <button class=\"btn btn-outline-danger rmv-btn\" onclick=\"this.blur();\">\r\n              Remove</button\r\n            >&nbsp;\r\n          </td>\r\n        </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n  ";
     /***/
   },
 
@@ -211,7 +211,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"display-container\">\r\n  <div class=\"totals\">\r\n    <div class=\"container subtotal-wrapper\">\r\n      <p class=\"subtotal-label\">Subtotal</p>\r\n      <p class=\"subtotal-data\">{{ registerService.subtotalStr }}</p>\r\n    </div>\r\n    <div class=\"container tax-wrapper\">\r\n      <p class=\"tax-label\">Tax</p>\r\n      <p class=\"tax-data\">{{ registerService.taxStr }}</p>\r\n    </div>\r\n\r\n\r\n\r\n    \r\n      <div class=\"container total-wrapper\">\r\n        <p class=\"total-label\">Total</p>\r\n        <p class=\"total-data\">{{ registerService.totalStr }}</p>\r\n      </div>\r\n\r\n    \r\n    \r\n    \r\n\r\n    <div class=\"container input-wrapper\">\r\n      <p class=\"input-data\">{{ displayNum }}</p>\r\n    </div>\r\n\r\n\r\n\r\n    <div class=\"container change-wrapper\">\r\n      <p class=\"change-label\">Change</p>\r\n      <p class=\"change-data\"></p>\r\n    </div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n    <div class=\"payment-btns\">\r\n      <button class=\"btn btn-primary cash-btn\" onclick=\"this.blur();\" (click)=\"cashSale()\">\r\n        Cash\r\n      </button>\r\n      <button class=\"btn btn-primary credit-btn\" onclick=\"this.blur();\" (click)=\"creditSale()\">\r\n        Credit\r\n      </button>\r\n    </div>\r\n  </div>\r\n  <div class=\"container numpad\">\r\n    <div class=\"row\">\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressSeven()\"\r\n      >\r\n        7\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressEight()\"\r\n      >\r\n        8\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressNine()\"\r\n      >\r\n        9\r\n      </button>\r\n    </div>\r\n    <div class=\"row\">\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressFour()\"\r\n      >\r\n        4\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressFive()\"\r\n      >\r\n        5\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressSix()\"\r\n      >\r\n        6\r\n      </button>\r\n    </div>\r\n    <div class=\"row\">\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressOne()\"\r\n      >\r\n        1\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressTwo()\"\r\n      >\r\n        2\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressThree()\"\r\n      >\r\n        3\r\n      </button>\r\n    </div>\r\n    <div class=\"row\">\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressDel()\"\r\n      >\r\n        Del\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressZero()\"\r\n      >\r\n        0\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressPoint()\"\r\n      >\r\n        .\r\n      </button>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
+    __webpack_exports__["default"] = "<div class=\"display-container\">\r\n  <div class=\"totals\">\r\n    <div class=\"container subtotal-wrapper\">\r\n      <p class=\"subtotal-label\">Subtotal</p>\r\n      <p class=\"subtotal-data\">{{ registerService.subtotalStr }}</p>\r\n    </div>\r\n    <div class=\"container tax-wrapper\">\r\n      <p class=\"tax-label\">Tax</p>\r\n      <p class=\"tax-data\">{{ registerService.taxStr }}</p>\r\n    </div>\r\n\r\n    <div class=\"container total-wrapper\">\r\n      <p class=\"total-label\">Total</p>\r\n      <p class=\"total-data\">{{ registerService.totalStr }}</p>\r\n    </div>\r\n\r\n    <div class=\"container input-wrapper\">\r\n      <p class=\"input-data\">{{ displayNum }}</p>\r\n    </div>\r\n\r\n    <div class=\"container change-wrapper\">\r\n      <p class=\"change-label\">Change</p>\r\n      <p class=\"change-data\"></p>\r\n    </div>\r\n\r\n    <div class=\"payment-btns\">\r\n      <button\r\n        class=\"btn btn-primary cash-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"cashSale()\"\r\n      >\r\n        Cash\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary credit-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"creditSale()\"\r\n      >\r\n        Credit\r\n      </button>\r\n    </div>\r\n  </div>\r\n  <div class=\"container numpad\">\r\n    <div class=\"row\">\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressSeven()\"\r\n      >\r\n        7\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressEight()\"\r\n      >\r\n        8\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressNine()\"\r\n      >\r\n        9\r\n      </button>\r\n    </div>\r\n    <div class=\"row\">\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressFour()\"\r\n      >\r\n        4\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressFive()\"\r\n      >\r\n        5\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressSix()\"\r\n      >\r\n        6\r\n      </button>\r\n    </div>\r\n    <div class=\"row\">\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressOne()\"\r\n      >\r\n        1\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressTwo()\"\r\n      >\r\n        2\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressThree()\"\r\n      >\r\n        3\r\n      </button>\r\n    </div>\r\n    <div class=\"row\">\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressDel()\"\r\n      >\r\n        Del\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressZero()\"\r\n      >\r\n        0\r\n      </button>\r\n      <button\r\n        class=\"btn btn-primary numpad-btn\"\r\n        onclick=\"this.blur();\"\r\n        (click)=\"pressPoint()\"\r\n      >\r\n        .\r\n      </button>\r\n    </div>\r\n  </div>\r\n</div>\r\n";
     /***/
   },
 
@@ -1151,20 +1151,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _globals__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! ../../globals */
     "./src/app/globals.ts");
+    /* harmony import */
+
+
+    var _services_sales_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ../../services/sales.service */
+    "./src/app/services/sales.service.ts");
 
     var AdminUIComponent =
     /*#__PURE__*/
     function () {
-      function AdminUIComponent(globals) {
+      function AdminUIComponent(globals, service) {
         _classCallCheck(this, AdminUIComponent);
 
+        this.service = service;
         globals.page = "admin";
         console.log(globals.page);
       }
 
       _createClass(AdminUIComponent, [{
         key: "ngOnInit",
-        value: function ngOnInit() {}
+        value: function ngOnInit() {
+          this.service.refreshSalesList();
+        }
       }]);
 
       return AdminUIComponent;
@@ -1173,6 +1182,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     AdminUIComponent.ctorParameters = function () {
       return [{
         type: _globals__WEBPACK_IMPORTED_MODULE_2__["Globals"]
+      }, {
+        type: _services_sales_service__WEBPACK_IMPORTED_MODULE_3__["SalesService"]
       }];
     };
 
@@ -2695,15 +2706,35 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         this.http = http;
         this.baseUrl = 'http://localhost:8080/api/sales';
-      } // @desc    CRUD service method to create new sale
-      // @params  Sales sale object
+      } // @desc    Refresh and populate salesList
+      // @params  None
       // @return  NA
 
 
       _createClass(SalesService, [{
+        key: "refreshSalesList",
+        value: function refreshSalesList() {
+          var _this5 = this;
+
+          this.http.get("".concat(this.baseUrl)).toPromise().then(function (res) {
+            return _this5.salesList = res;
+          });
+        } // @desc    CRUD service method to create new sale
+        // @params  Sales sale object
+        // @return  NA
+
+      }, {
         key: "createSale",
         value: function createSale(sale) {
           return this.http.post("".concat(this.baseUrl), sale);
+        } // @desc    CRUD service method to create delete sale
+        // @params  Sales sale object
+        // @return  NA
+
+      }, {
+        key: "deleteEmployee",
+        value: function deleteEmployee(id) {
+          return this.http.delete("".concat(this.baseUrl));
         }
       }]);
 
