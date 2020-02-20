@@ -1,0 +1,87 @@
+<div
+  *ngIf="slideIn"
+  [@slideSide]
+  class="jumbotron"
+  [ngStyle]="{
+    width: '93%',
+    margin: 'auto',
+    padding: '5rem',
+    marginTop: '5rem'
+  }"
+>
+  <h1>Hello</h1>
+  <h2 [ngStyle]="{ margin: '0' }" class="mb-1">
+    I'm a Software Developer
+  </h2>
+  <h4>
+    Seeking internships and entry-level positions
+  </h4>
+  <hr class="my-4" />
+  <div class="row">
+    <div class="col-md-6">
+      <app-code></app-code>
+
+      <ng-template [ngIf]="running === true" [ngIfElse]="off">
+        <button
+          mat-raised-button
+          color="accent"
+          [ngStyle]="{ width: '100%' }"
+          (click)="runCode()"
+        >
+          <i
+            class="fas fa-arrow-alt-circle-left"
+            [ngStyle]="{
+              fontSize: '2rem',
+              marginRight: '.5rem',
+              paddingBottom: 'rem'
+            }"
+          ></i>
+          RESET
+        </button>
+        <mat-progress-bar
+          mode="indeterminate"
+          [ngStyle]="{ width: '100%', marginBottom: '3rem' }"
+          [ngClass]="runStyle()"
+        >
+        </mat-progress-bar>
+      </ng-template>
+
+      <ng-template #off>
+        <button
+          mat-raised-button
+          color="accent"
+          [ngStyle]="{ width: '100%', backgroundColor: 'green' }"
+          (click)="runCode()"
+        >
+          <i
+            class="far fa-arrow-alt-circle-right"
+            [ngStyle]="{
+              fontSize: '2rem',
+              marginRight: '.5rem',
+              paddingBottom: 'rem'
+            }"
+          ></i>
+          RUN
+        </button>
+        <mat-progress-bar
+          mode="indeterminate"
+          [ngStyle]="{ width: '100%', marginBottom: '3rem' }"
+          [ngClass]="runStyle()"
+        >
+        </mat-progress-bar>
+      </ng-template>
+    </div>
+
+    <div class="col-md-6 console">
+      <div *ngIf="visible" [@slideInOut]>
+        <span class="blink">></span><br /><br /><span
+          class="str"
+          [ngClass]="runStyle()"
+        >
+          SKILLS: Java, Java Spring, Angular, JavaScript, Express, HTML, CSS, SASS,
+          MySQL, Bootstrap, GIT
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

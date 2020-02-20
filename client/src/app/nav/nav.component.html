@@ -1,0 +1,98 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport="false"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <mat-nav-list class="nav-list">
+      <a href="">
+        <mat-toolbar
+          [ngStyle]="{
+            justifyContent: 'center',
+            height: '10rem',
+            marginTop: '1rem'
+          }"
+          ><img class="header-image"
+        /></mat-toolbar>
+
+        <div class="header">
+          <h2>Tony Vu</h2>
+          <h5 class="sub-header">Software Developer</h5>
+        </div>
+      </a>
+      <a
+        mat-list-item
+        href="#"
+        routerLink=""
+        (click)="handSetState && drawer.close()"
+      >
+        <i class="fas fa-home link-icon"> </i>Home</a
+      >
+      <a
+        mat-list-item
+        href="#"
+        routerLink="projects"
+        (click)="handSetState && drawer.close()"
+        ><i class="fas fa-folder-open link-icon"> </i> Projects</a
+      >
+      <a
+        mat-list-item
+        href="#"
+        routerLink="contact"
+        (click)="handSetState && drawer.close()"
+      >
+        <i class="far fa-address-card link-icon"> </i>Contact</a
+      >
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async"
+      >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <mat-toolbar color="primary">
+        <h1>{{ globals.title }}</h1>
+
+        <span class="fill-remaining-space"></span>
+
+        <button mat-button onClick="window.open('//github.com/tonyvu1')">
+          <i
+            class="fab fa-github"
+            [ngStyle]="{
+              fontSize: '2.5rem',
+              marginRight: '.5rem',
+              paddingBottom: '.4rem'
+            }"
+          >
+          </i>
+          Github
+        </button>
+
+        <button mat-button onClick="window.open('//linkedin.com/in/tonyvu1/')">
+          <i
+            class="fab fa-linkedin"
+            [ngStyle]="{
+              fontSize: '2.5rem',
+              marginRight: '.5rem',
+              paddingBottom: '.4rem'
+            }"
+          >
+          </i>
+          LinkedIn
+        </button>
+      </mat-toolbar>
+    </mat-toolbar>
+
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

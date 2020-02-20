@@ -1,0 +1,50 @@
+.console {
+  background-color: rgb(58, 58, 58);
+  height: 37rem;
+  padding: 2rem 3rem .5rem 3rem;
+  margin-bottom: 1rem;
+}
+
+.on {
+  visibility: visible;
+}
+
+.off {
+  visibility: hidden;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.blink {
+  color: white;
+  font-size: 2rem;
+  animation: blink 1.5s step-start 0s infinite;
+  -webkit-animation: blink 1.5s step-start 0s infinite;
+}
+
+.str {
+  color: white;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.console-label {
+  color: white;
+  font-size: 2rem;
+}
+
+.jumbotron {
+  box-shadow: rgba(156, 172, 172, 0.2) 0px 2px 2px,
+    rgba(156, 172, 172, 0.2) 0px 4px 4px, rgba(156, 172, 172, 0.2) 0px 8px 8px,
+    rgba(156, 172, 172, 0.2) 0px 16px 16px,
+    rgba(156, 172, 172, 0.2) 0px 32px 32px,
+    rgba(156, 172, 172, 0.2) 0px 64px 64px;
+}

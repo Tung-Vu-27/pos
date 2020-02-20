@@ -1,0 +1,57 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.toolbar-flex {
+  flex: 1 0.5 auto;
+}
+
+.nav-list {
+  background: #eee;
+}
+
+.header-image {
+  background-image: url("../../assets/images/trills.jpg");
+  background-size: cover;
+  padding: 5rem;
+  border-radius: 50%;
+  justify-content: center;
+}
+
+.header {
+  text-align: center;
+  margin: 1rem;
+}
+
+.sub-header {
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.link-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+  padding-bottom: .3rem;
+}
