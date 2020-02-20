@@ -9,7 +9,7 @@ import { Sales } from '../models/sales.model';
 export class SalesService {
   salesList: Sales[];
 
-  private baseUrl = 'https://localhost:44327/api/sales';
+  private baseUrl = 'https://hubvu.azurewebsites.net/api/sales';
 
   constructor(private http: HttpClient) {}
 
