@@ -1,26 +1,25 @@
 <div class="container">
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th class="td-display" scope="col">ID</th>
-          <th class="td-display" scope="col">Date</th>
-          <th class="td-display" scope="col">Total</th>
-          <th scope="col"></th>
-        </tr>
-      </thead>
-  
-      <tbody>
-        <tr *ngFor="let sale of service.salesList">
-          <td class="td-display">{{ sale.id }}</td>
-          <td class="td-display">{{ sale.date }}</td>
-          <td class="td-display">{{ sale.total }}</td>
-          <td (click)="removeItem(item.ItemID)" class="delete-td">
-            <button class="btn btn-outline-danger rmv-btn" onclick="this.blur();">
-              Remove</button
-            >&nbsp;
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th class="td-display" scope="col">ID</th>
+        <th class="td-display" scope="col">Date</th>
+        <th class="td-display" scope="col">Total</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let sale of service.salesList">
+        <td class="td-display">{{ sale.id }}</td>
+        <td class="td-display">{{ sale.date }}</td>
+        <td class="td-display">{{ sale.total | number : '1.2-2' }}</td>
+        <td (click)="removeItem(item.ItemID)" class="delete-td">
+          <button class="btn btn-outline-danger rmv-btn" onclick="this.blur();">
+            Remove
+          </button>&nbsp;
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

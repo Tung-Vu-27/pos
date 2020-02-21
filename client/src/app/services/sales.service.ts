@@ -9,9 +9,10 @@ import { Sales } from '../models/sales.model';
 export class SalesService {
   salesList: Sales[];
 
-  private baseUrl = 'https://hubvu.azurewebsites.net/api/sales';
+  // PRODUCTION LINK: private baseUrl = 'https://icecreampos.azurewebsites.net/api/Sales';
+  private baseUrl = 'https://localhost:32772/api/Sales';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   // @desc    Refresh and populate salesList
   // @params  None

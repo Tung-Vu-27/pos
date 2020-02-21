@@ -43,8 +43,8 @@
           </div>
         </td>
         <td class="td-display">{{ item.UnitPrice }}</td>
-        <td class="td-display">{{ item.SubtotalString }}</td>
-        <td (click)="removeItem(item.ItemID)" class="delete-td">
+        <td class="td-display">{{ item.Subtotal | number : '1.2-2'}}</td>
+        <td (click)="removeItem(item.Id)" class="delete-td">
           <button class="btn btn-outline-danger rmv-btn" onclick="this.blur();">
             Remove</button
           >&nbsp;
