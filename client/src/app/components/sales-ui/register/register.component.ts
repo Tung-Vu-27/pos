@@ -66,7 +66,6 @@ export class RegisterComponent implements OnInit {
           data => console.log(data),
           error => console.log(error)
         );
-
         this.toastr.success("Purchase completed.", "SUCCESS");
       }
     }

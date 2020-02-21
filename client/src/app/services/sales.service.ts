@@ -22,6 +22,7 @@ export class SalesService {
       .get(`${this.baseUrl}`)
       .toPromise()
       .then(res => (this.salesList = res as Sales[]));
+      console.log("refreshSalesList() fired");
   }
 
   // @desc    CRUD service method to create new sale
@@ -34,7 +35,10 @@ export class SalesService {
   // @desc    CRUD service method to create delete sale
   // @params  Sales sale object
   // @return  NA
-  deleteEmployee(id: number) {
+  deleteSale(id: number) {
     return this.http.delete(`${this.baseUrl}`);
   }
+
+
+  
 }
