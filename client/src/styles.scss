@@ -1,36 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
-.form-group>input{
-    font-weight: bolder;
+.form-group > input {
+  font-weight: bolder;
 }
-.form-group>label{
-    font-weight: lighter;
-}
-
-button[type="submit"]{
-    background-color: #67dfd4;
-    color: #fff;
-
-}
-.jumbotron{
-    background-color: #fff;
-    padding-top: 32px;
+.form-group > label {
+  font-weight: lighter;
 }
 
-table tr:hover{
-    cursor: pointer;
+button[type="submit"] {
+  background-color: #67dfd4;
+  color: #fff;
+}
+.jumbotron {
+  background-color: #fff;
+  padding-top: 32px;
 }
 
-div.validation-error{
-    width: 100%;
-    margin-top: .25rem;
-    font-size: 80%;
-    color: #dc3545;
+table tr:hover {
+  cursor: pointer;
+}
+
+div.validation-error {
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 80%;
+  color: #dc3545;
 }
 
 body {
-    overflow: hidden; /* Hide scrollbars */
-  }
+  overflow: hidden; /* Hide scrollbars */
+}
 
-  .navbar-collapse {
-      background: rgb(37, 37, 37);
-  }
+.navbar-collapse {
+  background: rgb(37, 37, 37);
+}
