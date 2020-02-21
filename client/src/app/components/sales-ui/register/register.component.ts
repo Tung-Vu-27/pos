@@ -11,9 +11,9 @@ import { Sales } from "../../../models/sales.model";
 })
 export class RegisterComponent implements OnInit {
   constructor(
-    private registerService: RegisterService,
-    private salesService: SalesService,
-    private toastr: ToastrService
+    public registerService: RegisterService,
+    public salesService: SalesService,
+    public toastr: ToastrService
   ) {}
 
   ngOnInit() {

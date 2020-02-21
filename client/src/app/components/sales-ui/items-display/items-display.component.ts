@@ -8,7 +8,7 @@ import { RegisterService } from '../../../services/register.service';
 })
 export class ItemsDisplayComponent implements OnInit {
 
-  constructor(private service: RegisterService) { }
+  constructor(public service: RegisterService) { }
 
   ngOnInit() {
   }

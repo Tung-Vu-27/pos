@@ -8,7 +8,7 @@ import { Globals } from "../../../globals";
   styleUrls: ["./menu-btns.component.scss"]
 })
 export class MenuBtnsComponent implements OnInit {
-  constructor(private service: RegisterService, private globals: Globals) {}
+  constructor(public service: RegisterService, public globals: Globals) {}
 
   ngOnInit() {}
 

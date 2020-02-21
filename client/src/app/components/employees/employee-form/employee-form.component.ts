@@ -10,8 +10,8 @@ import { ToastrService } from "ngx-toastr";
 })
 export class EmployeeFormComponent implements OnInit {
   constructor(
-    private service: EmployeeService,
-    private toastr: ToastrService
+    public service: EmployeeService,
+    public toastr: ToastrService
   ) {}
 
   ngOnInit() {

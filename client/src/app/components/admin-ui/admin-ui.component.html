@@ -6,46 +6,49 @@
 
   <div class="row">
     <div class="col-md-6">
-      <table class="table table-hover" id="mydatatable">
-        <thead>
-          <tr>
-            <th class="td-display" scope="col">Id</th>
-            <th class="td-display" scope="col">Date</th>
-            <th class="td-display" scope="col">Total</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr *ngFor="let sale of service.salesList">
-            <td class="td-display">{{ sale.id }}</td>
-            <td class="td-display">{{ sale.date }}</td>
-            <td class="td-display">{{ sale.total | number: "1.2-2" }}</td>
-          </tr>
-        </tbody>
+      <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+          <td mat-cell *matCellDef="let sale">{{ sale.id }}</td>
+        </ng-container>
+      
+        <ng-container matColumnDef="total">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Total</th>
+          <td mat-cell *matCellDef="let sale">{{ sale.total }}</td>
+        </ng-container>
+      
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Date</th>
+          <td mat-cell *matCellDef="let sale">{{ sale.date }}</td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
       </table>
     </div>
 
     <div class="col-md-6">
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th class="td-display" scope="col">Name</th>
-            <th class="td-display" scope="col">Quantity</th>
-            <th class="td-display" scope="col">Unit Price</th>
-            <th class="td-display" scope="col">Subtotal</th>
-            <th scope="col"></th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr *ngFor="let sale of service.salesList">
-            <td class="td-display">{{ sale.id }}</td>
-            <td class="td-display">{{ sale.date }}</td>
-            <td class="td-display">{{ sale.total | number: "1.2-2" }}</td>
-          </tr>
-        </tbody>
+      <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+          <td mat-cell *matCellDef="let sale">{{ sale.id }}</td>
+        </ng-container>
+      
+        <ng-container matColumnDef="total">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Total</th>
+          <td mat-cell *matCellDef="let sale">{{ sale.total }}</td>
+        </ng-container>
+      
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Date</th>
+          <td mat-cell *matCellDef="let sale">{{ sale.date }}</td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
       </table>
     </div>
   </div>
 </div>
+
 

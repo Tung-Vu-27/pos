@@ -19,6 +19,7 @@ import { RegisterComponent } from "./components/sales-ui/register/register.compo
 import { MenuBtnsComponent } from "./components/sales-ui/menu-btns/menu-btns.component";
 import { RegisterService } from "./services/register.service";
 import { MatSortModule } from "@angular/material/sort";
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { MatSortModule } from "@angular/material/sort";
     HttpClientModule,
     BrowserAnimationsModule,
     MatSortModule,
+    MatTableModule,
     ToastrModule.forRoot({
       timeOut: 3000,
       preventDuplicates: true
