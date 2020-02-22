@@ -14,16 +14,16 @@
   },
 
   /***/
-  "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./src/styles.scss":
-  /*!**********************************************************************************************************************************************************************************************************************!*\
-    !*** ./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src??embedded!./node_modules/sass-loader/lib/loader.js??ref--15-3!./src/styles.scss ***!
-    \**********************************************************************************************************************************************************************************************************************/
+  "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./src/styles.scss":
+  /*!********************************************************************************************************************************************************************************************************************!*\
+    !*** ./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src??embedded!./node_modules/sass-loader/dist/cjs.js??ref--15-3!./src/styles.scss ***!
+    \********************************************************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
   /***/
-  function node_modulesAngularDevkitBuildAngularSrcAngularCliFilesPluginsRawCssLoaderJsNode_modulesPostcssLoaderSrcIndexJsNode_modulesSassLoaderLibLoaderJsSrcStylesScss(module, exports) {
-    module.exports = [[module.i, "/* You can add global styles to this file, and also import other style files */\n.form-group > input {\n  font-weight: bolder;\n}\n.form-group > label {\n  font-weight: lighter;\n}\nbutton[type=submit] {\n  background-color: #67dfd4;\n  color: #fff;\n}\n.jumbotron {\n  background-color: #fff;\n  padding-top: 32px;\n}\ntable tr:hover {\n  cursor: pointer;\n}\ndiv.validation-error {\n  width: 100%;\n  margin-top: 0.25rem;\n  font-size: 80%;\n  color: #dc3545;\n}\nbody {\n  overflow: hidden;\n  /* Hide scrollbars */\n}\n.navbar-collapse {\n  background: #252525;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9DOlxcVXNlcnNcXEJPU1NcXERlc2t0b3BcXHBvc1xcQ2xpZW50L3NyY1xcc3R5bGVzLnNjc3MiLCJzcmMvc3R5bGVzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsOEVBQUE7QUFDQTtFQUNJLG1CQUFBO0FDQ0o7QURDQTtFQUNJLG9CQUFBO0FDRUo7QURDQTtFQUNJLHlCQUFBO0VBQ0EsV0FBQTtBQ0VKO0FEQ0E7RUFDSSxzQkFBQTtFQUNBLGlCQUFBO0FDRUo7QURDQTtFQUNJLGVBQUE7QUNFSjtBRENBO0VBQ0ksV0FBQTtFQUNBLG1CQUFBO0VBQ0EsY0FBQTtFQUNBLGNBQUE7QUNFSjtBRENBO0VBQ0ksZ0JBQUE7RUFBa0Isb0JBQUE7QUNHdEI7QURBRTtFQUNJLG1CQUFBO0FDR04iLCJmaWxlIjoic3JjL3N0eWxlcy5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyogWW91IGNhbiBhZGQgZ2xvYmFsIHN0eWxlcyB0byB0aGlzIGZpbGUsIGFuZCBhbHNvIGltcG9ydCBvdGhlciBzdHlsZSBmaWxlcyAqL1xuLmZvcm0tZ3JvdXA+aW5wdXR7XG4gICAgZm9udC13ZWlnaHQ6IGJvbGRlcjtcbn1cbi5mb3JtLWdyb3VwPmxhYmVse1xuICAgIGZvbnQtd2VpZ2h0OiBsaWdodGVyO1xufVxuXG5idXR0b25bdHlwZT1cInN1Ym1pdFwiXXtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNjdkZmQ0O1xuICAgIGNvbG9yOiAjZmZmO1xuXG59XG4uanVtYm90cm9ue1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gICAgcGFkZGluZy10b3A6IDMycHg7XG59XG5cbnRhYmxlIHRyOmhvdmVye1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbn1cblxuZGl2LnZhbGlkYXRpb24tZXJyb3J7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgbWFyZ2luLXRvcDogLjI1cmVtO1xuICAgIGZvbnQtc2l6ZTogODAlO1xuICAgIGNvbG9yOiAjZGMzNTQ1O1xufVxuXG5ib2R5IHtcbiAgICBvdmVyZmxvdzogaGlkZGVuOyAvKiBIaWRlIHNjcm9sbGJhcnMgKi9cbiAgfVxuXG4gIC5uYXZiYXItY29sbGFwc2Uge1xuICAgICAgYmFja2dyb3VuZDogcmdiKDM3LCAzNywgMzcpO1xuICB9IiwiLyogWW91IGNhbiBhZGQgZ2xvYmFsIHN0eWxlcyB0byB0aGlzIGZpbGUsIGFuZCBhbHNvIGltcG9ydCBvdGhlciBzdHlsZSBmaWxlcyAqL1xuLmZvcm0tZ3JvdXAgPiBpbnB1dCB7XG4gIGZvbnQtd2VpZ2h0OiBib2xkZXI7XG59XG5cbi5mb3JtLWdyb3VwID4gbGFiZWwge1xuICBmb250LXdlaWdodDogbGlnaHRlcjtcbn1cblxuYnV0dG9uW3R5cGU9c3VibWl0XSB7XG4gIGJhY2tncm91bmQtY29sb3I6ICM2N2RmZDQ7XG4gIGNvbG9yOiAjZmZmO1xufVxuXG4uanVtYm90cm9uIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgcGFkZGluZy10b3A6IDMycHg7XG59XG5cbnRhYmxlIHRyOmhvdmVyIHtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG5kaXYudmFsaWRhdGlvbi1lcnJvciB7XG4gIHdpZHRoOiAxMDAlO1xuICBtYXJnaW4tdG9wOiAwLjI1cmVtO1xuICBmb250LXNpemU6IDgwJTtcbiAgY29sb3I6ICNkYzM1NDU7XG59XG5cbmJvZHkge1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICAvKiBIaWRlIHNjcm9sbGJhcnMgKi9cbn1cblxuLm5hdmJhci1jb2xsYXBzZSB7XG4gIGJhY2tncm91bmQ6ICMyNTI1MjU7XG59Il19 */", '', '']];
+  function node_modulesAngularDevkitBuildAngularSrcAngularCliFilesPluginsRawCssLoaderJsNode_modulesPostcssLoaderSrcIndexJsNode_modulesSassLoaderDistCjsJsSrcStylesScss(module, exports) {
+    module.exports = [[module.i, "/* You can add global styles to this file, and also import other style files */\n.form-group > input {\n  font-weight: bolder;\n}\n.form-group > label {\n  font-weight: lighter;\n}\nbutton[type=submit] {\n  background-color: #67dfd4;\n  color: #fff;\n}\n.jumbotron {\n  background-color: #fff;\n  padding-top: 32px;\n}\ntable tr:hover {\n  cursor: pointer;\n}\ndiv.validation-error {\n  width: 100%;\n  margin-top: 0.25rem;\n  font-size: 80%;\n  color: #dc3545;\n}\nbody {\n  overflow: hidden;\n  /* Hide scrollbars */\n}\n.navbar-collapse {\n  background: #252525;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9DOlxcVXNlcnNcXEJPU1NcXERlc2t0b3BcXHBvc1xcY2xpZW50L3NyY1xcc3R5bGVzLnNjc3MiLCJzcmMvc3R5bGVzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsOEVBQUE7QUFDQTtFQUNFLG1CQUFBO0FDQ0Y7QURDQTtFQUNFLG9CQUFBO0FDRUY7QURDQTtFQUNFLHlCQUFBO0VBQ0EsV0FBQTtBQ0VGO0FEQUE7RUFDRSxzQkFBQTtFQUNBLGlCQUFBO0FDR0Y7QURBQTtFQUNFLGVBQUE7QUNHRjtBREFBO0VBQ0UsV0FBQTtFQUNBLG1CQUFBO0VBQ0EsY0FBQTtFQUNBLGNBQUE7QUNHRjtBREFBO0VBQ0UsZ0JBQUE7RUFBa0Isb0JBQUE7QUNJcEI7QUREQTtFQUNFLG1CQUFBO0FDSUYiLCJmaWxlIjoic3JjL3N0eWxlcy5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyogWW91IGNhbiBhZGQgZ2xvYmFsIHN0eWxlcyB0byB0aGlzIGZpbGUsIGFuZCBhbHNvIGltcG9ydCBvdGhlciBzdHlsZSBmaWxlcyAqL1xuLmZvcm0tZ3JvdXAgPiBpbnB1dCB7XG4gIGZvbnQtd2VpZ2h0OiBib2xkZXI7XG59XG4uZm9ybS1ncm91cCA+IGxhYmVsIHtcbiAgZm9udC13ZWlnaHQ6IGxpZ2h0ZXI7XG59XG5cbmJ1dHRvblt0eXBlPVwic3VibWl0XCJdIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzY3ZGZkNDtcbiAgY29sb3I6ICNmZmY7XG59XG4uanVtYm90cm9uIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbiAgcGFkZGluZy10b3A6IDMycHg7XG59XG5cbnRhYmxlIHRyOmhvdmVyIHtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG5kaXYudmFsaWRhdGlvbi1lcnJvciB7XG4gIHdpZHRoOiAxMDAlO1xuICBtYXJnaW4tdG9wOiAwLjI1cmVtO1xuICBmb250LXNpemU6IDgwJTtcbiAgY29sb3I6ICNkYzM1NDU7XG59XG5cbmJvZHkge1xuICBvdmVyZmxvdzogaGlkZGVuOyAvKiBIaWRlIHNjcm9sbGJhcnMgKi9cbn1cblxuLm5hdmJhci1jb2xsYXBzZSB7XG4gIGJhY2tncm91bmQ6IHJnYigzNywgMzcsIDM3KTtcbn1cbiIsIi8qIFlvdSBjYW4gYWRkIGdsb2JhbCBzdHlsZXMgdG8gdGhpcyBmaWxlLCBhbmQgYWxzbyBpbXBvcnQgb3RoZXIgc3R5bGUgZmlsZXMgKi9cbi5mb3JtLWdyb3VwID4gaW5wdXQge1xuICBmb250LXdlaWdodDogYm9sZGVyO1xufVxuXG4uZm9ybS1ncm91cCA+IGxhYmVsIHtcbiAgZm9udC13ZWlnaHQ6IGxpZ2h0ZXI7XG59XG5cbmJ1dHRvblt0eXBlPXN1Ym1pdF0ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjNjdkZmQ0O1xuICBjb2xvcjogI2ZmZjtcbn1cblxuLmp1bWJvdHJvbiB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG4gIHBhZGRpbmctdG9wOiAzMnB4O1xufVxuXG50YWJsZSB0cjpob3ZlciB7XG4gIGN1cnNvcjogcG9pbnRlcjtcbn1cblxuZGl2LnZhbGlkYXRpb24tZXJyb3Ige1xuICB3aWR0aDogMTAwJTtcbiAgbWFyZ2luLXRvcDogMC4yNXJlbTtcbiAgZm9udC1zaXplOiA4MCU7XG4gIGNvbG9yOiAjZGMzNTQ1O1xufVxuXG5ib2R5IHtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgLyogSGlkZSBzY3JvbGxiYXJzICovXG59XG5cbi5uYXZiYXItY29sbGFwc2Uge1xuICBiYWNrZ3JvdW5kOiAjMjUyNTI1O1xufSJdfQ== */", '', '']];
     /***/
   },
 
@@ -367,8 +367,8 @@
   /***/
   function srcStylesScss(module, exports, __webpack_require__) {
     var content = __webpack_require__(
-    /*! !../node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!../node_modules/postcss-loader/src??embedded!../node_modules/sass-loader/lib/loader.js??ref--15-3!./styles.scss */
-    "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./src/styles.scss");
+    /*! !../node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!../node_modules/postcss-loader/src??embedded!../node_modules/sass-loader/dist/cjs.js??ref--15-3!./styles.scss */
+    "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./src/styles.scss");
 
     if (typeof content === 'string') {
       content = [[module.i, content, '']];
@@ -400,11 +400,11 @@
   /***/
   function _(module, exports, __webpack_require__) {
     __webpack_require__(
-    /*! C:\Users\BOSS\Desktop\pos\Client\src\styles.scss */
+    /*! C:\Users\BOSS\Desktop\pos\client\src\styles.scss */
     "./src/styles.scss");
 
     module.exports = __webpack_require__(
-    /*! C:\Users\BOSS\Desktop\pos\Client\node_modules\ngx-toastr\toastr.css */
+    /*! C:\Users\BOSS\Desktop\pos\client\node_modules\ngx-toastr\toastr.css */
     "./node_modules/ngx-toastr/toastr.css");
     /***/
   }
