@@ -1,13 +1,19 @@
 .wrapper {
-    width: 90%;
-    margin-left: 5%;
+  width: 90%;
+  margin-left: 5%;
+  height: 90vh;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 table {
-    width: 100%;
-  }
-  
+  width: 100%;
+}
+
+.sales-table {
+    overflow: auto;
+    height: 80vh !important;
+    overflow-y: scroll;
+}

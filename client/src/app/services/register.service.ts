@@ -1,8 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Item } from "../models/item.model";
-import { Sales } from "../models/sales.model";
 import { v4 as uuid } from "uuid";
-
 
 @Injectable({
   providedIn: "root"
@@ -14,6 +12,7 @@ export class RegisterService {
   subtotal: number = 0;
   tax: number = 0;
   total: number = 0;
+  inProgress: boolean = true; // Used to determine if ongoing sale is taking place. If false, reset all register values.
 
   // Used to display two decimal number
   subtotalStr: string;
@@ -134,5 +133,30 @@ export class RegisterService {
     this.total = this.subtotal + this.tax;
     this.totalStr = (Math.round(this.total * 100) / 100).toFixed(2);
     console.log(this.total + this.totalStr);
+  }
+
+  // @desc    Reset all values including array
+  // @params  None
+  // @Return  None
+  public reset() {
+    this.subtotal = 0;
+    this.tax = 0;
+    this.total = 0;
+    for (let i = this.itemList.length-1; i >= 0; i--) {
+      this.itemList.pop();
+    }
+    for (let i = 0; i < this.itemList.length; i++) {
+      console.log(this.itemList[i]);
+    }
+    this.refreshValues();
+  }
+
+  // @desc    If in progress, reset all values including array. (used in menu-btn component)
+  // @params  None
+  // @Return  None
+  public checkIfInProgress() {
+    if(this.inProgress == false) {
+      this.reset();
+    }
   }
 }

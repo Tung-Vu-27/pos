@@ -2,7 +2,6 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { Sales } from "../models/sales.model";
-import { v4 as uuid } from "uuid";
 
 @Injectable({
   providedIn: "root"
@@ -44,19 +43,38 @@ export class SalesService {
 
     // Create new sale object
     let newSale = new Sales();
-    newSale.Date = dateTime;
-    newSale.Total = total;
-    newSale.PaymentType = paymentType;
-    newSale.Cash = cash;
-    newSale.Change = change;
+    newSale.date = dateTime;
+    newSale.total = total;
+    newSale.paymentType = paymentType;
+    newSale.cash = cash;
+    newSale.change = change;
 
     return this.http.post(`${this.baseUrl}`, newSale);
   }
 
-  // @desc    CRUD service method to create delete sale
+  // @desc    CRUD service method to delete sale
   // @params  Sales sale object
   // @return  NA
   deleteSale(id: number) {
-    return this.http.delete(`${this.baseUrl}`);
+    return this.http.delete(`${this.baseUrl}` + "/" + id);
   }
+
+  // @desc    CRUD service method to delete all sales iteratively 
+  // @params  None
+  // @return  NA
+  deleteAll() {
+    this.refreshSalesList();
+
+    for(let i = 0; i < this.salesList.length; i++) {
+      this.deleteSale(this.salesList[i].id).subscribe(
+        data => console.log(data),
+        error => console.log(error)
+      );;
+    }
+    this.refresh();
+  }
+
+  refresh(): void {
+    window.location.reload();
+}
 }

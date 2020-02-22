@@ -15,12 +15,13 @@
     </div>
 
     <div class="container input-wrapper">
+      <p class="change-label">Input</p>
       <p class="input-data">{{ displayNum }}</p>
     </div>
 
     <div class="container change-wrapper">
       <p class="change-label">Change</p>
-      <p class="change-data"></p>
+      <p class="change-data">{{ change | number: "1.2-2" }}</p>
     </div>
 
     <div class="payment-btns">

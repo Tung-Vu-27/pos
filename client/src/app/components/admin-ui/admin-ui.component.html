@@ -4,8 +4,8 @@
   </div>
 
   <div class="row">
-    <div class="col-md-12">
-      <table class="table table-hover" id="mydatatable">
+    <div class="col-md-12 sales-table">
+      <table class="table table-hover">
         <thead>
           <tr>
             <th class="td-display" scope="col">SalesId</th>
@@ -29,4 +29,7 @@
         </tbody>
       </table>
     </div>
+
+    <button class="btn btn-danger" (click)="this.salesService.deleteAll()">Delete All</button>
 </div>
+

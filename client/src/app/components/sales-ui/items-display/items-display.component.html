@@ -44,7 +44,7 @@
         </td>
         <td class="td-display">{{ item.UnitPrice }}</td>
         <td class="td-display">{{ item.Subtotal | number : '1.2-2'}}</td>
-        <td (click)="removeItem(item.UUID)" class="delete-td">
+        <td (click)="removeItem(item.Id)" class="delete-td">
           <button class="btn btn-outline-danger rmv-btn" onclick="this.blur();">
             Remove</button
           >&nbsp;
