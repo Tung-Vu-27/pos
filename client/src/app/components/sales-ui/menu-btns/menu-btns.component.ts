@@ -12,9 +12,7 @@ export class MenuBtnsComponent implements OnInit {
 
   ngOnInit() {}
 
-  // @desc    UI method to add item to current order
-  // @params  itemName
-  // @Return  None
+  // UI method to add item to current order
   addItem(itemName: string) {
     // Switch cases determine item prices stored in Globals
     switch (itemName) {

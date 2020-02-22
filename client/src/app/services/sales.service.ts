@@ -9,14 +9,11 @@ import { Sales } from "../models/sales.model";
 export class SalesService {
   salesList: Sales[];
 
-  // PRODUCTION LINK: private baseUrl = 'https://icecreampos.azurewebsites.net/api/Sales';
-  private baseUrl = "https://localhost:32780/api/Sales";
+  private baseUrl = "https://icecreampos.azurewebsites.net/api/Sales";
 
   constructor(private http: HttpClient) {}
 
-  // @desc    Refresh and populate salesList
-  // @params  None
-  // @return  NA
+  // Refresh and populate salesList
   refreshSalesList() {
     this.http
       .get(`${this.baseUrl}`)
@@ -24,9 +21,7 @@ export class SalesService {
       .then(res => (this.salesList = res as Sales[]));
   }
 
-  // @desc    CRUD service method to create new sale
-  // @params  total, paymentType, cash, change
-  // @return  NA
+  // CRUD service method to create new sale
   createSale(
     total: number,
     paymentType: string,
@@ -57,16 +52,12 @@ export class SalesService {
     return this.http.post(`${this.baseUrl}`, newSale);
   }
 
-  // @desc    CRUD service method to delete sale
-  // @params  Sales sale object
-  // @return  NA
+  // CRUD service method to delete sale
   deleteSale(id: number) {
     return this.http.delete(`${this.baseUrl}` + "/" + id);
   }
 
-  // @desc    CRUD service method to delete all sales iteratively
-  // @params  None
-  // @return  NA
+  // CRUD service method to delete all sales iteratively
   deleteAll() {
     this.refreshSalesList();
 

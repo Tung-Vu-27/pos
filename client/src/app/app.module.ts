@@ -37,7 +37,7 @@ import {MatTableModule} from '@angular/material/table';
     MatTableModule,
     ToastrModule.forRoot({
       timeOut: 3000,
-      preventDuplicates: true
+      preventDuplicates: true,
     })
   ],
   providers: [RegisterService, Globals],

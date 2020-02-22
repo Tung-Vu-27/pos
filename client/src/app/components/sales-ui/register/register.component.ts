@@ -18,35 +18,26 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
     this.registerService.refreshValues();
     this.salesService.refreshSalesList();
-    this.refreshNum();
+    this.registerService.refreshNum();
   }
 
-  inputStr: string = "0";
-  displayNum: string = ""; // Used after all conversions to display string
-  inputNum: number = 0;
-  change: number = 0;
-
-  // Method used to force string to show 2 digit decimal
-  refreshNum() {
-    this.inputNum = parseFloat(this.inputStr);
-    this.displayNum = (Math.floor(this.inputNum * 100) / 100).toFixed(2);
-  }
-
-  // Method to make complete sale. This method will interact with salesService to add new sale to database.
+  // Method to make complete cash sale. This method will interact with salesService to add new sale to database.
   cashSale() {
+    this.checkInProgress();
     if (this.registerService.total != 0) {
-      if (this.inputNum < this.registerService.total) {
+      if (this.registerService.inputNum < this.registerService.total) {
         this.toastr.error("Payment amount is less than total owed.", "INVALID");
       } else {
-        this.change = this.inputNum - this.registerService.total;
+        this.registerService.change =
+          this.registerService.inputNum - this.registerService.total;
 
         // Create sale from service
         this.salesService
           .createSale(
             this.registerService.total,
             "Cash",
-            this.inputNum,
-            this.change
+            this.registerService.inputNum,
+            this.registerService.change
           )
           .subscribe(
             data => console.log(data),
@@ -58,18 +49,20 @@ export class RegisterComponent implements OnInit {
     }
   }
 
+  // Method to make complete credit sale. This method will interact with salesService to add new sale to database.
   creditSale() {
+    this.checkInProgress();
     if (this.registerService.total != 0) {
-      this.change = 0;
-      this.inputNum = 0;
+      this.registerService.change = 0;
+      this.registerService.inputNum = 0;
 
       // Create sale from service
       this.salesService
         .createSale(
           this.registerService.total,
           "Credit",
-          this.inputNum,
-          this.change
+          this.registerService.inputNum,
+          this.registerService.change
         )
         .subscribe(
           data => console.log(data),
@@ -83,10 +76,6 @@ export class RegisterComponent implements OnInit {
   // Checks if sale is in progress. If false, reset all values and itemsList.
   checkInProgress() {
     if (this.registerService.inProgress == false) {
-      this.inputNum = 0;
-      this.change = 0;
-      this.displayNum = "";
-      this.inputStr = "";
       this.registerService.reset();
       this.registerService.inProgress = true;
     }
@@ -95,73 +84,73 @@ export class RegisterComponent implements OnInit {
   // Numpad btn methods
   pressZero() {
     this.checkInProgress();
-    this.inputStr += "0";
-    this.refreshNum();
+    this.registerService.inputStr += "0";
+    this.registerService.refreshNum();
   }
 
   pressOne() {
     this.checkInProgress();
-    this.inputStr += "1";
-    this.refreshNum();
+    this.registerService.inputStr += "1";
+    this.registerService.refreshNum();
   }
 
   pressTwo() {
     this.checkInProgress();
-    this.inputStr += "2";
-    this.refreshNum();
+    this.registerService.inputStr += "2";
+    this.registerService.refreshNum();
   }
 
   pressThree() {
     this.checkInProgress();
-    this.inputStr += "3";
-    this.refreshNum();
+    this.registerService.inputStr += "3";
+    this.registerService.refreshNum();
   }
 
   pressFour() {
     this.checkInProgress();
-    this.inputStr += "4";
-    this.refreshNum();
+    this.registerService.inputStr += "4";
+    this.registerService.refreshNum();
   }
 
   pressFive() {
     this.checkInProgress();
-    this.inputStr += "5";
-    this.refreshNum();
+    this.registerService.inputStr += "5";
+    this.registerService.refreshNum();
   }
 
   pressSix() {
     this.checkInProgress();
-    this.inputStr += "6";
-    this.refreshNum();
+    this.registerService.inputStr += "6";
+    this.registerService.refreshNum();
   }
 
   pressSeven() {
     this.checkInProgress();
-    this.inputStr += "7";
-    this.refreshNum();
+    this.registerService.inputStr += "7";
+    this.registerService.refreshNum();
   }
 
   pressEight() {
     this.checkInProgress();
-    this.inputStr += "8";
-    this.refreshNum();
+    this.registerService.inputStr += "8";
+    this.registerService.refreshNum();
   }
 
   pressNine() {
     this.checkInProgress();
-    this.inputStr += "9";
-    this.refreshNum();
+    this.registerService.inputStr += "9";
+    this.registerService.refreshNum();
   }
 
   pressPoint() {
     this.checkInProgress();
-    this.inputStr += ".";
-    this.refreshNum();
+    this.registerService.inputStr += ".";
+    this.registerService.refreshNum();
   }
 
   pressDel() {
     this.checkInProgress();
-    this.inputStr = "0";
-    this.refreshNum();
+    this.registerService.inputStr = "0";
+    this.registerService.refreshNum();
   }
 }

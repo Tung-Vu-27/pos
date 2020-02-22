@@ -12,6 +12,10 @@ export class RegisterService {
   subtotal: number = 0;
   tax: number = 0;
   total: number = 0;
+  inputStr: string = "0";
+  displayNum: string = ""; // Used after all conversions to display string
+  inputNum: number = 0;
+  change: number = 0;
   inProgress: boolean = true; // Used to determine if ongoing sale is taking place. If false, reset all register values.
 
   // Used to display two decimal number
@@ -23,9 +27,7 @@ export class RegisterService {
   // amount if paid in cash.
   saleMade: boolean = false;
 
-  // @desc    Add new item to current order Item array
-  // @params  name, unitPrice
-  // @return  None
+  // Add new item to current order Item array
   public addItem(name: string, quantity: number, unitPrice: number) {
     if (this.itemExists(name)) {
       this.increaseQuantity(name);
@@ -42,9 +44,7 @@ export class RegisterService {
     }
   }
 
-  // @desc    Function to remove item from item array by id (used for "Remove" btn)
-  // @params  id
-  // @Return  None
+  // Function to remove item from item array by id (used for "Remove" btn)
   public removeItemById(id: string) {
     for (let i = 0; i < this.itemList.length; i++) {
       if (this.itemList[i].Id === id) {
@@ -54,9 +54,7 @@ export class RegisterService {
     this.refreshValues();
   }
 
-  // @desc    Function to remove item from item array by name (private method used for decreaseQuantity)
-  // @params  itemName
-  // @Return  None
+  // Function to remove item from item array by name (private method used for decreaseQuantity)
   private removeItemByName(itemName: string) {
     for (let i = 0; i < this.itemList.length; i++) {
       if (this.itemList[i].Name === itemName) {
@@ -65,9 +63,7 @@ export class RegisterService {
     }
   }
 
-  // @desc    Find item, then increment quantity.
-  // @params  name
-  // @Return  None
+  // Find item, then increment quantity.
   public increaseQuantity(name: string) {
     for (let i = 0; i < this.itemList.length; i++) {
       if (this.itemList[i].Name === name) {
@@ -80,9 +76,7 @@ export class RegisterService {
     }
   }
 
-  // @desc    Find item, then increment quantity.
-  // @params  name
-  // @Return  None
+  // Find item, then increment quantity.
   public decreaseQuantity(name: string) {
     for (let i = 0; i < this.itemList.length; i++) {
       if (this.itemList[i].Name === name) {
@@ -100,9 +94,7 @@ export class RegisterService {
     }
   }
 
-  // @desc    Returns true if item is already in basket.
-  // @params  name
-  // @Return  None
+  // Returns true if item is already in basket.
   private itemExists(name: string) {
     var exists = false;
 
@@ -114,9 +106,7 @@ export class RegisterService {
     return exists;
   }
 
-  // @desc    Refresh subtotal, tax, and total values
-  // @params  None
-  // @Return  None
+  // Refresh subtotal, tax, and total values
   public refreshValues() {
     // Refresh subtotals
     this.subtotal = 0;
@@ -135,14 +125,16 @@ export class RegisterService {
     console.log(this.total + this.totalStr);
   }
 
-  // @desc    Reset all values including array
-  // @params  None
-  // @Return  None
+  // Reset all values including array
   public reset() {
     this.subtotal = 0;
     this.tax = 0;
     this.total = 0;
-    for (let i = this.itemList.length-1; i >= 0; i--) {
+    this.inputNum = 0;
+    this.change = 0;
+    this.displayNum = "0.00";
+    this.inputStr = "";
+    for (let i = this.itemList.length - 1; i >= 0; i--) {
       this.itemList.pop();
     }
     for (let i = 0; i < this.itemList.length; i++) {
@@ -152,12 +144,16 @@ export class RegisterService {
     this.inProgress = true;
   }
 
-  // @desc    If in progress, reset all values including array. (used in menu-btn component)
-  // @params  None
-  // @Return  None
+  // If in progress, reset all values including array. (used in menu-btn component)
   public checkIfInProgress() {
-    if(this.inProgress == false) {
+    if (this.inProgress == false) {
       this.reset();
     }
+  }
+
+  // Method used to force string to show 2 digit decimal
+  public refreshNum() {
+    this.inputNum = parseFloat(this.inputStr);
+    this.displayNum = (Math.floor(this.inputNum * 100) / 100).toFixed(2);
   }
 }
