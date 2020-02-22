@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { RegisterService } from "../../../services/register.service";
 import { SalesService } from "../../../services/sales.service";
 import { ToastrService } from "ngx-toastr";
-import { Sales } from "../../../models/sales.model";
+import { v4 as uuid } from "uuid";
 
 @Component({
   selector: "app-register",
@@ -30,6 +30,9 @@ export class RegisterComponent implements OnInit {
   // Will be used in refreshNum() method and used for completing purchase
   inputNum: number = 0;
 
+  // Used to display change for cash purchases
+  change: number = 0;
+
   // Method used to force string to show 2 digit decimal
   refreshNum() {
     this.inputNum = parseFloat(this.inputStr);
@@ -42,30 +45,14 @@ export class RegisterComponent implements OnInit {
       if (this.inputNum < this.registerService.total) {
         this.toastr.error("Payment amount is less than total owed.", "INVALID");
       } else {
-        let newSale = new Sales();
+        this.change = this.inputNum - this.registerService.total;
 
-        var today = new Date();
-        var date =
-          today.getFullYear() +
-          "-" +
-          (today.getMonth() + 1) +
-          "-" +
-          today.getDate();
-        var time =
-          today.getHours() +
-          ":" +
-          today.getMinutes() +
-          ":" +
-          today.getSeconds();
-        var dateTime = date + " " + time;
-
-        newSale.Date = dateTime;
-        newSale.Total = this.registerService.total;
-
-        this.salesService.createSale(newSale).subscribe(
+        // Create sale from service
+        this.salesService.createSale(this.registerService.total, "Cash", this.inputNum, this.change).subscribe(
           data => console.log(data),
           error => console.log(error)
         );
+
         this.toastr.success("Purchase completed.", "SUCCESS");
       }
     }
@@ -73,6 +60,14 @@ export class RegisterComponent implements OnInit {
 
   creditSale() {
     if (this.registerService.total != 0) {
+      this.change = 0;
+      this.inputNum = 0;
+      
+        // Create sale from service
+        this.salesService.createSale(this.registerService.total, "Credit", this.inputNum, this.change).subscribe(
+          data => console.log(data),
+          error => console.log(error)
+        );
       this.toastr.success("Purchase completed.", "SUCCESS");
     }
   }

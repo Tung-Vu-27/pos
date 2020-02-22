@@ -18,34 +18,6 @@ namespace Api.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Api.Models.Item", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("varchar(20)");
-
-                    b.Property<int>("SaleId")
-                        .HasColumnType("int");
-
-                    b.Property<double>("SubTotal")
-                        .HasColumnType("float");
-
-                    b.Property<int>("Total")
-                        .HasColumnType("int");
-
-                    b.Property<double>("UnitPrice")
-                        .HasColumnType("float");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Item");
-                });
-
             modelBuilder.Entity("Hub.Models.Sales", b =>
                 {
                     b.Property<int>("Id")
@@ -53,9 +25,19 @@ namespace Api.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<double>("Cash")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Change")
+                        .HasColumnType("float");
+
                     b.Property<string>("Date")
                         .IsRequired()
                         .HasColumnType("varchar(20)");
+
+                    b.Property<string>("PaymentType")
+                        .IsRequired()
+                        .HasColumnType("varchar(10)");
 
                     b.Property<double>("Total")
                         .HasColumnType("float");

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -16,6 +16,16 @@
   <ItemGroup>
     <Compile Remove="Migrations\20200219062631_Initial.cs" />
     <Compile Remove="Migrations\20200219062631_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20200221100122_MyMigration.cs" />
+    <Compile Remove="Migrations\20200221100122_MyMigration.Designer.cs" />
+    <Compile Remove="Migrations\20200221220241_PosMigration.cs" />
+    <Compile Remove="Migrations\20200221220241_PosMigration.Designer.cs" />
+    <Compile Remove="Migrations\20200221224127_PosMigration.cs" />
+    <Compile Remove="Migrations\20200221224127_PosMigration.Designer.cs" />
+    <Compile Remove="Migrations\20200221234703_PosMigration.cs" />
+    <Compile Remove="Migrations\20200221234703_PosMigration.Designer.cs" />
+    <Compile Remove="Migrations\20200222000710_PosMigration.cs" />
+    <Compile Remove="Migrations\20200222000710_PosMigration.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

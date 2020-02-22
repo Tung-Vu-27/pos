@@ -42,6 +42,8 @@ namespace Api.Controllers
         }
 
         // PUT: api/Sales/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
+        // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPut("{id}")]
         public async Task<IActionResult> PutSales(int id, Sales sales)
         {
@@ -72,6 +74,8 @@ namespace Api.Controllers
         }
 
         // POST: api/Sales
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
+        // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
         public async Task<ActionResult<Sales>> PostSales(Sales sales)
         {

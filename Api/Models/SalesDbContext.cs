@@ -1,4 +1,4 @@
-﻿using Api.Models;
+﻿
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -15,6 +15,5 @@ namespace Hub.Models
         }
 
         public DbSet<Sales> Sales { get; set; }
-        public DbSet<Item> Item { get; set; }
     }
 }
