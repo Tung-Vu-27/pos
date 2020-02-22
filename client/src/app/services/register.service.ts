@@ -149,6 +149,7 @@ export class RegisterService {
       console.log(this.itemList[i]);
     }
     this.refreshValues();
+    this.inProgress = true;
   }
 
   // @desc    If in progress, reset all values including array. (used in menu-btn component)

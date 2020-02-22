@@ -17,6 +17,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
     this.registerService.refreshValues();
+    this.salesService.refreshSalesList();
     this.refreshNum();
   }
 

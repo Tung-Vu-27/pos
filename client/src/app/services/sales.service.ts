@@ -33,6 +33,11 @@ export class SalesService {
     cash: number,
     change: number
   ): Observable<Object> {
+    // Reset Sales database when sales reach 30 or more
+    if (this.salesList.length > 30) {
+      this.deleteAll();
+    }
+
     // Set string date format
     var today = new Date();
     var date =
@@ -59,22 +64,22 @@ export class SalesService {
     return this.http.delete(`${this.baseUrl}` + "/" + id);
   }
 
-  // @desc    CRUD service method to delete all sales iteratively 
+  // @desc    CRUD service method to delete all sales iteratively
   // @params  None
   // @return  NA
   deleteAll() {
     this.refreshSalesList();
 
-    for(let i = 0; i < this.salesList.length; i++) {
+    for (let i = 0; i < this.salesList.length; i++) {
       this.deleteSale(this.salesList[i].id).subscribe(
         data => console.log(data),
         error => console.log(error)
-      );;
+      );
     }
     this.refresh();
   }
 
   refresh(): void {
     window.location.reload();
-}
+  }
 }

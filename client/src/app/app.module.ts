@@ -5,10 +5,6 @@ import { HttpClientModule } from "@angular/common/http";
 import { ToastrModule } from "ngx-toastr";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { EmployeesComponent } from "./components/employees/employees.component";
-import { EmployeeFormComponent } from "./components/employees/employee-form/employee-form.component";
-import { EmployeeListComponent } from "./components/employees/employee-list/employee-list.component";
-import { EmployeeService } from "./services/employee.service";
 import { FormsModule } from "@angular/forms";
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { SalesUIComponent } from "./components/sales-ui/sales-ui.component";
@@ -24,9 +20,6 @@ import {MatTableModule} from '@angular/material/table';
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeesComponent,
-    EmployeeFormComponent,
-    EmployeeListComponent,
     NavbarComponent,
     SalesUIComponent,
     AdminUIComponent,
@@ -47,7 +40,7 @@ import {MatTableModule} from '@angular/material/table';
       preventDuplicates: true
     })
   ],
-  providers: [EmployeeService, RegisterService, Globals],
+  providers: [RegisterService, Globals],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
