@@ -14,21 +14,27 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace Api
-{
-    public class Startup
-    {
-        public Startup(IConfiguration configuration)
-        {
+namespace Api {
+    public class Startup {
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+        public Startup(IConfiguration configuration) {
             Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddCors();
+        public void ConfigureServices(IServiceCollection services) {
+            services.AddCors(options => {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                                  builder => {
+                                      builder.WithOrigins("https://icecreampos.azurewebsites.net")
+                                      .AllowAnyHeader()
+                                      .AllowAnyMethod()
+                                      .AllowAnyOrigin();
+                                  });
+            });
 
             services.AddControllers();
 
@@ -36,21 +42,17 @@ namespace Api
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-            app.UseCors("CorsPolicy");
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
 
-            if (env.IsDevelopment())
-            {
+
+            if (env.IsDevelopment()) {
                 app.UseDeveloperExceptionPage();
             }
 
-            app.Use(async (context, next) =>
-            {
+            app.Use(async (context, next) => {
                 await next();
 
-                if (context.Response.StatusCode == 404 && !Path.HasExtension(context.Request.Path.Value))
-                {
+                if (context.Response.StatusCode == 404 && !Path.HasExtension(context.Request.Path.Value)) {
                     context.Request.Path = "/index.html";
                     await next();
                 }
@@ -63,17 +65,15 @@ namespace Api
 
             app.UseRouting();
 
-            app.UseCors(x => x
-                .AllowAnyOrigin()
-                .AllowAnyMethod()
-                .AllowAnyHeader());
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
+            app.UseEndpoints(endpoints => {
                 endpoints.MapControllers();
             });
+
+
         }
     }
 }

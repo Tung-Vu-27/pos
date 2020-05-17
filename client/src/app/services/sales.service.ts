@@ -9,7 +9,9 @@ import { Sales } from "../models/sales.model";
 export class SalesService {
   salesList: Sales[];
 
-  private baseUrl = "https://icecreampos.azurewebsites.net/api/Sales";
+  // PRODUCTION LINK: private baseUrl = 'https://icecreampos.azurewebsites.net/api/Sales';
+  // DEBUG LINK: private baseUrl = "https://localhost:32770/api/Sales";
+  private baseUrl = 'https://icecreampos.azurewebsites.net/api/Sales';
 
   constructor(private http: HttpClient) {}
 
