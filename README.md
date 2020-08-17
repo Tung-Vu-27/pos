@@ -36,7 +36,7 @@ If you'd like to download the project to use full features with HTTP calls, foll
 5. cd into /Api and type "dotnet run" to start the project
 
 Problems I faced during development:
-The biggeset hurdle I faced was wrapping my heading around asynchronous programming and utilizing Observables and Promises
+The biggest hurdle I faced was wrapping my head around asynchronous programming and utilizing Observables and Promises
 when making a request to the backend. You can view all of the sales made on the admin page, and it was difficult at first to
 make sure that the admin page was being updated each time a sale was made. Eventually, after much research and googling, I got the hang of asynchronous calls and I was able to update the admin page each time a new sale was made. 
 
