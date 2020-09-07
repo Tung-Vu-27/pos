@@ -1,38 +1,25 @@
-POS
+# POS
+#### Summary 
+This is one of my first personal programming projects that was built with an Angular + .NET stack. It is a simple POS system for an ice cream shop. 
 
-This is one of my personal programming projects. It is a simple POS system. The frontend is built with Angular. Each time a sale is made by clicking "Cash" or "Check" with items in your cart, it will execute an HTTP request to the backend. The backend is built with .NET Core 3.1 and PostgreSQL database.
+#### Directory
+Backend: /api/Apps/Pos
+Frontend /client/src/pos
 
-Technologies used:
-- Angular 8
+#### Key Technologies:
+- Angular
 - TypeScript
-- Bootstrap
-- PostgreSQL Db
-- .NET Core 3.1 
+- .NET Core 3.1
 - C#
+- PostgreSQL
 - HTML
-- SASS
+- SCSS
+- Bootstrap
 
-If you'd like to download the project to use full features with HTTP calls, follow these steps:
-1. Download the zip and extract
-2. cd into /client and npm install
-3. Open /Api directory and create an appsettings.json file (this is where you can link your own sql server db)
-4. Your appsettings.json file should follow this template:
-{
-  "Logging": {
-    "LogLevel": {
-      "Default": "Information",
-      "Microsoft": "Warning",
-      "Microsoft.Hosting.Lifetime": "Information"
-    }
-  },
-  "AllowedHosts": "*",
-  "ConnectionStrings": {
-    "ProductionConnect": "[DATABASE LOGIN STRING GOES HERE]"
-  }
-}
-5. cd into /Api and type "dotnet run" to start the project
+#### Encountered Issues
+- The biggest hurdle I faced was wrapping my head around asynchronous programming and utilizing Observables and Promises when making a request to the backend. There’s a feature where you can view all of the sales made by navigating to the admin page. It was difficult at first to make sure that the admin page was being updated each time a sale was made. Eventually, after much research and googling, I got the hang of asynchronous calls and I was able to update the admin page each time a new sale was made.
 
-Problems I faced during development:
-The biggest hurdle I faced was wrapping my head around asynchronous programming and utilizing Observables and Promises
-when making a request to the backend. You can view all of the sales made on the admin page, and it was difficult at first to
-make sure that the admin page was being updated each time a sale was made. Eventually, after much research and googling, I got the hang of asynchronous calls and I was able to update the admin page each time a new sale was made. 
+#### Lessons Learned: 
+- The overall structure and general practices of .NET Core 3.1 Web api project
+- How to make HTTP requests across separate servers utilizing CORS
+- Wiring up an external database to the backend
