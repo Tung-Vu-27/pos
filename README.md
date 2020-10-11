@@ -4,14 +4,14 @@ This is a simple POS system. The frontend is built with Angular. Each time a sal
 
 Technologies used:
 
-Angular 8
-TypeScript
-Bootstrap
-Sql Server Db
-.NET Core 3.1
-C#
-HTML
-SASS
+-Angular 8
+-TypeScript
+-Bootstrap
+-Sql Server Db
+-.NET Core 3.1
+-C#
+-HTML
+-SASS
 If you'd like to download the project to use full features with HTTP calls, follow these steps:
 
 Download the zip and extract
