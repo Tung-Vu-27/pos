@@ -1,25 +1,21 @@
-# POS
-#### Summary 
-This is one of my first personal programming projects that was built with an Angular + .NET stack. It is a simple POS system for an ice cream shop. 
+POS
 
-#### Directory
-Backend: /api/Apps/Pos
-Frontend /client/src/pos
+This is a simple POS system. The frontend is built with Angular. Each time a sale is made by clicking "Cash" or "Check" with items in your cart, it will execute an HTTP request to the backend. The backend is built with .NET Core 3.1 and SQL Server database. 
 
-#### Key Technologies:
-- Angular
-- TypeScript
-- .NET Core 3.1
-- C#
-- PostgreSQL
-- HTML
-- SCSS
-- Bootstrap
+Technologies used:
 
-#### Encountered Issues
-- The biggest hurdle I faced was wrapping my head around asynchronous programming and utilizing Observables and Promises when making a request to the backend. There’s a feature where you can view all of the sales made by navigating to the admin page. It was difficult at first to make sure that the admin page was being updated each time a sale was made. Eventually, after much research and googling, I got the hang of asynchronous calls and I was able to update the admin page each time a new sale was made.
+Angular 8
+TypeScript
+Bootstrap
+Sql Server Db
+.NET Core 3.1
+C#
+HTML
+SASS
+If you'd like to download the project to use full features with HTTP calls, follow these steps:
 
-#### Lessons Learned: 
-- The overall structure and general practices of .NET Core 3.1 Web api project
-- How to make HTTP requests across separate servers utilizing CORS
-- Wiring up an external database to the backend
+Download the zip and extract
+cd into /client and npm install
+Open /Api directory and create an appsettings.json file (this is where you can link your own sql server db)
+Your appsettings.json file should follow this template: { "Logging": { "LogLevel": { "Default": "Information", "Microsoft": "Warning", "Microsoft.Hosting.Lifetime": "Information" } }, "AllowedHosts": "*", "ConnectionStrings": { "ProductionConnect": "[DATABASE LOGIN STRING GOES HERE]" } }
+cd into /Api and type "dotnet run" to start the project
