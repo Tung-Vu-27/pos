@@ -1,20 +1,14 @@
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using Hub.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
-namespace Api {
+namespace Api
+{
     public class Startup {
         readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
@@ -29,7 +23,7 @@ namespace Api {
             services.AddCors(options => {
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                                   builder => {
-                                      builder.WithOrigins("https://icecreampos.azurewebsites.net")
+                                      builder.WithOrigins("https://localhost:5001")
                                       .AllowAnyHeader()
                                       .AllowAnyMethod()
                                       .AllowAnyOrigin();
